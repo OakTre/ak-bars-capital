@@ -1,1 +1,122 @@
-//
+.header {
+	--color-header-white: #fff;
+	--rgba-header-white: rgba(255,255,255, 0.6);
+	--rgba-border-color: rgba(255,255,255, 0.2);
+	--color-header-bg: #10002B;
+
+	&._header-black {
+		--color-header-white: #10002B;
+		--rgba-header-white: rgba(16, 0, 43, 0.6);
+		--rgba-border-color: rgba(16, 0, 43, 0.2);
+		--color-header-bg: #fff;
+	}
+
+	background-color: var(--color-header-bg);
+
+	&__container {
+		display: flex;
+		align-items: center;
+		padding-top: .9rem;
+	}
+
+	&__left-block {
+		flex-shrink: 0;
+	}
+
+	&__rihgt-block {
+		flex-grow: 1;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		padding-bottom: 0.9rem;
+		margin-bottom: 1.5rem;
+		border-bottom: 1px solid var(--rgba-border-color);
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+	}
+
+	&__search {
+		margin-left: auto;
+		display: inline-block;
+		margin-right: 2rem;
+
+		&-icon {
+			display: block;
+			width: 1.8rem;
+			height: 1.8rem;
+			fill: var(--rgba-header-white);
+		}
+	}
+
+	&__btn {
+		padding: 0.8rem 3.4rem;
+		font-size: 1.3rem;
+		line-height: 1.9rem;
+	}
+
+	&__tel {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+		color: var(--color-header-white);
+		letter-spacing: 0.02em;
+
+		&-icon {
+			display: block;
+			margin-right: 1rem;
+			width: 1.9rem;
+			height: 1.9rem;
+			stroke: var(--color-header-white);
+			stroke-miterlimit: 10;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+		}
+	}
+}
+
+.top-nav {
+	display: flex;
+
+	&__item {
+		margin-right: 4rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		font-size: 1.3rem;
+		line-height: 2.3rem;
+		color: var(--rgba-header-white);
+		text-transform: capitalize;
+	}
+}
+
+.bottom-nav {
+	display: flex;
+
+	&__item {
+		margin-right: 3.2rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+		color: var(--color-header-white);
+		text-transform: capitalize;
+		letter-spacing: 0.02em;
+	}
+}

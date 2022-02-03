@@ -1,3 +1,96 @@
+-let foo_arr = ["Паевые фонды", "Индивилуальное управление", "Пенсионные накопления", "Обучение"]
+-let foo_arr2 = ["Доверительное управление", "Паевые фонды", "Управление активами НПФ и страховых компаний", "Управление средствами Саморегулируемых организаций"]
+-let foo_arr3 = ["Где купить?", "О компании", "Новости", "Пресс-центр", "Информация"]
+
 footer.footer
-	.site-container
-		h1 footer
+	.footer__top-block
+		.site-container.footer__grid
+			.footer__grid-block
+				a.footer__tel.footer__legend(href="tel:+78435186677")
+					|	8 (843) 518-66-77
+					span
+						|	 Для звонков по России
+			.footer__grid-block
+				a.footer__legend(href="/")
+					|	 Офисы продаж
+			.footer__grid-block
+				a.footer__legend(href="/")
+					|	 Контакты
+			.footer__grid-block
+				button.button-reset.button.footer__btn
+					|	Онлайн заявка
+
+	.footer__bottom-block
+		.site-container.footer__grid._align-strech
+			.footer__grid-block
+				a.footer__legend_heading.footer__legend(href="/")
+					|	Частным клиентам
+				ul.footer__list
+					for item in foo_arr
+						li.footer__list-item
+							a.footer__list-link(href="/")=item
+			.footer__grid-block
+				a.footer__legend_heading.footer__legend(href="/")
+					|	Корпоративным клиентам
+				ul.footer__list
+					for item in foo_arr2
+						li.footer__list-item
+							a.footer__list-link(href="/")=item
+			.footer__grid-block
+				ul.footer__legends-list
+					for item in foo_arr3
+						li.footer__legends-item
+							a.footer__legends-link(href="/")=item
+			.footer__grid-block
+				ul.social
+					li.social__item
+						a.social__link(href="/")
+							+icon("vk")(width="24" height="14" class="social__link-icon")
+					li.social__item
+						a.social__link(href="/")
+							+icon("inst")(width="22" height="22" class="social__link-icon")
+					li.social__item
+						a.social__link(href="/")
+							+icon("ok")(width="13" height="22" class="social__link-icon")
+					li.social__item
+						a.social__link(href="/")
+							+icon("fb")(width="20" height="20" class="social__link-icon")
+					li.social__item
+						a.social__link(href="/")
+							+icon("tw")(width="22" height="17" class="social__link-icon")
+					li.social__item
+						a.social__link(href="/")
+							<svg width="20" height="17" class="social__link-icon" viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M7.4928 15.6981C6.8998 15.6981 7.0008 15.4731 6.7958 14.9081L5.0498 9.16409L18.4848 1.19409L7.4928 15.6981Z" fill="#8F8F8F"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M7.49268 15.6981C7.95068 15.6981 8.15268 15.4881 8.40868 15.2401L10.8517 12.8641L7.80468 11.0271" fill="#777777"/>
+								<mask id="mask0_71_3553" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="17">
+								<path d="M18.5778 0.11L0.929829 6.916C-0.274171 7.398 -0.267171 8.071 0.709829 8.37L5.23983 9.783L15.7228 3.17C16.2178 2.87 16.6718 3.031 16.2988 3.362L7.80383 11.028L15.1868 16.483C15.4568 16.633 15.7038 16.709 15.9218 16.711H15.9348C16.3848 16.708 16.7058 16.377 16.8468 15.701L19.8528 1.539C20.0988 0.555 19.6538 0 19.0568 0C18.9038 0 18.7408 0.036 18.5768 0.11" fill="white"/>
+								</mask>
+								<g mask="url(#mask0_71_3553)">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5778 0.11L0.929829 6.916C-0.274171 7.398 -0.267171 8.071 0.709829 8.37L5.23983 9.783L15.7228 3.17C16.2178 2.87 16.6718 3.031 16.2988 3.362L7.80383 11.028L15.1868 16.483C15.4568 16.633 15.7038 16.709 15.9218 16.711H15.9348C16.3848 16.708 16.7058 16.377 16.8468 15.701L19.8528 1.539C20.0988 0.555 19.6538 0 19.0568 0C18.9038 0 18.7408 0.036 18.5768 0.11" fill="#B3B3B3"/>
+								</g>
+							</svg>
+	.footer__copyright
+		.site-container.footer__copyright-container
+			ul.footer__copyright-list
+				li.footer__copyright-item
+					a.footer__copyright-link(href="/")
+						|	 Повышение финансовой грамотности
+				li.footer__copyright-item
+					a.footer__copyright-link(href="/")
+						|	 Раскрытие информации
+				li.footer__copyright-item
+					a.footer__copyright-link(href="/")
+						|	 Обязательная информация
+			a.artrockets(href="/")
+				span
+					|	Построено в
+				img(src="/local/assets/img/artrockets.png", alt="Построено в Артрокетс")
+
+	.footer__open-info
+		.site-container.footer__open-info-container
+			button.button-reset.footer__open-info-btn
+				|	Раскрытие информации
+				+icon("arrow-down")(width="7" height="14" class="footer__open-info-btn-icon")
+
+

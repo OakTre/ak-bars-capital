@@ -10,3 +10,101 @@
 	border: none;
 	font-family: var(--main-ff);
 }
+
+.logo {
+	display: block;
+	margin-right: 2.4rem;
+
+	&__img {
+		max-width: 8.5rem;
+	}
+}
+
+.button {
+	display: inline-block;
+	padding: 1.8rem 3.3rem;
+	font-size: 1.8rem;
+	line-height: 2.7rem;
+	font-weight: 500;
+	background-color: var(--color-green);
+	color: var(--color-white);
+	text-align: center;
+	border-radius: 0.4rem;
+	cursor: pointer;
+	transition: background-color var(--transition), transform var(--transition);
+
+	&:hover {
+		background-color: var(--color-green-light)
+	}
+
+	&:active {
+		transform: scale(0.98);
+	}
+
+	@include mq(md) {
+		padding: 1.5rem 3.5rem;
+		font-size: 1.6rem;
+		line-height: 2.7rem;
+	}
+
+	@include mq(sm) {
+		padding: 1rem 2rem;
+		font-size: 1.4rem;
+		line-height: 2.7rem;
+	}
+}
+
+.social {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-row: 2;
+	column-gap: 4rem;
+	row-gap: 2rem;
+	max-width: 20rem;
+
+	@include mq(md) {
+		column-gap: 3rem;
+		row-gap: 2.4rem;
+	}
+
+	&__item {
+		grid-column: 1 span;
+	}
+
+	&__link {
+		width: 4rem;
+		height: 4rem;
+		background-color: var(--color-grey);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0.4rem;
+		transition: background-color var(--transition);
+
+		&:hover {
+			background-color: var(--color-green-lighter)
+		}
+
+		&-icon {
+			fill: var(--color-dark-grey);
+		}
+	}
+}
+
+.artrockets {
+	display: flex;
+	align-items: flex-end;
+
+	span {
+		display: block;
+		margin-right: 0.5rem;
+		font-size: 1.4rem;
+		line-height: 1;
+		letter-spacing: 0.02em;
+		color: var(--color-grey2);
+	}
+
+	img {
+		transform: translateY(-0.2rem);
+	}
+}
