@@ -1,0 +1,12 @@
+@import "_mixins/_media";
+@import "_mixins/_px-to-rem";
+@import "_fonts";
+
+.button-reset {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border-radius: 0;
+	border: none;
+	font-family: var(--main-ff);
+}
