@@ -1,5 +1,21 @@
-section.hero
-	.site-container
+section.intro(style="background-image: url(/local/assets/img/intro-abb-bg.svg)")
+	.site-container.intro__container
+		.intro-slider
+			.slider-nav.intro-slider__nav
+				button.slider-nav__btn.button-reset
+					+icon("arrow-shevron-left")(width="10" height="16" class="slider-nav__btn-icon")
+				button.slider-nav__btn.button-reset
+					+icon("arrow-shevron-right")(width="10" height="16" class="slider-nav__btn-icon")
+			.intro-slider__item
+				img(class="intro-slider__img" src="/local/assets/img/intro-block/slider-img.png", alt="Инвестиции с «Ак Барс Капитал»")
+				h1.intro__heading.intro-heading
+					|	Инвестиции с&nbsp;«Ак&nbsp;Барс&nbsp;Капитал»
 
-+linkCSS("head")
-+linkJs("test")
+				p.intro__text
+					|	Стать инвестором может каждый
+
+				a.button.button-reset.intro__btn(href="/")
+					|	Начать инвестировать
+
++linkCSS("intro-block")
++linkJs("intro-block-slider")

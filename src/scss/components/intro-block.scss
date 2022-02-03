@@ -1,0 +1,77 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
+.intro {
+	height: 57rem;
+	overflow: hidden;
+	background-color: var(--color-dark);
+	background-repeat: no-repeat;
+	background-size: 126.8rem 40.3rem;
+	background-position: 70% 10%;
+	margin-bottom: 11.6rem;
+
+	@include mq(md) {
+		margin-bottom: 7.2rem;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 4.8rem;
+	}
+
+	&__container {
+		height: 100%;
+	}
+
+	&__heading {
+		color: var(--color-white);
+		max-width: 61.2rem;
+		margin-bottom: 2.4rem;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+	}
+
+	&__text {
+		font-size: 2.2rem;
+		line-height: 3.3rem;
+		color: var(--rgba-white-07);
+		max-width: 55.5rem;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+	}
+
+	&__btn {
+		margin-top: 4.8rem;
+	}
+}
+
+.intro-slider {
+	position: relative;
+	height: 100%;
+
+	&__item {
+		position: relative;
+		height: 100%;
+		padding-top: 10.4rem;
+	}
+
+	&__img {
+		position: absolute;
+		bottom: 0;
+		right: 21.3rem;
+		display: block;
+		width: 38.5rem;
+		height: 55.9rem;
+		object-fit: cover;
+	}
+
+	&__nav {
+		position: absolute;
+		right: 0;
+		bottom: 4.8rem;
+		z-index: 4;
+	}
+}

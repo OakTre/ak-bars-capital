@@ -1,0 +1,259 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
+.invest-now {
+	&__title {
+		margin-bottom: 2.4rem;
+	}
+
+	&__nav-container {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 3.6rem;
+	}
+
+	&__text {
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+		max-width: 59.4rem;
+	}
+
+	&__list-nav {
+		display: flex;
+		align-items: center;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		margin-right: 1.8rem;
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 2.7rem;
+		transition: color var(--transition);
+		cursor: pointer;
+
+		&.is-active {
+			color: var(--color-green);
+
+			.invest-now__btn-icon {
+				fill: var(--color-green);
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			color: var(--color-green);
+
+			.invest-now__btn-icon {
+				fill: var(--color-green);
+			}
+		}
+	}
+
+	&__btn-icon {
+		display: block;
+		width: 2.4rem;
+		height: 2.4rem;
+		margin-right: 0.9rem;
+		fill: var(--color-grey4);
+		transition: fill var(--transition);
+	}
+}
+
+.invest-list {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 32px;
+
+	&.is-cards {
+		.invest-list__item {
+			grid-column: 4 span;
+		}
+	}
+
+	&.is-list {
+		.invest-list__item {
+			height: auto;
+			grid-column: 12 span;
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			column-gap: 32px;
+			align-items: center;
+			padding: 2.4rem;
+		}
+
+		.invest-list__heading {
+			grid-column: 3 span;
+		}
+
+		.invest-list__text {
+			grid-column: 3 span;
+		}
+
+		.invest-list__percents {
+			grid-column: 6 span;
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			column-gap: 32px;
+		}
+
+		.invest-list__percents-item {
+			margin-right: 0;
+			grid-column: 2 span;
+		}
+	}
+
+	@include mq(md) {
+		gap: 16px;
+	}
+
+	&__item {
+		grid-column: 4 span;
+		height: 23.7rem;
+		background-color: var(--color-grey-bg);
+		border-radius: 1rem;
+		padding: 3.2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	&__heading {
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+		margin-bottom: 1.2rem;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
+
+	&__text {
+		display: block;
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		margin-bottom: 0.5rem;
+		color: var(--color-grey3);
+	}
+
+	&__percents {
+		margin-top: auto;
+		display: flex;
+	}
+
+	&__percents-item {
+		margin-right: 3.2rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__percents-numbers {
+		display: flex;
+		align-items: flex-end;
+		font-weight: 700;
+		font-size: 2.4rem;
+		line-height: 4rem;
+		font-family: var(--second-ff);
+	}
+
+	&__percents-time {
+		display: block;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		color: var(--color-grey3);
+		margin-left: 2.2rem;
+	}
+
+	&__percents-nubmers-icon {
+		display: block;
+		width: 1.2rem;
+		height: 1.1rem;
+		margin-right: 1rem;
+		margin-bottom: 1.2rem;
+		fill: var(--color-green);
+	}
+}
+
+.invest-table {
+	display: flex;
+	align-items: center;
+	margin-top: 3.2rem;
+	background-color: var(--color-dark);
+	border-radius: 1rem;
+	padding: 4rem 9.2rem 4.2rem 3.8rem;
+
+	&__icon {
+		display: block;
+		width: 4.8rem;
+		height: 4.8rem;
+		fill: var(--color-purple);
+	}
+
+	&__icon-wrapper {
+		margin-right: 2rem;
+		flex-shrink: 0;
+	}
+
+	&__content {
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__heading {
+		font-weight: 700;
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+		color: var(--color-white);
+		margin-bottom: 0.8rem;
+
+		span {
+			color: var(--color-green);
+		}
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		color: var(--rgba-white-08);
+		max-width: 69.6rem;
+	}
+
+	&__content-link {
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+		color: var(--color-green);
+		transition: color var(--transition);
+
+		&:hover {
+			color: var(--color-purple);
+
+			.invest-table__content-link-icon {
+				fill: var(--color-purple);
+			}
+		}
+	}
+
+	&__content-link-icon {
+		display: block;
+		margin-left: 1rem;
+		fill: var(--color-green);
+		transition: fill var(--transition);
+	}
+}

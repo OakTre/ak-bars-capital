@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание сайта">
-    <title>Главная | Название сайта</title>
+    <title>Главная | Ак Барс Капитал</title>
     <link rel="stylesheet" href="/local/assets/css/vendor.min.css?v=0.0.0.0">
     <link rel="stylesheet" href="/local/assets/css/style.min.css?v=0.0.0.0">
   </head>
@@ -21,7 +21,18 @@
                 <li class="top-nav__item"><a class="top-nav__link" href="/">Корпоративным клиентам</a></li>
                 <li class="top-nav__item"><a class="top-nav__link" href="/">Где купить?</a></li>
                 <li class="top-nav__item"><a class="top-nav__link" href="/">Контакты</a></li>
-                <li class="top-nav__item"><a class="top-nav__link" href="/">еще</a></li>
+                <li class="top-nav__item">
+                  <div class="header-dropdown">
+                    <button class="button-reset top-nav__link header-dropdown__btn" href="/">еще
+                      <svg class="icon icon-arrow-shevron-bottom-small header-dropdown__btn-icon" width="8" height="5">
+                        <use xlink:href="/local/assets/img/sprite.svg#arrow-shevron-bottom-small"></use>
+                      </svg>
+                    </button>
+                    <div class="header-dropdown__content">
+                      <div class="header-dropdown__content-container"><a class="header-dropdown__link" href="/">	 О компании</a><a class="header-dropdown__link" href="/">	Новости</a><a class="header-dropdown__link" href="/">	Пресс-центр</a><a class="header-dropdown__link" href="/">	Информация</a></div>
+                    </div>
+                  </div>
+                </li>
               </ul><a class="header__search" href="/">
                 <svg class="icon icon-search header__search-icon" width="18" height="18">
                   <use xlink:href="/local/assets/img/sprite.svg#search"></use>
@@ -29,7 +40,16 @@
             </div>
             <div class="header__bottom">
               <ul class="bottom-nav">
-                <li class="bottom-nav__item"><a class="bottom-nav__link" href="/">	Паевые инвестиционные фонды</a></li>
+                <li class="bottom-nav__item">
+                  <div class="header-dropdown"><a class="bottom-nav__link header-dropdown__btn" href="/">Паевые инвестиционные фонды
+                      <svg class="icon icon-arrow-shevron-bottom-small header-dropdown__btn-icon" width="8" height="5">
+                        <use xlink:href="/local/assets/img/sprite.svg#arrow-shevron-bottom-small"></use>
+                      </svg></a>
+                    <div class="header-dropdown__content">
+                      <div class="header-dropdown__content-container"><a class="header-dropdown__link" href="/">	 Открытые ПИФы</a><a class="header-dropdown__link" href="/">	 Закрытые ПИФы</a></div>
+                    </div>
+                  </div>
+                </li>
                 <li class="bottom-nav__item"><a class="bottom-nav__link" href="/">Доверительное управление</a></li>
                 <li class="bottom-nav__item"><a class="bottom-nav__link" href="/">Институциональные инвесторы</a></li>
               </ul><a class="header__tel" href="tel:+78435186677">
@@ -41,11 +61,135 @@
         </div>
       </header>
       <main class="page-main main">
-        <section class="hero">
-          <div class="site-container"></div>
+        <section class="intro" style="background-image: url(/local/assets/img/intro-abb-bg.svg)">
+          <div class="site-container intro__container">
+            <div class="intro-slider">
+              <div class="slider-nav intro-slider__nav">
+                <button class="slider-nav__btn button-reset">
+                  <svg class="icon icon-arrow-shevron-left slider-nav__btn-icon" width="10" height="16">
+                    <use xlink:href="/local/assets/img/sprite.svg#arrow-shevron-left"></use>
+                  </svg>
+                </button>
+                <button class="slider-nav__btn button-reset">
+                  <svg class="icon icon-arrow-shevron-right slider-nav__btn-icon" width="10" height="16">
+                    <use xlink:href="/local/assets/img/sprite.svg#arrow-shevron-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="intro-slider__item"><img class="intro-slider__img" src="/local/assets/img/intro-block/slider-img.png" alt="Инвестиции с «Ак Барс Капитал»">
+                <h1 class="intro__heading intro-heading">	Инвестиции с&nbsp;«Ак&nbsp;Барс&nbsp;Капитал»</h1>
+                <p class="intro__text">	Стать инвестором может каждый</p><a class="button button-reset intro__btn" href="/">	Начать инвестировать</a>
+              </div>
+            </div>
+          </div>
         </section>
-        <link rel="stylesheet" href="/local/assets/css/components/head.min.css"/>
-        <script src="/local/assets/js/components/test.js"></script>
+        <link rel="stylesheet" href="/local/assets/css/components/intro-block.min.css"/>
+        <script src="/local/assets/js/components/intro-block-slider.js"></script>
+        <link rel="stylesheet" href="/local/assets/css/components/invest-now.min.css"/>
+        <section class="invest-now section">
+          <div class="site-container invest-now__container">
+            <h2 class="second-title invest-now__title">	Инвестируйте прямо сейчас</h2>
+            <div class="invest-now__nav-container">
+              <p class="invest-now__text">	Подборка готовых решений от экспертов «Ак Барс Капитал»</p>
+              <div class="invest-now__list-nav">
+                <button class="button-reset invest-now__btn js-btn-filter is-active" data-filter="cards">
+                  <svg class="icon icon-cadrs-icon invest-now__btn-icon" width="24" height="24">
+                    <use xlink:href="/local/assets/img/sprite.svg#cadrs-icon"></use>
+                  </svg>	Карточки
+                </button>
+                <button class="button-reset js-btn-filter invest-now__btn" data-filter="list">
+                  <svg class="icon icon-list-icon invest-now__btn-icon" width="24" height="24">
+                    <use xlink:href="/local/assets/img/sprite.svg#list-icon"></use>
+                  </svg>	Список
+                </button>
+              </div>
+            </div>
+            <div class="invest-now__list js-invest-list invest-list is-cards"><a class="invest-list__item" href="/"><span class="invest-list__heading">«АК БАРС — Акции»</span>
+                <p class="invest-list__text">ОПИФ рыночных финансовых инструментов «Максвелл Капитал»</p>
+                <div class="invest-list__percents">
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	155,66%</span><span class="invest-list__percents-time">	за 1 год</span></div>
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	9,64%</span><span class="invest-list__percents-time">	за 1 день</span></div>
+                </div></a><a class="invest-list__item" href="/"><span class="invest-list__heading">«АК БАРС — Консервативный»</span>
+                <p class="invest-list__text">ОПИФ рыночных финансовых инструментов «Максвелл Капитал»</p>
+                <div class="invest-list__percents">
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	155,66%</span><span class="invest-list__percents-time">	за 1 год</span></div>
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	9,64%</span><span class="invest-list__percents-time">	за 1 день</span></div>
+                </div></a><a class="invest-list__item" href="/"><span class="invest-list__heading">«АК БАРС — Индексный»</span>
+                <p class="invest-list__text">ОПИФ рыночных финансовых инструментов «Максвелл Капитал»</p>
+                <div class="invest-list__percents">
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	155,66%</span><span class="invest-list__percents-time">	за 1 год</span></div>
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	9,64%</span><span class="invest-list__percents-time">	за 1 день</span></div>
+                </div></a><a class="invest-list__item" href="/"><span class="invest-list__heading">«Лалэ»</span>
+                <p class="invest-list__text">ОПИФ рыночных финансовых инструментов «Максвелл Капитал»</p>
+                <div class="invest-list__percents">
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	155,66%</span><span class="invest-list__percents-time">	за 1 год</span></div>
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	9,64%</span><span class="invest-list__percents-time">	за 1 день</span></div>
+                </div></a><a class="invest-list__item" href="/"><span class="invest-list__heading">«Максвелл-Капитал»</span>
+                <p class="invest-list__text">ОПИФ рыночных финансовых инструментов «Максвелл Капитал»</p>
+                <div class="invest-list__percents">
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	155,66%</span><span class="invest-list__percents-time">	за 1 год</span></div>
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	9,64%</span><span class="invest-list__percents-time">	за 1 день</span></div>
+                </div></a><a class="invest-list__item" href="/"><span class="invest-list__heading">«Юнион-Капитал»</span>
+                <p class="invest-list__text">ОПИФ рыночных финансовых инструментов «Максвелл Капитал»</p>
+                <div class="invest-list__percents">
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	155,66%</span><span class="invest-list__percents-time">	за 1 год</span></div>
+                  <div class="invest-list__percents-item"><span class="invest-list__percents-numbers">
+                      <svg class="icon icon-small-green-triangle invest-list__percents-nubmers-icon" width="12" height="11">
+                        <use xlink:href="/local/assets/img/sprite.svg#small-green-triangle"></use>
+                      </svg>	9,64%</span><span class="invest-list__percents-time">	за 1 день</span></div>
+                </div></a>
+            </div>
+            <div class="invest-table">
+              <div class="invest-table__icon-wrapper">
+                <svg class="icon icon-table-icon invest-table__icon" width="48" height="48">
+                  <use xlink:href="/local/assets/img/sprite.svg#table-icon"></use>
+                </svg>
+              </div>
+              <div class="invest-table__content">
+                <div class="invest-table__content-wrapper"><span class="invest-table__heading">Подготовили подробную<span>	таблицу доходностей фондов</span></span>
+                  <p class="invest-table__text">	Перейдите к таблице, чтобы увидеть детальную информацию по результатам работы ПИФ</p>
+                </div><a class="invest-table__content-link" href="/">	 Перейти на подробную таблицу
+                  <svg class="icon icon-link-open-icon invest-table__content-link-icon" width="18" height="18">
+                    <use xlink:href="/local/assets/img/sprite.svg#link-open-icon"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <script src="/local/assets/js/components/invest-now.js"></script>
       </main>
       <footer class="footer">
         <div class="footer__top-block">

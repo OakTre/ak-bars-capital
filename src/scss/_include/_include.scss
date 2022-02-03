@@ -1,5 +1,6 @@
 @import "_mixins/_media";
 @import "_mixins/_px-to-rem";
+@import "_mixins/_flex";
 @import "_fonts";
 
 .button-reset {
@@ -107,4 +108,52 @@
 	img {
 		transform: translateY(-0.2rem);
 	}
+}
+
+.intro-heading {
+	font-weight: 700;
+	font-size: 4.8rem;
+	line-height: 6.5rem;
+	letter-spacing: 0.02em;
+}
+
+.slider-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 11.6rem;
+
+	&__btn {
+		@include flex-center;
+
+		width: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		border: 1px solid var(--rgba-white-05);
+		cursor: pointer;
+	}
+
+	&__btn-icon {
+		display: block;
+		stroke-width: 2px;
+		stroke: var(--color-white);
+	}
+}
+
+.section {
+	margin-bottom: 11.6rem;
+
+	@include mq(md) {
+		margin-bottom: 6.4rem;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 4.8rem;
+	}
+}
+
+.second-title {
+	font-size: 3.2rem;
+	line-height: 4rem;
+	color: var(--color-dark);
 }
