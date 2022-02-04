@@ -1,0 +1,50 @@
++linkCSS("card")
++linkCSS("news")
+
+section.section.news
+	.site-container.news__container
+		.news__heading-wrapper
+			h2.news__title.secon-title
+				|	Будь в курсе послених новостей
+			a.news__link(href="/")
+				span._desktop
+					|	Все новости
+				span._mobile
+					|	Все
+		ul.cards__list
+			li.cards__item
+				a.card(href="/")
+					.card__top
+						span.card__date
+							+icon("calendar")(width="18" height="19" class="card__date-icon")
+							|	17.10.2021
+						span.card__feauture
+							|	Covid-19
+					p.card__content
+						|	Важно! Предупреждаем Вас об участившихся случаях мошеннических действий в социальных сетях и сети Интернет
+					span.card__link-text
+						|	Подробнее
+			li.cards__item
+				a.card(href="/")
+					.card__top
+						span.card__date
+							+icon("calendar")(width="18" height="19" class="card__date-icon")
+							|	17.10.2021
+						span.card__feauture._red
+							|	Ак Барс
+					p.card__content
+						|	Приостановление функционирования сайта по причине технического сбоя
+					span.card__link-text
+						|	Подробнее
+			li.cards__item
+				a.card(href="/")
+					.card__top
+						span.card__date
+							+icon("calendar")(width="18" height="19" class="card__date-icon")
+							|	17.10.2021
+						span.card__feauture
+							|	Covid-19
+					p.card__content
+						|	Важно! Предупреждаем Вас об участившихся случаях мошеннических действий в социальных сетях и сети Интернет
+					span.card__link-text
+						|	Подробнее

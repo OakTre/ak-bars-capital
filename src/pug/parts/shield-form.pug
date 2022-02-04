@@ -1,0 +1,25 @@
++linkCSS("shield")
+section.section.shield.shield-form
+	.site-container
+		.shield__inner.shield-form__inner
+			img(class="shield__img shield-form__img" src="/local/assets/img/shield/shield-form-img.svg" alt="Институциональный инвестор")
+			h2.shield__heading.second-title
+				|	Инвестируйте online
+			p.shield__text.shield-form__text
+				|	Зарегистрируйтесь или
+				a(href="/")
+					|	Войдите
+				|	в личный кабинет, чтобы инвестировать и контролировать портфель
+			form.shield-form__form(action="/")
+				.shield-form__wrapper
+					label.shield-form__label
+						input.input(type="tel" name="tel" placeholder="+7")
+					button.shield-form__btn.button.button-reset
+						span._desktop
+							|	Далее
+						span._mobile
+							|	ОК
+				p.shield-form__agreement
+					|	Нажимая «Далее», вы соглашаетесь с условиями
+					a(href="/")
+						|	Политики&nbsp;обработки персональных данных

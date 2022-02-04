@@ -1,0 +1,51 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
+.text-block {
+	&__title {
+		margin-bottom: 1.6rem;
+	}
+
+	&__hedaing-text {
+		max-width: 66rem;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		margin-bottom: 6.4rem;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12,1fr);
+		column-gap: 32px;
+		row-gap: 9.6rem;
+
+		@include mq(md) {
+			row-gap: 5.6rem;
+		}
+	}
+
+	&__item {
+		grid-column: 4 span;
+
+		@include mq(md) {
+			grid-column: 6 span;
+		}
+
+		&-heading {
+			display: block;
+			font-weight: 700;
+			font-size: 4rem;
+			line-height: 1;
+			font-family: var(--second-ff);
+			margin-bottom: 3.2rem;
+			color: var(--color-green);
+		}
+
+		&-text {
+			font-weight: 500;
+			font-size: 1.8rem;
+			line-height: 2.5rem;
+			max-width: 35.1rem;
+		}
+	}
+}

@@ -1,13 +1,14 @@
 :root {
-  --main-ff: "Roboto",sans-serif;
-  --second-ff: "Rubrick",sans-serif;
+  --main-ff: "Roboto", sans-serif;
+  --second-ff: "Rubrick", sans-serif;
   --color-dark: #10002B;
+  --color-dark-blue: #170C58;
   --color-white: #fff;
   --color-green: #00B2A9;
   --color-green-light: #18BEB6;
   --color-green-lighter: rgba(0, 178, 169, 0.15);
   --color-red: #FF2C2C;
-  --color-red-light: #FF2C2C;
+  --color-red-lighter: rgba(255, 97, 63, 0.15);
   --color-grey: #F5F5F5;
   --color-grey2: #959494;
   --color-grey3: #616264;
@@ -28,42 +29,42 @@
 
 @font-face {
   font-weight: 400;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-display: swap;
-  src: url(/local/assets/fonts/roboto-regular.woff2) format("woff2"),url(/local/assets/fonts/roboto-regular.woff) format("woff");
+  src: url("/local/assets/fonts/roboto-regular.woff2") format("woff2"),url("/local/assets/fonts/roboto-regular.woff") format("woff");
 }
 
 @font-face {
   font-weight: 500;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-display: swap;
-  src: url(/local/assets/fonts/Roboto-Medium.woff2) format("woff2"),url(/local/assets/fonts/Roboto-Medium.woff) format("woff");
+  src: url("/local/assets/fonts/Roboto-Medium.woff2") format("woff2"),url("/local/assets/fonts/Roboto-Medium.woff") format("woff");
 }
 
 @font-face {
   font-weight: 700;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-style: normal;
   font-display: swap;
-  src: url(/local/assets/fonts/Roboto-Bold.woff2) format("woff2"),url(/local/assets/fonts/Roboto-Bold.woff) format("woff");
+  src: url("/local/assets/fonts/Roboto-Bold.woff2") format("woff2"),url("/local/assets/fonts/Roboto-Bold.woff") format("woff");
 }
 
 @font-face {
   font-weight: 500;
-  font-family: Rubrick;
+  font-family: "Rubrick";
   font-style: normal;
   font-display: swap;
-  src: url(/local/assets/fonts/rubrick-medium.woff2) format("woff2"),url(/local/assets/fonts/rubrick-medium.woff) format("woff");
+  src: url("/local/assets/fonts/rubrick-medium.woff2") format("woff2"),url("/local/assets/fonts/rubrick-medium.woff") format("woff");
 }
 
 @font-face {
   font-weight: 700;
-  font-family: Rubrick;
+  font-family: "Rubrick";
   font-style: normal;
   font-display: swap;
-  src: url(/local/assets/fonts/rubrick-bold.woff2) format("woff2"),url(/local/assets/fonts/rubrick-bold.woff) format("woff");
+  src: url("/local/assets/fonts/rubrick-bold.woff2") format("woff2"),url("/local/assets/fonts/rubrick-bold.woff") format("woff");
 }
 
 .button-reset {
@@ -107,16 +108,16 @@
 }
 
 .button:active {
-  -webkit-transform: scale(.98);
-  -ms-transform: scale(.98);
-  transform: scale(.98);
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 .social {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   -ms-grid-row: 2;
   grid-row: 2;
   -webkit-column-gap: 4rem;
@@ -177,9 +178,9 @@
 }
 
 .artrockets img {
-  -webkit-transform: translateY(-.2rem);
-  -ms-transform: translateY(-.2rem);
-  transform: translateY(-.2rem);
+  -webkit-transform: translateY(-0.2rem);
+  -ms-transform: translateY(-0.2rem);
+  transform: translateY(-0.2rem);
 }
 
 .intro-heading {
@@ -235,9 +236,45 @@
   color: var(--color-dark);
 }
 
+.second-title span {
+  color: var(--color-green);
+}
+
+.input {
+  width: 100%;
+  height: 6.4rem;
+  background-color: var(--color-white);
+  border-radius: .4rem;
+  border: 1px solid var(--color-white);
+  padding: 2.2rem 1.6rem 2rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  outline: none;
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--border-color);
+}
+
+.input::-moz-placeholder {
+  color: var(--border-color);
+}
+
+.input:-ms-input-placeholder {
+  color: var(--border-color);
+}
+
+.input::-ms-input-placeholder {
+  color: var(--border-color);
+}
+
+.input::placeholder {
+  color: var(--border-color);
+}
+
 *,
-::after,
-::before {
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -591,7 +628,7 @@ h6 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[12];
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   -webkit-column-gap: 32px;
   -moz-column-gap: 32px;
   column-gap: 32px;
@@ -771,7 +808,7 @@ h6 {
   transition: stroke var(--transition);
 }
 
-@media screen and (min-width:2100px) {
+@media screen and (min-width: 2100px) {
   html {
     font-size: 13px;
   }
@@ -781,19 +818,19 @@ h6 {
   }
 }
 
-@media screen and (max-width:1440px) {
+@media screen and (max-width: 1440px) {
   html {
     font-size: 9px;
   }
 }
 
-@media screen and (max-width:1280px) {
+@media screen and (max-width: 1280px) {
   html {
     font-size: 8px;
   }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
   .button {
     padding: 1.5rem 3.5rem;
     font-size: 1.6rem;
@@ -816,7 +853,7 @@ h6 {
   }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .button {
     padding: 1rem 2rem;
     font-size: 1.4rem;

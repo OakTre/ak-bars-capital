@@ -1,5 +1,5 @@
 const {src, dest, series, watch, parallel} = require("gulp");
-const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
 const prefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
@@ -32,7 +32,7 @@ const pugBuild = () => {
 const styles = () => {
 	return src("./src/scss/**/*.scss")
 		.pipe(sass({
-			outputStyle: "expanded"
+			outputStyle: 'compressed'
 		}).on("error", notify.onError()))
 		.pipe(rename({
 			suffix: ".min"
@@ -42,9 +42,9 @@ const styles = () => {
 			overrideBrowserslist: ['last 10 version'],
 			grid: "no-autoplace",
 		}))
-		.pipe(cleanCSS({
-			level: 2
-		}))
+		// .pipe(cleanCSS({
+		// 	level: 2
+		// }))
 		.pipe(gcmq())
 		.pipe(dest("./app/local/assets/css/"))
 		.pipe(browserSync.stream());
@@ -53,14 +53,14 @@ const styles = () => {
 const stylesVendor = () => {
 	return src("./src/scss/vendor.scss")
 			.pipe(sass({
-					outputStyle: "expanded"
-			}))
+					outputStyle: 'compressed'
+			}).on("error", notify.onError()))
 			.pipe(rename({
 					suffix: ".min"
 			}))
-			.pipe(cleanCSS({
-					level: 2
-			}))
+			// .pipe(cleanCSS({
+			// 		level: 2
+			// }))
 			.pipe(dest("./app/local/assets/css/"))
 }
 
@@ -145,7 +145,7 @@ const watchFiles = () => {
 		}
 	});
 
-	watch("./src/scss/**/*.scss", styles)
+	watch("./src/scss/**/**.scss", styles)
 	watch("./src/pug/**/*.pug", pugBuild)
 	watch("./src/img/**/*.{png,jpg,jpeg,svg}", imgToApp)
 	watch("./src/img/sprite/*.svg", svgSprites)

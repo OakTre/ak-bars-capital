@@ -1,0 +1,34 @@
+.news__heading-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 6.4rem;
+}
+
+.news__title {
+  max-width: 51.5rem;
+}
+
+.news__link {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: var(--color-green);
+}
+
+.news__link ._mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .news__link ._desktop {
+    display: none;
+  }
+
+  .news__link ._mobile {
+    display: inline;
+  }
+}

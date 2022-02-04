@@ -1,0 +1,35 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
+.news {
+	&__heading-wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 6.4rem;
+	}
+
+	&__title {
+		max-width: 51.5rem;
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 2.4rem;
+		color: var(--color-green);
+
+		._desktop {
+			@include mq(sm) {
+				display: none;
+			}
+		}
+
+		._mobile {
+			display: none;
+
+			@include mq(sm) {
+				display: inline;
+			}
+		}
+	}
+}

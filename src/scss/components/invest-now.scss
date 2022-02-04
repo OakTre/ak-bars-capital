@@ -83,16 +83,17 @@
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
 			column-gap: 32px;
-			align-items: center;
 			padding: 2.4rem;
 		}
 
 		.invest-list__heading {
 			grid-column: 3 span;
+			align-self: center;
 		}
 
 		.invest-list__text {
 			grid-column: 3 span;
+			align-self: center;
 		}
 
 		.invest-list__percents {
@@ -100,6 +101,7 @@
 			display: grid;
 			grid-template-columns: repeat(6, 1fr);
 			column-gap: 32px;
+			align-self: center;
 		}
 
 		.invest-list__percents-item {
