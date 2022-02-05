@@ -123,7 +123,16 @@
 	justify-content: space-between;
 	width: 11.6rem;
 
+	&.anim-start {
+		.slider-nav__btn-circle {
+			animation: circle 9s linear infinite;
+			animation-delay: 0.1s;
+		}
+	}
+
 	&__btn {
+		position: relative;
+
 		@include flex-center;
 
 		width: 5rem;
@@ -131,12 +140,52 @@
 		border-radius: 50%;
 		border: 1px solid var(--rgba-white-05);
 		cursor: pointer;
+
+		&.swiper-button-disabled {
+			pointer-events: none;
+			opacity: 0.5;
+			.slider-nav__btn-circle {
+				opacity: 0;
+			}
+		}
+
+		&.opacity {
+			.slider-nav__btn-circle {
+				opacity: 0;
+			}
+		}
+
+		&.non-opacity {
+			.slider-nav__btn-circle {
+				opacity: 1;
+			}
+		}
 	}
 
 	&__btn-icon {
 		display: block;
 		stroke-width: 2px;
 		stroke: var(--color-white);
+	}
+
+	&__btn-circle {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		transform: translate(-50%, -50%);
+		stroke-dashoffset: 155;
+		stroke-dasharray: 155;
+	}
+}
+
+@keyframes circle {
+	from {
+		stroke-dashoffset: 155;
+	}
+
+	to {
+		stroke-dashoffset: 0;
 	}
 }
 
@@ -175,5 +224,18 @@
 
 	&::placeholder {
 		color: var(--border-color);
+	}
+
+	&.parsley-error {
+		border-color: var(--color-red);
+	}
+
+	~ .parsley-errors-list {
+		position: absolute;
+		right: 1rem;
+		bottom: 0.5rem;
+		color: var(--color-red);
+		font-size: 1.2rem;
+		line-height: 1.4rem;
 	}
 }

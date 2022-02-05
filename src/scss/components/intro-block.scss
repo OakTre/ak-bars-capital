@@ -20,6 +20,11 @@
 
 	&__container {
 		height: 100%;
+
+		.swiper,
+		.swiper-wrapper {
+			height: 100%;
+		}
 	}
 
 	&__heading {

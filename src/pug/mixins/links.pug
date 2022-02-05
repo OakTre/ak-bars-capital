@@ -1,8 +1,8 @@
 mixin linkCSS(name)
-	link(rel="stylesheet", href=`/local/assets/css/components/${name}.min.css`)
+	link(rel="stylesheet", href=`/local/assets/css/components/${name}.min.css?v=` + siteVersion)
 
 
 mixin linkJs(name)
-	script(src=`/local/assets/js/components/${name}.js`)
+	script(src=`/local/assets/js/components/${name}.js?v=` + siteVersion)
 
 

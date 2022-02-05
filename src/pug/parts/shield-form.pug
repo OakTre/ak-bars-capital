@@ -10,10 +10,10 @@ section.section.shield.shield-form
 				a(href="/")
 					|	Войдите
 				|	в личный кабинет, чтобы инвестировать и контролировать портфель
-			form.shield-form__form(action="/")
+			form.shield-form__form(action="/" data-need-validation)
 				.shield-form__wrapper
 					label.shield-form__label
-						input.input(type="tel" name="tel" placeholder="+7")
+						input.input.js-phone-mask(type="tel" name="tel" placeholder="+7" data-parsley-required data-parsley-phone)
 					button.shield-form__btn.button.button-reset
 						span._desktop
 							|	Далее
