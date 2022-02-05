@@ -1,10 +1,12 @@
 -let top_arr = ["Частным клиентам", "Корпоративным клиентам", "Где купить?", "Контакты"]
 - let bottom_arr = ["Доверительное управление", "Институциональные инвесторы"]
-header.header
+header.header(class=headerClass)
 	.site-container.header__container
 		.header__left-block
 			a.logo(href="/")
 				img(src="/local/assets/img/logo.svg", alt="Логотип" class="logo__img")
+			a.logo.logo_white(href="/")
+				img(src="/local/assets/img/logo-white.svg", alt="Логотип" class="logo__img")
 		.header__rihgt-block
 			.header__top
 				ul.top-nav

@@ -1,0 +1,18 @@
+mixin breadcrumbs(levels)
+	.breadcrumbs__container&attributes(attributes)
+		.breadcrumbs
+			each item, index in levels
+
+				- var count = index+1
+				- var name = item[0]
+				- var link = item[1] || null
+
+				if link
+					.breadcrumbs__item
+						a.breadcrumbs__item-link(href=link) #{name}
+				else
+					.breadcrumbs__item #{name}
+				//- для иконки между ссылкой
+				if count < levels.length
+					span.breadcrumbs__arrow
+						| /

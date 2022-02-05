@@ -11,6 +11,20 @@
 		--shield-heading-color: rgba(16, 0, 43, 1);
 		--shield-text-color: rgba(16, 0, 43, 0.6);
 	}
+
+	&.shield_dark {
+		--shield-bg-color: var(--color-dark-blue);
+		--shield-heading-color: var(--color-white);
+		--shield-text-color: var(--rgba-white-07);
+
+		.shield__img {
+			bottom: 3rem;
+			width: 35.7rem;
+			height: 35.7rem;
+		}
+	}
+
+
 	position: relative;
 
 	&__inner {

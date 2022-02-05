@@ -239,3 +239,40 @@
 		line-height: 1.4rem;
 	}
 }
+
+
+.file {
+	display: inline-flex;
+	align-items: flex-start;
+	padding: 4rem 3.2rem;
+	border-radius: 1rem;
+	background-color: var(--color-grey-bg);
+	width: 62rem;
+	transition: background-color var(--transition);
+
+	&__icon {
+		display: block;
+		margin-right: 3rem;
+		width: 4rem;
+		height: 5rem;
+	}
+
+	&__name {
+		display: block;
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		max-width: 31.5rem;
+	}
+
+	&__size {
+		color: var(--color-grey2);
+		font-size: 1.4rem;
+		line-height: 1.9rem;
+		margin-left: auto;
+	}
+
+	&:hover {
+		background-color: var(--color-green-lighter);
+	}
+}

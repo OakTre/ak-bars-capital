@@ -1,0 +1,26 @@
++linkCSS("warning")
+
+section.warning
+	.site-container
+		.warning__content
+			.warning__icon-wrapper
+				+icon("warning")(class="warning__icon" width="48" height="48")
+			.warning__info
+				span.warning__heading
+					|	Уважаемые клиенты!
+				p.warning__text
+					|	Предупреждаем Вас об участившихся случаях мошеннических действий в социальных сетях и сети Интернет, с предложением получения денежных средств от ООО УК "АК БАРС КАПИТАЛ" путем кредитования.
+					|	Напоминаем Вам о том, что ООО УК "АК БАРС КАПИТАЛ" не имеет лицензии дающей право выдавать кредиты физическим и юридическим лицам.
+				.warning__links
+					.warning__links-item
+						span.warning__links-legend
+							|	Единая справочная
+						a.warning__links-link(href="tel:+78435186677")
+							+icon("mobile")(class="warning__links-link-icon")
+							| 8 (843) 518-66-77
+					.warning__links-item
+						span.warning__links-legend
+							|	Почта для обращений
+						a.warning__links-link(href="mailto:")
+							+icon("email")(class="warning__links-link-icon")
+							| info@akbars-capital.ru

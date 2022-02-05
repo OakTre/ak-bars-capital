@@ -1,0 +1,29 @@
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+
+	&__container {
+		margin-bottom: 4rem;
+	}
+
+	&__item {
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		color: var(--color-grey2);
+	}
+
+	&__arrow {
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		color: var(--color-grey2);
+		padding: 0 0.4rem;
+	}
+
+	&__item-link {
+		transition: color var(--transition);
+
+		&:hover {
+			color: var(--color-green);
+		}
+	}
+}

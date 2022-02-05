@@ -3,12 +3,28 @@
 	--rgba-header-white: rgba(255,255,255, 0.6);
 	--rgba-border-color: rgba(255,255,255, 0.2);
 	--color-header-bg: #10002B;
+	--icon-fill: #fff;
 
 	&._header-black {
 		--color-header-white: #10002B;
 		--rgba-header-white: rgba(16, 0, 43, 0.6);
 		--rgba-border-color: rgba(16, 0, 43, 0.2);
 		--color-header-bg: #fff;
+		--icon-fill: rgba(16, 0, 43, 0.6);
+
+		box-shadow: 0 0 5px rgba(16, 0, 43, 0.1);
+
+		.logo {
+			display: none;
+		}
+
+		.logo_white {
+			display: block;
+		}
+	}
+
+	.logo_white {
+		display: none;
 	}
 
 	position: fixed;
@@ -81,6 +97,7 @@
 			margin-right: 1rem;
 			width: 1.9rem;
 			height: 1.9rem;
+			fill: none;
 			stroke: var(--color-header-white);
 			stroke-miterlimit: 10;
 			stroke-linecap: round;
@@ -161,7 +178,8 @@
 	&__btn-icon {
 		display: block;
 		margin-left: 0.8rem;
-		stroke: var(--color-white);
+		fill: none;
+		stroke: var(--icon-fill);
 		transition: stroke var(--transition);
 	}
 
