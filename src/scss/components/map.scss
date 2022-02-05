@@ -1,4 +1,132 @@
 .map {
+	position: relative;
+	z-index: 2;
 	height: 73rem;
 	background-color: var(--color-grey);
+
+	&__map {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__container {
+		position: relative;
+		padding-top: 3.6rem;
+		pointer-events: none;
+	}
+
+	&__logo-svg {
+		display: block;
+		width: 56px;
+		height: 56px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 40.3rem;
+		padding: 3.2rem 4.2rem 2.4rem 2.4rem;
+		background-color: var(--color-white);
+		border-radius: 1rem;
+		pointer-events: auto;
+	}
+
+	&__heading {
+		display: block;
+		font-weight: 700;
+		font-size: 2rem;
+		line-height: 3.2rem;
+		color: var(--color-green);
+		margin-bottom: 4.6rem;
+	}
+
+	&__adress {
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+		letter-spacing: 0.02em;
+		margin-bottom: 1.6rem;
+	}
+
+	&__adres-icon {
+		display: block;
+		margin-right: 0.6rem;
+		width: 2.4rem;
+		height: 2.4rem;
+		fill: var(--color-green);
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		font-weight: 700;
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+		letter-spacing: 0.02em;
+		margin-bottom: 4.4rem;
+		transition: color var(--transition);
+
+		&._text {
+			font-weight: 400;
+			align-items: flex-start;
+			margin-bottom: 0;
+		}
+
+		&:not(._text):hover {
+			color: var(--color-green);
+		}
+
+	}
+
+	&__link-icon {
+		flex-shrink: 0;
+		margin-right: 0.7rem;
+		width: 2.2rem;
+		height: 2.2rem;
+		fill: var(--color-green);
+	}
+
+	&__working-time {
+		display: block;
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+		letter-spacing: 0.02em;
+		margin-bottom: 1rem;
+	}
+
+	&__working-time-row {
+		display: flex;
+		align-items: center;
+	}
+
+	&__working-time-day {
+		display: block;
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+		letter-spacing: 0.02em;
+		width: 4.7rem;
+		margin-right: 4.8rem;
+	}
+
+	&__working-time-hours {
+		display: block;
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+		letter-spacing: 0.02em;
+
+		&._grey {
+			color: var(--color-grey2);
+		}
+	}
+
+	&__working-time-list {
+		margin-bottom: 4.5rem;
+	}
 }

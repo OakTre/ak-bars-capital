@@ -111,8 +111,49 @@
         </section>
         <link rel="stylesheet" href="/local/assets/css/components/map.min.css?v=0.0.1.1"/>
         <section class="section map">
-          <div class="site-container map__container"></div>
+          <div class="map__map" id="map"></div>
+          <div class="site-container map__container">
+            <div class="map__content">
+              <span class="map__heading">	Офис в Казани на ул. Меридианная</span>
+              <span class="map__adress">
+                <svg class="icon icon-marker map__adres-icon" width="24" height="24">
+                  <use xlink:href="/local/assets/img/sprite.svg#marker"></use>
+                </svg>	420124, г. Казань, ул. Меридианная, д. 1а
+              </span>
+              <span class="map__working-time">	Режим работы</span>
+              <div class="map__working-time-list">
+                <div class="map__working-time-row">
+                  <span class="map__working-time-day">пн-чт</span>
+                  <span class="map__working-time-hours">8:30-17:30</span>
+                </div>
+                <div class="map__working-time-row">
+                  <span class="map__working-time-day">пт</span>
+                  <span class="map__working-time-hours">8:30-16:15, обед 13:00-13:45</span>
+                </div>
+                <div class="map__working-time-row">
+                  <span class="map__working-time-day">сб-вс</span>
+                  <span class="map__working-time-hours _grey">выходной</span>
+                </div>
+              </div>
+              <a class="map__link" href="tel:+78435186677">
+                <svg class="icon icon-mobile map__link-icon">
+                  <use xlink:href="/local/assets/img/sprite.svg#mobile"></use>
+                </svg>8 (843) 518-66-77
+              </a>
+              <a class="map__link" href="mailto: info@akbars-capital.ru">
+                <svg class="icon icon-email map__link-icon">
+                  <use xlink:href="/local/assets/img/sprite.svg#email"></use>
+                </svg>info@akbars-capital.ru
+              </a>
+              <span class="map__link _text">
+                <svg class="icon icon-post-icon map__link-icon">
+                  <use xlink:href="/local/assets/img/sprite.svg#post-icon"></use>
+                </svg>Для отправки корреспонденции:<br>Татарстан, Казань, ул. Меридианная,<br>д. 1а, ООО УК «АК&nbsp;БАРС&nbsp;КАПИТАЛ»
+              </span>
+            </div>
+          </div>
         </section>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=b0b15954-57af-4901-b78c-0ad5bd94cda8&amp;lang=ru_RU"></script>
         <script src="/local/assets/js/components/map.js?v=0.0.1.1"></script>
         <link rel="stylesheet" href="/local/assets/css/components/requisites.min.css?v=0.0.1.1"/>
         <section class="section requisites">
