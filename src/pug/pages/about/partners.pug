@@ -1,0 +1,32 @@
++linkCSS("partners")
+
+section.section.partners
+	.site-container.partners__container
+		.partners__heading-wrapper
+			h2.partners__heading.second-title
+				|	Партнеры
+			.slider-nav.partners__nav
+				button.slider-nav__btn.button-reset.js-partners-slider-prev.partners__nav-btn
+					<svg class="slider-nav__btn-circle"  width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="25" cy="25" r="24.5" stroke="#00B2A9"/>
+					</svg>
+					+icon("arrow-shevron-left")(width="10" height="16" class="slider-nav__btn-icon partners__nav-btn-icon")
+				button.slider-nav__btn.button-reset.js-partners-slider-next.partners__nav-btn
+					<svg class="slider-nav__btn-circle"  width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="25" cy="25" r="24.5" stroke="#00B2A9"/>
+					</svg>
+					+icon("arrow-shevron-right")(width="10" height="16" class="slider-nav__btn-icon partners__nav-btn-icon")
+		.partners__slider.js-partners-slider
+			.swiper-wrapper
+				-for(let i = 0; i<7; i++)
+					.partners__item.swiper-slide
+						img.partners__img(src="/local/assets/img/partners/img.png", alt="")
+						p.partners__text
+							|	АО «Специализированный депозитарий «ИНФИНИТУМ»
+
+
+
+		a.button.partners__btn(href="/")
+			|	 Стать агентом
+
++linkJs("partners")

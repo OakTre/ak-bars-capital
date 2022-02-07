@@ -199,6 +199,18 @@
 	@include mq(sm) {
 		margin-bottom: 4.8rem;
 	}
+
+	&_small-margin {
+		margin-bottom: 8rem;
+
+		@include mq(md) {
+			margin-bottom: 6.4rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 4.8rem;
+		}
+	}
 }
 
 .second-title {
@@ -274,5 +286,28 @@
 
 	&:hover {
 		background-color: var(--color-green-lighter);
+	}
+}
+
+.file-transparent {
+	display: flex;
+	align-items: flex-start;
+}
+
+.warning-text {
+	display: flex;
+	align-items: flex-start;
+
+	&__icon {
+		width: 2.4rem;
+		height: 2.4rem;
+		fill: none;
+		margin-right: 1.3rem;
+	}
+
+	span {
+		display: block;
+		max-width: 95rem;
+		color: var(--color-grey2);
 	}
 }

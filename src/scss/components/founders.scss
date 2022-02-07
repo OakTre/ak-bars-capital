@@ -1,0 +1,123 @@
+.founders {
+	&__container {
+		position: relative;
+	}
+
+	&__img {
+		position: absolute;
+		right: 8.8rem;
+		bottom: 2.7rem;
+		width: 47.2rem;
+		height: 47.2rem;
+	}
+
+	&__heading {
+		margin-bottom: 2.4rem;
+	}
+
+	&__txt {
+		max-width: 76.9rem;
+		margin-bottom: 4.2rem;
+		font-size: 1.6rem;
+		line-height: 2.7rem;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 62.7rem;
+		margin: -0.8rem -4rem;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		width: calc(50% - 8rem);
+		margin: 0.8rem 4rem;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		color: var(--color-grey3);
+
+		&::before {
+			display: block;
+			width: 1.9rem;
+			height: 1.9rem;
+			border-radius: 50%;
+			background-color: var(--color-green);
+			margin-right: 0.8rem;
+			content: "";
+		}
+
+		&._ivesthim {
+			&::before {
+				background-color: #00B2A9;
+			}
+		}
+
+		&._kvarts {
+			&::before {
+				background-color: #FC9202;
+			}
+		}
+
+		&._ak-bars {
+			&::before {
+				background-color: rgba($color: #00B2A9, $alpha: 0.6);
+			}
+		}
+
+		&._ul {
+			&::before {
+				background-color: #10002B;
+			}
+		}
+	}
+
+	&__legeng {
+		display: block;
+		margin-top: 7.2rem;
+		margin-bottom: 4rem;
+		font-weight: 700;
+		font-size: 2.4rem;
+		line-height: 1;
+		font-family: var(--second-ff);
+	}
+
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+		color: var(--color-green);
+	}
+
+	&__link-icon {
+		width: 1.3rem;
+		height: 1.3rem;
+		fill: var(--color-green);
+		margin-left: 1.2rem;
+	}
+
+	&__files {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 7.3rem;
+	}
+
+	&__files-file {
+		margin-bottom: 4.7rem;
+
+		&:hover {
+			.file__name {
+				color: var(--color-green);
+				transition: color var(--transition);
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

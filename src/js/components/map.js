@@ -44,31 +44,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 		housesCollection.add(placemark);
 
-		// housesCollection.events.add("click", function (e) {
-		// 	$(".mark").removeClass("mark-active");
-		// 	let el = e.get('target');
-		// 	let overlay = el.getOverlaySync();
-		// 	let layout = overlay.getLayoutSync();
-		// 	let element = layout.getParentElement();
-		// 	let markEl = $(element).find(".mark");
-		// 	let marImg = $(markEl).attr("data-img");
-
-		// 	e.get("target").options.set(
-		// 		"iconLayout",
-		// 		ymaps.templateLayoutFactory.createClass(
-		// 			`<a data-img="${marImg}" href="#" class="mark mark-active"><img src="${marImg}"></a>`
-		// 		)
-		// 	);
-
-		// 	$(".mark").each(function (index) {
-		// 		if ($(".mark").eq(index).hasClass("mark-active")) {
-		// 			$(".offices__item").eq(index).addClass("is-open");
-		// 		} else {
-		// 			$(".offices__item").eq(index).removeClass("is-open");
-		// 		}
-		// 	});
-		// });
-
 		contactsMap.geoObjects.add(housesCollection);
 	}
 });

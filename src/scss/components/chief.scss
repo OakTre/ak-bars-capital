@@ -1,0 +1,60 @@
+.chief {
+	background-color: var(--color-grey-bg);
+	padding: 12.4rem 0;
+
+	&__container {
+		display: flex;
+	}
+
+	&__img {
+		display: block;
+		width: 32.6rem;
+		height: 32.6rem;
+		object-fit: cover;
+		border-radius: 1.2rem;
+		margin-right: 16.2rem;
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+		font-family: var(--second-ff);
+		letter-spacing: 0.02em;
+		margin-bottom: 1.6rem;
+	}
+
+	&__name {
+		display: block;
+		font-weight: 700;
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+		letter-spacing: 0.02em;
+		margin-bottom: 0.8rem;
+	}
+
+	&__position {
+		display: block;
+		margin-bottom: 4.3rem;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		color: rgba($color: #616264, $alpha: 0.6);
+	}
+
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+		color: var(--color-green);
+	}
+
+	&__link-icon {
+		display: block;
+		margin-left: 1.2rem;
+		width: 1.3rem;
+		height: 1.3rem;
+		fill: var(--color-green);
+	}
+}

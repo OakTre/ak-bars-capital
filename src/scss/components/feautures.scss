@@ -1,0 +1,86 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
+.feautures {
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 32px;
+
+		@include mq(md) {
+			column-gap: 0;
+			row-gap: 24px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		grid-column: 4 span;
+		padding: 3rem 2.4rem 1.6rem 2.4rem;
+		background-color: var(--color-grey-bg);
+		border-radius: 1rem;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
+	}
+
+	&__heading {
+		position: relative;
+		z-index: 2;
+		display: block;
+		font-weight: 700;
+		font-size: 4.8rem;
+		line-height: 1;
+		font-family: var(--second-ff);
+		letter-spacing: 0.02em;
+		color: var(--color-green);
+		margin-bottom: 3.2rem;
+
+		span {
+			font-size: 2.4rem;
+			line-height: 2.7rem;
+		}
+
+		@include mq(sm) {
+			font-size: 4rem;
+			line-height: 1;
+			letter-spacing: -0.04em;
+		}
+	}
+
+	&__text {
+		position: relative;
+		z-index: 2;
+		font-weight: 500;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		letter-spacing: 0.02em;
+		max-width: 32.7rem;
+
+		span {
+			color: var(--color-green);
+		}
+
+		&._big {
+			font-weight: 500;
+			font-size: 2rem;
+			line-height: 2.7rem;
+		}
+	}
+
+	&__img-icon {
+		position: absolute;
+		top: 3.2rem;
+		right: 2.2rem;
+	}
+
+	&__img-icon-bg {
+		position: absolute;
+		top: 3rem;
+		right: 2.4rem;
+		// z-index: -1;
+		width: 14.9rem;
+		height: 14.9rem;
+	}
+}
