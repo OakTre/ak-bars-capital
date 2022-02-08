@@ -71,6 +71,15 @@
 		width: 38.5rem;
 		height: 55.9rem;
 		object-fit: cover;
+		object-position: top;
+
+		&._type2 {
+			right: 0;
+			bottom: 9.8rem;
+			width: 48.2rem;
+			height: 41.4rem;
+			object-fit: contain;
+		}
 	}
 
 	&__nav {

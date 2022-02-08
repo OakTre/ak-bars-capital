@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			hideIconOnBalloonOpen: false,
 		});
 
-		contactsMap.behaviors.disable('scrollZoom');
+		// contactsMap.behaviors.disable('scrollZoom');
 
 		let marActive = `<a data-img="" href="" class="map__logo-svg"><img src="/local/assets/img/map-logo.svg"></a>`
 

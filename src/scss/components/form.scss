@@ -1,0 +1,124 @@
+.form {
+	margin-bottom: 10.5rem;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__inner {
+		width: 62.1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__heading {
+		margin-bottom: 2.4rem;
+	}
+
+	&__txt {
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		margin-bottom: 5.6rem;
+		text-align: center;
+	}
+
+	&__label {
+		position: relative;
+		display: block;
+		width: 100%;
+		margin-bottom: 1.6rem;
+
+		&:nth-last-of-type(1) {
+			margin-bottom: 3.2rem;
+		}
+
+		.parsley-errors-list {
+			position: absolute;
+			right: 1rem;
+			bottom: 0.5rem;
+			color: var(--color-red);
+			font-size: 1.2rem;
+			line-height: 1.4rem;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		height: 6.4rem;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		padding: 2rem 1.6rem;
+		background-color: var(--color-white);
+
+		border: 1px solid var(--border-color);
+		border-radius: 0.5rem;
+		outline: none;
+
+		&.parsley-error {
+			border-color: var(--color-red);
+		}
+
+		&::placeholder {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			color: var(--color-grey2);
+		}
+	}
+
+	&__agreement-wrapper {
+		align-self: stretch;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__btn {
+		padding: 1.8rem 3.5rem;
+	}
+
+	&__agreement {
+		cursor: pointer;
+		position: relative;
+		display: block;
+
+		&.parsley-error {
+			p {
+				color: var(--color-red);
+			}
+		}
+
+		~ .parsley-errors-list {
+			display: none;
+		}
+
+		p {
+			position: relative;
+			padding-left: 3.7rem;
+			max-width: 27.6rem;
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			letter-spacing: 0.02em;
+			color: var(--color-grey2);
+
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 2.5rem;
+				height: 2.5rem;
+				border-radius: 0.5rem;
+				border: 1px solid var(--border-color);
+				background-color: var(--color-white);
+				content: "";
+			}
+		}
+
+	}
+
+	&__input-agreement {
+
+	}
+}

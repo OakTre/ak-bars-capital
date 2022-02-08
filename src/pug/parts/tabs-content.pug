@@ -1,0 +1,118 @@
++linkCSS("tabs-content")
+
+section.tabs-content.section
+	.site-container.tabs-content__container.js-tabs-container
+		ul.tabs-content__nav
+			li.tabs-content__nav-item
+				label.tabs-content__nav-label
+					input.visually-hidden.js-tab(type="radio" name="tab" value="questions")
+					span.tabs-content__btn
+						|	Частые вопросы
+			li.tabs-content__nav-item
+				label.tabs-content__nav-label
+					input.visually-hidden.js-tab(type="radio" name="tab" value="invest")
+					span.tabs-content__btn
+						|	Требования к инвестору
+			li.tabs-content__nav-item
+				label.tabs-content__nav-label
+					input.visually-hidden.js-tab(type="radio" checked name="tab" value="payment")
+					span.tabs-content__btn
+						|	Как оплатить
+		.tabs-content__content-list
+			.tabs-content__content.js-tab-content(data-content="questions")
+				.questions
+					h3
+						|	Условия инвестирования
+
+					h4
+						|	Минимальная сумма инвестиций
+					p
+						|	— 1 000 рублей по заявкам на приобретение инвестиционных паев, поданным владельцем инвестиционных паев;
+						br
+						|	— 30 000 рублей по заявкам на приобретение инвестиционных паев, поданным номинальным держателем.
+
+					h4
+						|	Надбавка
+
+					p
+						|	При приобретении инвестиционных паев по заявке, поданной Управляющей компании или Агенту ПАО «АК БАРС» БАНК надбавка, на которую увеличивается расчетная стоимость инвестиционного пая, составляет:
+
+					p
+						|	—  1 (Один) процент от расчетной стоимости одного инвестиционного пая при внесении в оплату инвестиционных паев Фонда денежных средств в размере менее 50 000 (Пятидесяти тысяч) рублей;
+
+					p
+						|	—  0,5 (Ноль целых пять десятых) процента от расчетной стоимости одного инвестиционного пая при внесении в оплату инвестиционных паев Фонда денежных средств...
+					h4
+						|	Скидка
+					p
+						|	При погашении инвестиционных паев Фонда по заявке, поданной Управляющей компании или Агенту ПАО «АК БАРС» БАНК, скидка, на которую уменьшается расчетная стоимость инвестиционного пая, составляет:
+
+					p
+						|	- 1,8 (Одна целая восемь десятых) процента от расчетной стоимости инвестиционного пая в случае, если заявка на погашение инвестиционных паев подана в срок менее или равный 180 (Ста восьмидесяти) дням со дня внесения приходной записи по зачислению данных инвестиционных паев на лицевой счет, с которого производится погашение данных инвестиционных паев;
+
+					h4
+						|	Вознаграждения
+					p
+						|	Вознаграждение УК: 1,3 % от среднегодовой стоимости чистых активов Фонда.
+
+					p
+						|	Вознаграждения специализированного депозитария, регистратора: не более 0,25% среднегодовой стоимости чистых активов Фонда.
+
+					p
+						|	Прочие расходы: не более 0,4% от среднегодовой стоимости чистых активов Фонда.
+
+
+			.tabs-content__content.js-tab-content(data-content="invest")
+				.payment
+					.payment__item
+						img.payment__img(src="/local/assets/img/pifs/payment-img.svg", alt="")
+						span.payment__heading
+							|	Оплата паев в&nbsp;банкоматах2
+						p.payment__text
+							|	В банкоматах ПАО «АК БАРС» БАНКА, с помощью пластиковых карт
+					.payment__item
+						img.payment__img(src="/local/assets/img/pifs/payment-img2.svg", alt="")
+						span.payment__heading
+							|	Оплата паев в интернет&nbsp;-&nbsp;банке
+						p.payment__text
+							|	Без комиссии, с подключенной услугой «Дистанционного банковского обслуживания»
+					.payment__item
+						img.payment__img(src="/local/assets/img/pifs/payment-img3.svg", alt="")
+						span.payment__heading
+							|	Биржевое обращение&nbsp;паев
+						p.payment__text
+							|	Паи ряда паевых инвестиционных фондов
+					.payment__item
+						img.payment__img(src="/local/assets/img/pifs/payment-img4.svg", alt="")
+						span.payment__heading
+							|	Агенты «АК&nbsp;БАРС&nbsp;КАПИТАЛ»
+						p.payment__text
+							|	По выдаче, погашению и обмену инвестиционных паев
+			.tabs-content__content.js-tab-content(data-content="payment")
+				.payment
+					.payment__item
+						img.payment__img(src="/local/assets/img/pifs/payment-img.svg", alt="")
+						span.payment__heading
+							|	Оплата паев в&nbsp;банкоматах
+						p.payment__text
+							|	В банкоматах ПАО «АК БАРС» БАНКА, с помощью пластиковых карт
+					.payment__item
+						img.payment__img(src="/local/assets/img/pifs/payment-img2.svg", alt="")
+						span.payment__heading
+							|	Оплата паев в интернет&nbsp;-&nbsp;банке
+						p.payment__text
+							|	Без комиссии, с подключенной услугой «Дистанционного банковского обслуживания»
+					.payment__item
+						img.payment__img(src="/local/assets/img/pifs/payment-img3.svg", alt="")
+						span.payment__heading
+							|	Биржевое обращение&nbsp;паев
+						p.payment__text
+							|	Паи ряда паевых инвестиционных фондов
+					.payment__item
+						img.payment__img(src="/local/assets/img/pifs/payment-img4.svg", alt="")
+						span.payment__heading
+							|	Агенты «АК&nbsp;БАРС&nbsp;КАПИТАЛ»
+						p.payment__text
+							|	По выдаче, погашению и обмену инвестиционных паев
+
++linkJs("tabs")

@@ -1,0 +1,16 @@
+.rights {
+	background-color: var(--color-grey-bg);
+	padding: 6.7rem 0 6.5rem;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__text {
+		max-width: 101rem;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+	}
+}

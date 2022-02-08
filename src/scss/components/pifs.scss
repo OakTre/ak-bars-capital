@@ -1,0 +1,101 @@
+.pifs {
+	margin-bottom: 12.2rem;
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 32px;
+	}
+
+	&__item {
+		position: relative;
+		grid-column: 6 span;
+		background-color: var(--color-dark-blue);
+		border-radius: 1rem;
+		padding: 4.8rem;
+
+		&:hover {
+			.pifs__link-name {
+				text-decoration: underline;
+			}
+		}
+
+		&:nth-child(2) {
+			.pifs__img {
+				bottom: 2.5rem;
+				right: 8.8rem;
+				width: 10rem;
+				height: 15.7rem;
+			}
+		}
+	}
+
+	&__legend {
+		display: block;
+		max-width: 33.5rem;
+		font-weight: 700;
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+		font-family: var(--second-ff);
+		color: var(--color-white);
+		margin-bottom: 2.4rem;
+	}
+
+	&__link-name {
+		font-weight: 500;
+		font-size: 1.6rem;
+		line-height: 2.7rem;
+		color: var(--color-green);
+	}
+
+	&__img {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 6.8rem;
+		width: 13.5rem;
+		height: 21.1rem;
+	}
+}
+
+
+.pifs-feautures {
+	&__title {
+		margin-bottom: 1.6rem;
+	}
+
+	&__text {
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+		max-width: 73rem;
+		margin-bottom: 9.6rem;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 32px;
+	}
+
+	&__item {
+		grid-column: 3 span;
+		display: flex;
+		align-items: center;
+	}
+
+	&__item-img {
+		display: block;
+		object-fit: cover;
+		width: 7rem;
+		height: 7rem;
+		margin-right: 1.9rem;
+	}
+
+	&__item-text {
+		display: block;
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		max-width: 19.2rem;
+	}
+}

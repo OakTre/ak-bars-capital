@@ -9,7 +9,7 @@
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: repeat(2, 23rem);
+		grid-template-rows: 25.3rem 23rem;
 		gap: 32px;
 	}
 
@@ -17,11 +17,12 @@
 		position: relative;
 		background-color: var(--color-grey-bg);
 		border-radius: 1rem;
+		height: 100%;
 		padding: 3.2rem;
 		transition: background-color var(--transition);
 
 		&:hover {
-			background-color: var(--color-green);
+			background-color: var(--color-dark-blue);
 
 			.services__item-heading {
 				color: var(--color-white);
