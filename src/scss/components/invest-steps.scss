@@ -1,0 +1,76 @@
+.invest-steps {
+	&__heading {
+		max-width: 30rem;
+		margin-bottom: 6.4rem;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 32px;
+	}
+
+	&__item {
+		grid-column: 4 span;
+		position: relative;
+		padding: 3.2rem;
+		background-color: var(--color-grey-bg);
+		border-radius: 1rem;
+		min-height: 44.1rem;
+
+		&:nth-child(1) {
+			.invest-steps__img {
+				width: 18.8rem;
+				height: 24rem;
+			}
+		}
+
+		&:nth-child(2) {
+			.invest-steps__img {
+				width: 25.9rem;
+				height: 19rem;
+			}
+		}
+
+		&:nth-child(2) {
+			.invest-steps__img {
+				width: 21.4rem;
+				height: 17.8rem;
+			}
+		}
+	}
+
+	&__step {
+		display: block;
+		font-weight: 700;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		font-family: var(--second-ff);
+		color: var(--color-green);
+		text-transform: uppercase;
+		margin-bottom: 1.6rem;
+	}
+
+	&__item-heading {
+		display: block;
+		font-weight: 700;
+		font-size: 2rem;
+		line-height: 2.6rem;
+		font-family: var(--second-ff);
+		margin-bottom: 1.6rem;
+	}
+
+	&__item-text {
+		max-width: 32.5rem;
+		color: var(--color-grey3);
+	}
+
+	&__img {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
+		display: block;
+		object-fit: contain;
+	}
+}

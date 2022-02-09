@@ -60,7 +60,7 @@
 
 
 .pifs-feautures {
-	&__title {
+	&__heading {
 		margin-bottom: 1.6rem;
 	}
 
@@ -77,10 +77,30 @@
 		column-gap: 32px;
 	}
 
+	&__item-wrapper {
+		grid-column: 4 span;
+		padding: 3.2rem 2.4rem;
+		background-color: var(--color-grey-bg);
+		border-radius: 1rem;
+
+		.pifs-feautures__item {
+			grid-column: none;
+			margin-bottom: 2.4rem;
+		}
+	}
+
 	&__item {
 		grid-column: 3 span;
 		display: flex;
 		align-items: center;
+	}
+
+	&__item-text-bottom {
+		font-weight: 400;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		color: var(--color-grey3);
+		max-width: 33.6rem;
 	}
 
 	&__item-img {

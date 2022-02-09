@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(e){const t=document.querySelector(".js-right-btn"),n=document.querySelector(".js-right-container");t.addEventListener("click",()=>{n.style.display="none"})}));

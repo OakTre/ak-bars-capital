@@ -1,5 +1,5 @@
 // js-tabs-container - на контейнер
-// js-tab-content, data-menu="<tab-value>" и gl__menu-tab-content - на подменяемый контент
+// js-tab-content, data-menu="<tab-value>" - на подменяемый контент
 
 document.addEventListener("DOMContentLoaded", function (event) {
 	const menuTabsContainerElems = document.querySelectorAll('.js-tabs-container');

@@ -10,4 +10,4 @@ package-lock.json
 /.git/
 /**/_backstage
 /**/Thumbs.db
-# /app/
+/app/
