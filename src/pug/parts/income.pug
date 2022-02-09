@@ -1,0 +1,73 @@
++linkCSS("income")
+
+section.section.income
+	.site-container.income__container
+		.income__left-block
+			h2.income__heading.second-title
+				span
+					|	Рассчитайте
+				|	упущенный доход
+			p.income__txt
+				|	На основе исторической доходности фонда
+
+			.income-range
+				.income-range__item
+					label.income-range__label.js-range-container
+						span.income-range__heading
+							|	Первый взнос, ₽
+						input(type="text" class="income-range__input js-range-input-child" name="pevii-vznos")
+						.custom-range.js-range-input(data-start="30000" data-step="10000" data-min="30000" data-max="100000000")
+					.income-range__info-wrap
+						span.income-range__info-text
+							|	от 30 000
+						span.income-range__info-text
+							|	до 100 000 000
+				.income-range__item
+					label.income-range__label.js-range-container
+						span.income-range__heading
+							|	Срок инвестиций, в годах
+						input(type="text" class="income-range__input js-range-input-child" name="pevii-vznos")
+						.custom-range.js-range-input(data-start="2" data-step="1" data-min="1" data-max="5")
+					.income-range__info-wrap
+						span.income-range__info-text
+
+						span.income-range__info-text
+							|	до 5 лет
+
+
+			.income__warning
+				|	Расчет за 11.10.2018-12.10.2021 с учетом налогов для резидентов РФ и всех комиссий
+				span.tooltip
+					+icon("question")(width="10" height="10" class="tooltip__icon")
+					.tooltip__text-container
+						.tooltip__text-content
+							|	Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		.income__right-block
+			.possible-income
+				span.possible-income__heading
+					|	Возможный доход
+				.possible-income__body
+					.possible-income__left
+						.possible-income__text
+							span.possible-income__plus
+								|	+
+							span.possible-income__price
+								|	222 903,35
+							span.possible-income__r
+								|	 ₽
+						p.possible-income__small-txt
+							|	*с учетом налоговой льготы
+							br
+							|	от государства
+
+					.possible-income__rigth
+						.possible-income__percents
+							span.possible-income__percents-nubmer
+								|	155,66%
+								+icon("small-green-triangle")(width="12" height="11" class="possible-income__percents-nubmer-icon")
+							span.possible-income__percents-nubmer-text
+								|	Доходность
+
+				button.button-reset.button.possible-income__btn
+					|	Оформить
++linkJs("income")

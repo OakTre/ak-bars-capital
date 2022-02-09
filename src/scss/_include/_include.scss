@@ -48,6 +48,16 @@
 		padding: 1.2rem 2.4rem;
 	}
 
+	&._transparent {
+		background-color: var(--color-white);
+		border: 1px solid var(--border-color);
+		color: var(--color-dark);
+
+		&:hover {
+			background-color: var(--color-grey-bg);
+		}
+	}
+
 	@include mq(md) {
 		padding: 1.5rem 3.5rem;
 		font-size: 1.6rem;
@@ -315,5 +325,92 @@
 		display: block;
 		max-width: 95rem;
 		color: var(--color-grey2);
+	}
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+
+	&:hover {
+		.tooltip__text-container {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__icon {
+		width: 1rem;
+		height: 1rem;
+		fill: none;
+		stroke: var(--color-green);
+		stroke-width: 0.75;
+	}
+
+	&__text-container {
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		padding-bottom: 0.5rem;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity var(--transition), visibility var(--transition);
+	}
+
+	&__text-content {
+		background-color: var(--color-grey-bg);
+		border-radius: 0.8rem;
+		padding: 1rem;
+		color: var(--color-dark);
+		min-width: 15rem;
+		text-align: center;
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+	}
+}
+
+
+.custom-range {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	padding: 0 1.6rem;
+	width: 100%;
+	transform: translateX(-50%);
+	height: 2px;
+	background: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+
+	.noUi-connect {
+		background: var(--color-green);
+	}
+
+	.noUi-handle {
+		box-shadow: none;
+		border-radius: 50%;
+		border: none;
+		width: 2.2rem;
+		height: 2.2rem;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+
+		&::before {
+			content: none;
+		}
+
+		&::after {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: var(--color-green);
+			width: 1.4rem;
+			height: 1.4rem;
+			border-radius: 50%;
+		}
 	}
 }

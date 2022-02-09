@@ -2,13 +2,45 @@
 @import "../_include/_mixins/_media";
 
 .intro {
+	--intro-bg-color: var(--color-dark);
+	--intro-color-heading: var(--color-white);
+	--intro-color-text: var(--rgba-white-07);
+
+	&._white-intro {
+		--intro-bg-color: var(--color-grey-bg);
+		--intro-color-heading: var(--color-dark);
+		--intro-color-text: rgba(16, 0, 43, 0.7);
+
+		.intro-slider__item {
+			padding-top: 0;
+		}
+
+		.intro__text {
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+		}
+	}
+
 	height: 57rem;
 	overflow: hidden;
-	background-color: var(--color-dark);
+	background-color: var(--intro-bg-color);
 	background-repeat: no-repeat;
 	background-size: 126.8rem 40.3rem;
 	background-position: 70% 10%;
 	margin-bottom: 11.6rem;
+
+	&._small-margin {
+		margin-bottom: 4.8rem;
+
+		@include mq(md) {
+			margin-bottom: 8rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 4rem;
+		}
+	}
+
 
 	@include mq(md) {
 		margin-bottom: 7.2rem;
@@ -28,7 +60,7 @@
 	}
 
 	&__heading {
-		color: var(--color-white);
+		color: var(--intro-color-heading);
 		max-width: 61.2rem;
 		margin-bottom: 2.4rem;
 		overflow: hidden;
@@ -40,7 +72,7 @@
 	&__text {
 		font-size: 2.2rem;
 		line-height: 3.3rem;
-		color: var(--rgba-white-07);
+		color: var(--intro-color-text);
 		max-width: 55.5rem;
 		overflow: hidden;
 		display: -webkit-box;
@@ -50,6 +82,13 @@
 
 	&__btn {
 		margin-top: 4.8rem;
+		min-width: 26rem;
+	}
+
+	&__breadcrumbs {
+		margin-bottom: 0;
+		padding-top: 2.8rem;
+		padding-bottom: 4.1rem;
 	}
 }
 
@@ -87,5 +126,43 @@
 		right: 0;
 		bottom: 4.8rem;
 		z-index: 4;
+	}
+}
+
+.intro-feautures {
+	margin-bottom: 8rem;
+
+	@include mq(sm) {
+		margin-bottom: 4rem;
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 32px;
+	}
+
+	&__item {
+		grid-column: 4 span;
+		background-color: var(--color-grey-bg);
+		border-radius: 1rem;
+		padding: 3.2rem;
+	}
+
+	&__item-heading {
+		display: block;
+		margin-bottom: 1.2rem;
+		font-weight: 700;
+		font-size: 3.8rem;
+		line-height: 6.5rem;
+		font-family: var(--second-ff);
+		color: var(--color-green);
+	}
+
+	&__item-text {
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		font-family: var(--second-ff);
 	}
 }
