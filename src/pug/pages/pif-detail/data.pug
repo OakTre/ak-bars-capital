@@ -1,5 +1,48 @@
 +linkCSS("data")
 
+-
+	let found_arr = [{
+			name: "03.12.2021",
+			attr: "Дата"
+		},
+		{
+			name: "3 968.58",
+			attr: "Пай, руб."
+		},
+		{
+			name: "4 945 280.86",
+			attr: "СЧА, руб."
+		},
+		{
+			name: "- 5.49",
+			attr: "Прирост за 1 месяц"
+		},
+		{
+			name: "- 3.29",
+			attr: "За 3 месяца"
+		},
+		{
+			green: true,
+			name: "3.05",
+			attr: "За 6 месяцев"
+		},
+		{
+			green: true,
+			name: "21.06",
+			attr: "За год"
+		},
+		{
+			green: true,
+			name: "70.99",
+			attr: "За 3 года"
+		},
+		{
+			green: true,
+			name: "123.74",
+			attr: "За 5 лет"
+		}
+	]
+
 section.section.data
 	.site-container.data__container
 		h2.data__heading.second-title
@@ -7,6 +50,48 @@ section.section.data
 		p.data__text
 			|	По динамике стоимости пая оцените стабильность и доходность стратегии. Фонд акций подходит для высокорискованных инвесторов, так как стоимость пая может резко изменяться
 
+
+		.data__fund-info
+			for item in found_arr
+				- let greenClass = item.green ? "is-green" : false
+				.data__fund-info-item(data-heading=item.attr class=greenClass)=item.name
+					- if (item.green == true)
+						+icon("small-green-triangle")(width="12" height="11" class="data__fund-info-item-icon")
+
+
+		.data__btns-wrapper
+			p.data__percents
+				span
+					|	Динамика стоимости пая:
+				span
+					|	72,66%
+					+icon("small-green-triangle")(width="12" height="11" class="data__triangle-icon")
+			.data__period-btns
+				label.data-btn
+					input(type="radio" name="period" value="1month" class="visually-hidden")
+					span
+						|	1 месяц
+				label.data-btn
+					input(type="radio" name="period" value="3month" class="visually-hidden")
+					span
+						|	3 месяца
+				label.data-btn
+					input(type="radio" name="period" value="6month" class="visually-hidden")
+					span
+						|	6 месяцев
+				label.data-btn
+					input(type="radio" name="period" value="1year" class="visually-hidden")
+					span
+						|	1 год
+				label.data-btn
+					input(type="radio" name="period" value="3year" class="visually-hidden")
+					span
+						|	3 года
+				label.data-btn
+					input(type="radio" name="period" value="5year" class="visually-hidden")
+					span
+						|	5 лет
+		include chart
 
 		.data__text-info
 			p

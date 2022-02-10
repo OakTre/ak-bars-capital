@@ -64,4 +64,172 @@
 			text-decoration: underline;
 		}
 	}
+
+	&__btns-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 3rem;
+	}
+
+	&__percents {
+		display: inline-flex;
+		align-items: center;
+
+		span {
+			&:nth-child(1) {
+				font-size: 1.4rem;
+				line-height: 2.1rem;
+				letter-spacing: 0.02em;
+				color: var(--color-grey3);
+			}
+
+			&:nth-child(2) {
+				display: inline-flex;
+				align-items: center;
+				margin-left: 0.5rem;
+
+				font-weight: 700;
+				font-size: 2.4rem;
+				line-height: 3.6rem;
+				font-family: var(--second-ff);
+			}
+		}
+	}
+
+	&__triangle-icon {
+		display: block;
+		margin-left: 0.5rem;
+		fill: var(--color-green);
+	}
+
+	&__period-btns {
+		display: flex;
+		align-items: center;
+	}
+
+	&__fund-info {
+		display: flex;
+		align-items: center;
+		padding: 0.7rem 1.6rem .8rem;
+		background-color: var(--color-grey-bg);
+		margin-bottom: 5.8rem;
+		border-radius: 0.4rem;
+		justify-content: space-between;
+	}
+
+	&__fund-info-item {
+		flex-shrink: 0;
+		position: relative;
+		font-weight: 700;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		font-family: var(--second-ff);
+		display: flex;
+		align-items: center;
+
+		&.is-green {
+			color: var(--color-green);
+		}
+
+		&::before {
+			position: absolute;
+			left: 0;
+			bottom: calc(100% + 1.5rem);
+			font-weight: 400;
+			font-size: 1.4rem;
+			line-height: 1.9rem;
+			color: var(--color-grey3);
+			font-family: var(--main-ff);
+			content: attr(data-heading);
+			white-space: nowrap;
+		}
+
+		&:nth-child(1) {
+			width: 10.9rem;
+			margin-right: 6rem;
+		}
+
+		&:nth-child(2) {
+			width: 10.9rem;
+			margin-right: 4.8rem;
+		}
+
+		&:nth-child(3) {
+			width: 12.7rem;
+			margin-right: 7.5rem;
+		}
+
+		&:nth-child(4) {
+			width: 13rem;
+			margin-right: 4.8rem;
+		}
+
+		&:nth-child(5) {
+			width: 8rem;
+			margin-right: 4.8rem;
+		}
+
+		&:nth-child(6) {
+			width: 8.8rem;
+			margin-right: 4.8rem;
+		}
+
+		&:nth-child(7) {
+			width: 8.7rem;
+			margin-right: 0;
+		}
+
+		&:nth-child(8) {
+			width: 8.7rem;
+			margin-right: 2;
+		}
+
+		&:nth-child(9) {
+			width: auto;
+		}
+	}
+
+	&__fund-info-item-icon {
+		width: 0.9rem;
+		height: 0.9rem;
+		fill: var(--color-green);
+		margin-left: 0.5rem;
+	}
+}
+
+.data-btn {
+	position: relative;
+	display: block;
+	margin-right: 0.8rem;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	input:checked {
+		~ span {
+			color: var(--color-white);
+			background-color: var(--color-green);
+			border-color: var(--color-grey);
+		}
+	}
+
+	span {
+		padding: 0.6rem 2rem;
+		border-radius: 0.4rem;
+		border: 1px solid var(--border-color);
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+		color: var(--color-grey3);
+		letter-spacing: 0.02em;
+		transition: color var(--transition), background-color var(--transition), border-color var(--transition);
+		cursor: pointer;
+
+		&:hover {
+			color: var(--color-white);
+			background-color: var(--color-green);
+			border-color: var(--color-grey);
+		}
+	}
 }
