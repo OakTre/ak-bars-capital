@@ -1,3 +1,4 @@
+// обработчик запроса
 function sendRequest(method, url) {
 	return new Promise((resolve, reject) => {
 		const xhr = new XMLHttpRequest();
@@ -23,19 +24,35 @@ function sendRequest(method, url) {
 };
 
 document.addEventListener("DOMContentLoaded", function (event) {
-	const selectCity = document.querySelector(".js-sity-select");
+	const selectCityEl = document.querySelector(".js-sity-select");
+	const selectStoresEl = document.querySelector(".js-stores-select");
+
 	const url = "/local/include/cities.json";
-	let response;
+
 	const contentHeading = document.querySelector(".js-content-heading");
 	const contentStreet = document.querySelector(".js-content-street");
 	const contentWorkingHours = document.querySelector(".js-content-working-hours");
 	const contentMobile = document.querySelector(".js-content-mobile");
-	let phoneRegEX = /([01]?[- .]?[\(\. ]?[2-9]\d{2}[\)\. ]?[- .]?\d{3}[- .]\d{4})/;
 
+	let response;
+	let placemark;
+	let cityId;
+
+	// инициализирум селект с пунктом продаж
+	const selectStores = new Choices(selectStoresEl, {
+		searchEnabled: false,
+		itemSelectText: '',
+		shouldSort: false,
+		allowHTML: true,
+	});
+
+	// отправдяем запрос в бд
 	sendRequest("GET", url)
 		.then((data) => {
+			// сохраняем дату
 			response = data;
 
+			// проходимся по бз и забираем название городов с адишниками
 			for (let i = 0; i < response.length; i++) {
 				let selectCityOption = `
 					<option value="${response[i].id}">
@@ -43,10 +60,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					</option>
 				`;
 
-				selectCity.innerHTML += selectCityOption;
+				// подставляем в селект
+				selectCityEl.innerHTML += selectCityOption;
 			}
 
-			window.initSelect(selectCity);
+			// инициализирум селект с городами
+			const selectCity = new Choices(selectCityEl, {
+				searchEnabled: false,
+				itemSelectText: '',
+				shouldSort: false,
+				allowHTML: true,
+			});
+
 
 			// Карта
 			function init() {
@@ -69,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 				// storesMap.behaviors.disable('scrollZoom');
 
+				// проходимся по бз и подставляем иконки на карту
 				response.forEach((city) => {
 					let marActive = `<a data-img="" href="" class="map__logo-svg"><img src="/local/assets/img/map-logo.svg"></a>`
 
@@ -77,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 						[140, 64],
 					];
 
-					let placemark = new ymaps.Placemark(
+					placemark = new ymaps.Placemark(
 						city.coords, {}, {
 						iconLayout: ymaps.templateLayoutFactory.createClass(marActive),
 						zIndex: 700,
@@ -90,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					});
 
 					housesCollection.add(placemark);
-
 				});
 
 				storesMap.geoObjects.add(housesCollection);
@@ -106,14 +131,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 				storesMap.setCenter(geoCenter);
 
-				selectCity.addEventListener("change", (e) => {
+				// вешаем событие на изменение селекта города
+				selectCityEl.addEventListener("change", (e) => {
 					let self = e.target;
 					let value = e.target.options[e.target.selectedIndex].value;
 
+					// проходимся по бд и подставляем нужную инфу на страницу
 					for (i = 0; i < response.length; i++) {
 						if(response[i].id == Number(value)) {
+							// сохраняем айдишник города
+							cityId = response[i].id;
+
+							// выставляем карту выбанного города
 							storesMap.setCenter(response[i].coords);
 
+							// подставляем нужную инфу на страницу
 							contentHeading.innerHTML = response[i].heading;
 							contentStreet.innerHTML = response[i].street;
 							contentWorkingHours.innerHTML = "";
@@ -129,10 +161,66 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 								contentWorkingHours.innerHTML += workingHoursTemplate;
 							}
+
+							// чистим второй селект
+							selectStores.clearChoices();
+
+							// подставляепм во второй селект данный из бд
+							for (let k = 0; k < response[i].stores.length; k++) {
+								selectStores.setChoices([
+									{value: response[i].stores[k].id, label: response[i].stores[k].slectName, selected: k == 0 ? true : false}
+								])
+							}
 						}
 					};
 				});
+
+				// вешаем событие на изменение селекта с пунктами продаж
+				selectStoresEl.addEventListener("change", (e) => {
+					let self = e.target;
+					let value = e.target.options[e.target.selectedIndex].value;
+
+					// в уже известоном городе(cityId) проходимся по пунктам продаж и подставлеям данные
+					for (let k = 0; k < response[cityId].stores.length; k++) {
+
+						if (response[cityId].stores[k].id == Number(value) ) {
+
+							// выставляем иконки на карту(пока почему-то не работает))))
+							placemark.options.set(
+								"iconLayout",
+								ymaps.templateLayoutFactory.createClass(
+									`<a data-img="" href="" class="map__logo-svg"><img src="/local/assets/img/map-logo.svg"></a>`
+								)
+							);
+
+							storesMap.setCenter(response[cityId].stores[k].coords);
+
+							housesCollection.add(placemark);
+
+							storesMap.geoObjects.add(housesCollection);
+
+							// подставляем нужную инфу на страницу
+							contentHeading.innerHTML = response[cityId].stores[k].heading;
+							contentStreet.innerHTML = response[cityId].stores[k].street;
+							contentWorkingHours.innerHTML = "";
+							contentMobile.innerHTML = response[cityId].stores[k].phone;
+
+							for (let l=0; l<response[cityId].stores[k].workingHours.length; l++) {
+								let workingHoursTemplate = `
+									<div class="map__working-time-row">
+										<span class="map__working-time-day">${response[cityId].stores[k].workingHours[l].day}</span>
+										<span class="map__working-time-hours">${response[cityId].stores[k].workingHours[l].hours}</span>
+									</div>
+								`
+
+								contentWorkingHours.innerHTML += workingHoursTemplate;
+							}
+						}
+					}
+				});
 			}
+
+			// инициализируем карту
 			ymaps.ready(init);
 		})
 		.catch(()=>{

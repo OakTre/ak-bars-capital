@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	  function resetSelect() {
 		slcts.forEach((el)=>{
 		  el.destroy();
-		  el.init();
+		//   el.init();
 		});
 	  };
 
