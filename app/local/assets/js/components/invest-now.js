@@ -1,1 +1,23 @@
-document.addEventListener("DOMContentLoaded",(function(s){const t=document.querySelectorAll(".js-btn-filter"),e=document.querySelector(".js-invest-list");t.forEach(s=>{s.addEventListener("click",()=>{"cards"==s.dataset.filter?(e.classList.remove("is-list"),e.classList.add("is-cards"),t.forEach(s=>{s.classList.remove("is-active")}),s.classList.add("is-active")):(e.classList.remove("is-cards"),e.classList.add("is-list"),t.forEach(s=>{s.classList.remove("is-active")}),s.classList.add("is-active"))})})}));
+document.addEventListener("DOMContentLoaded", function(event) {
+	const btnsFilter = document.querySelectorAll(".js-btn-filter");
+	const list = document.querySelector(".js-invest-list");
+
+	btnsFilter.forEach((btn)=>{
+		btn.addEventListener("click", ()=>{
+			const filter = btn.dataset.filter;
+
+			if (filter == "cards") {
+				list.classList.remove("is-list");
+				list.classList.add("is-cards");
+				btnsFilter.forEach((el)=>{el.classList.remove("is-active")})
+				btn.classList.add("is-active");
+			} else {
+				list.classList.remove("is-cards");
+				list.classList.add("is-list");
+				btnsFilter.forEach((el)=>{el.classList.remove("is-active")})
+				btn.classList.add("is-active");
+			}
+
+		});
+	});
+});

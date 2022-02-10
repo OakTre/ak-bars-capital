@@ -1,0 +1,160 @@
++linkCSS("tabs-content")
+
+section.tabs-content.section
+	.site-container
+		h2.tabs-content__heading.second-title
+			|	Где оплатить
+		.tabs-content__container.js-tabs-container
+			ul.tabs-content__nav
+				li.tabs-content__nav-item
+					label.tabs-content__nav-label
+						input.visually-hidden.js-tab(type="radio" checked name="tab" value="online-pay")
+						span.tabs-content__btn
+							|	Оплата в интернет-банке
+				li.tabs-content__nav-item
+					label.tabs-content__nav-label
+						input.visually-hidden.js-tab(type="radio" name="tab" value="pay-bankomat")
+						span.tabs-content__btn
+							|	Оплата в банкоматах
+				li.tabs-content__nav-item
+					label.tabs-content__nav-label
+						input.visually-hidden.js-tab(type="radio" name="tab" value="stock-pay")
+						span.tabs-content__btn
+							|	Биржевое обращение
+				li.tabs-content__nav-item
+					label.tabs-content__nav-label
+						input.visually-hidden.js-tab(type="radio" name="tab" value="agents-pay")
+						span.tabs-content__btn
+							|	Агенты УК АК БАРС КАПИТАЛ
+			.tabs-content__content-list
+				.tabs-content__content.js-tab-content(data-content="online-pay")
+					.online-payment
+						p.online-payment__heading-text
+							|	Если вы пользуетесь услугой дистанционного банковского обслуживания в «АК БАРС» Банке, с 1 июня 2009 года Вы можете без комиссии оплачивать паи открытых ПИФов нашей компании с ее помощью
+						h3.online-payment__legend
+							|	Какие ПИФы можно оплатить в интернет-банке?
+						.online-payment__list
+							a.online-payment__link(href="/")
+								span.online-payment__link-legend
+									|	«АК БАРС- Акции»
+								p.online-payment__link-txt
+									|	ОПИФ рыночных финансовых инструментов
+								span.online-payment__link-name
+									|	 Подробнее
+							a.online-payment__link(href="/")
+								span.online-payment__link-legend
+									|	«АК БАРС- Индексный»
+								p.online-payment__link-txt
+									|	ОПИФ рыночных финансовых инструментов
+								span.online-payment__link-name
+									|	 Подробнее
+							a.online-payment__link(href="/")
+								span.online-payment__link-legend
+									|	«АК БАРС- Консервативный»
+								p.online-payment__link-txt
+									|	ОПИФ рыночных финансовых инструментов
+								span.online-payment__link-name
+									|	 Подробнее
+							a.online-payment__link(href="/")
+								span.online-payment__link-legend
+									|	«Максвэлл Капитал»
+								p.online-payment__link-txt
+									|	ОПИФ рыночных финансовых инструментов
+								span.online-payment__link-name
+									|	 Подробнее
+						.online-payment__content
+							h4
+								|	ВАЖНО ЗНАТЬ
+							p
+								|	Для осуществления платежа необходимо иметь подключенную услугу Дистанционного банковского обслуживания ПАО «АК БАРС» БАНК и пятнадцатизнанчый номер заявки на приобретение инвестиционных паев.
+
+							p
+								|	Зачисление инвестиционных паев на ваш лицевой счет произойдет в течение трех рабочих дней после поступления денежных средств на расчетный счет Фонда.
+
+							p
+								|	ВНИМАНИЕ! Просим Вас сообщать об оплате паёв, произведенных через Интернет-банк, своему менеджеру по продажам.
+
+							p
+								|	Кроме того, вы всегда можете оплатить паи УК «АК БАРС КАПИТАЛ» в любом отделении «АК БАРС» Банка или безналичным переводом с Вашего рублевого счета, открытого в любом другом банке.
+
+				.tabs-content__content.js-tab-content(data-content="pay-bankomat")
+					.payment
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img.svg", alt="")
+							span.payment__heading
+								|	Оплата паев в&nbsp;банкоматах2
+							p.payment__text
+								|	В банкоматах ПАО «АК БАРС» БАНКА, с помощью пластиковых карт
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img2.svg", alt="")
+							span.payment__heading
+								|	Оплата паев в интернет&nbsp;-&nbsp;банке
+							p.payment__text
+								|	Без комиссии, с подключенной услугой «Дистанционного банковского обслуживания»
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img3.svg", alt="")
+							span.payment__heading
+								|	Биржевое обращение&nbsp;паев
+							p.payment__text
+								|	Паи ряда паевых инвестиционных фондов
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img4.svg", alt="")
+							span.payment__heading
+								|	Агенты «АК&nbsp;БАРС&nbsp;КАПИТАЛ»
+							p.payment__text
+								|	По выдаче, погашению и обмену инвестиционных паев
+
+				.tabs-content__content.js-tab-content(data-content="stock-pay")
+					.payment
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img.svg", alt="")
+							span.payment__heading
+								|	Оплата паев в&nbsp;банкоматах
+							p.payment__text
+								|	В банкоматах ПАО «АК БАРС» БАНКА, с помощью пластиковых карт
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img2.svg", alt="")
+							span.payment__heading
+								|	Оплата паев в интернет&nbsp;-&nbsp;банке
+							p.payment__text
+								|	Без комиссии, с подключенной услугой «Дистанционного банковского обслуживания»
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img3.svg", alt="")
+							span.payment__heading
+								|	Биржевое обращение&nbsp;паев
+							p.payment__text
+								|	Паи ряда паевых инвестиционных фондов
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img4.svg", alt="")
+							span.payment__heading
+								|	Агенты «АК&nbsp;БАРС&nbsp;КАПИТАЛ»
+							p.payment__text
+								|	По выдаче, погашению и обмену инвестиционных паев
+
+				.tabs-content__content.js-tab-content(data-content="agents-pay")
+					.payment
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img.svg", alt="")
+							span.payment__heading
+								|	Оплата паев в&nbsp;банкоматах
+							p.payment__text
+								|	В банкоматах ПАО «АК БАРС» БАНКА, с помощью пластиковых карт
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img2.svg", alt="")
+							span.payment__heading
+								|	Оплата паев в интернет&nbsp;-&nbsp;банке
+							p.payment__text
+								|	Без комиссии, с подключенной услугой «Дистанционного банковского обслуживания»
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img3.svg", alt="")
+							span.payment__heading
+								|	Биржевое обращение&nbsp;паев
+							p.payment__text
+								|	Паи ряда паевых инвестиционных фондов
+						.payment__item
+							img.payment__img(src="/local/assets/img/pifs/payment-img4.svg", alt="")
+							span.payment__heading
+								|	Агенты «АК&nbsp;БАРС&nbsp;КАПИТАЛ»
+							p.payment__text
+								|	По выдаче, погашению и обмену инвестиционных паев
++linkJs("tabs")

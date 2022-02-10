@@ -1,0 +1,76 @@
++linkCSS("map")
++linkCSS("pay-stores")
+
+section.pay-stores
+	.site-container.pay-stores__container
+		h2.pay-stores__heading.second-title
+			|	Пункты продаж
+		p.pay-stores__heading-text
+			|	Инвестиционные продукты ООО УК «АК БАРС КАПИТАЛ» можно приобрести более чем в 30 населенных пунктах на территории России и Республики Татарстан.
+		.pay-stores__selects-container
+			.pay-stores__select
+				.select
+					.select__container
+						span.select__placeholder
+							|	Выберите город
+							//- js-custom-select
+						select(name="city" class="js-sity-select")
+			.pay-stores__select
+				.select
+					.select__container
+						span.select__placeholder
+							|	Пункт продаж
+						select(name="city" class="js-custom-select")
+							option(value="ул. Меридианная, д. 1а")
+								|	ул. Меридианная, д. 1а
+	.pay-stores__map
+		#pay-stores-map.map__map
+		.site-container.map__container.pay-stores__map-container
+			.map__content
+				span.map__heading.js-content-heading
+					|	Офис в Казани на ул. Меридианная
+				span.map__adress
+					+icon("marker")(class="map__adres-icon" width="24" height="24")
+					span.js-content-street
+						|	420124, г. Казань, ул. Меридианная, д. 1а
+
+				span.map__working-time
+					|	Режим работы
+				.map__working-time-list.js-content-working-hours
+					.map__working-time-row
+						span.map__working-time-day
+							| пн-чт
+						span.map__working-time-hours
+							| 8:30-17:30
+					.map__working-time-row
+						span.map__working-time-day
+							| пт
+						span.map__working-time-hours
+							| 8:30-16:15, обед 13:00-13:45
+					.map__working-time-row
+						span.map__working-time-day
+							| сб-вс
+						span.map__working-time-hours._grey
+							| выходной
+
+				a.map__link(href="tel:+78435186677")
+					+icon("mobile")(class="map__link-icon")
+					span.js-content-mobile
+						| 8 (843) 518-66-77
+
+				a.map__link(href="mailto: info@akbars-capital.ru")
+					+icon("email")(class="map__link-icon")
+					| info@akbars-capital.ru
+
+
+				span.map__link._text
+					+icon("post-icon")(class="map__link-icon")
+					| Для отправки корреспонденции:
+					br
+					| Татарстан, Казань, ул. Меридианная,
+					br
+					| д. 1а, ООО УК «АК&nbsp;БАРС&nbsp;КАПИТАЛ»
+
+script(src="https://api-maps.yandex.ru/2.1/?apikey=b0b15954-57af-4901-b78c-0ad5bd94cda8&lang=ru_RU")
++linkJs("initSelects")
++linkJs("storesMap")

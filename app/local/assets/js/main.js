@@ -1,1 +1,5 @@
-document.addEventListener("DOMContentLoaded",(function(e){BodyScrollOptions={reserveScrollBarGap:!0}}));
+document.addEventListener("DOMContentLoaded", function(event) {
+	const options = BodyScrollOptions = {
+		reserveScrollBarGap: true,
+	};
+});

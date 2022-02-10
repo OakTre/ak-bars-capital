@@ -1,0 +1,37 @@
+.pay-stores {
+	&__heading {
+		margin-bottom: 3.2rem;
+	}
+
+	&__heading-text {
+		max-width: 71.3rem;
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+		margin-bottom: 4.8rem;
+	}
+
+	&__selects-container {
+		position: relative;
+		z-index: 4;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 32px;
+		margin-bottom: 3.2rem;
+	}
+
+	&__select {
+		grid-column: 6 span;
+	}
+
+	&__map {
+		position: relative;
+		z-index: 2;
+		height: 75rem;
+		background-color: var(--color-grey-bg);
+	}
+
+	&__map-container {
+		display: flex;
+		justify-content: flex-end;
+	}
+}

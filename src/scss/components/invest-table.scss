@@ -1,10 +1,14 @@
 .invest-table {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	margin-top: 3.2rem;
 	background-color: var(--color-dark);
 	border-radius: 1rem;
 	padding: 4rem 9.2rem 4.2rem 3.8rem;
+
+	&.mob-bg {
+		background-color: var(--color-dark-blue);
+	}
 
 	&__icon {
 		display: block;
@@ -26,11 +30,13 @@
 	}
 
 	&__heading {
+		display: block;
 		font-weight: 700;
 		font-size: 1.8rem;
 		line-height: 2.7rem;
 		color: var(--color-white);
 		margin-bottom: 0.8rem;
+		max-width: 66.5rem;
 
 		span {
 			color: var(--color-green);
@@ -67,5 +73,30 @@
 		margin-left: 1rem;
 		fill: var(--color-green);
 		transition: fill var(--transition);
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+	}
+
+	&__link {
+		margin-right: 6rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link-heading {
+		display: block;
+		margin-bottom: 0.9rem;
+		color: var(--color-grey2);
+		font-size: 1.3rem;
+		line-height: 1.9rem;
+	}
+
+	&__content-btn {
+		width: 26rem;
 	}
 }

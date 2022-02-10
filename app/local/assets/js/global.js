@@ -1,1 +1,29 @@
-document.addEventListener("DOMContentLoaded",(function(t){if(!1===function(){const t=document.createElement("canvas");return!(!t.getContext||!t.getContext("2d"))&&0==t.toDataURL("image/webp").indexOf("data:image/webp")}()){document.querySelectorAll(".lazy[data-bg-fallback]").forEach((function(t){const e=t.getAttribute("data-bg-fallback");t.setAttribute("data-bg",e)}))}new LazyLoad({elements_selector:".lazy"})}));
+document.addEventListener("DOMContentLoaded", function(event) {
+	function canUseWebp () {
+		const elem = document.createElement("canvas");
+
+		if (elem.getContext && elem.getContext("2d")) {
+			return elem.toDataURL("image/webp").indexOf("data:image/webp") == 0;
+		}
+		return false;
+	};
+
+	if (canUseWebp() === false) {
+		const lazyBgItems = document.querySelectorAll(".lazy[data-bg-fallback]")
+
+		lazyBgItems.forEach(function(item) {
+			const srcBgFallback = item.getAttribute("data-bg-fallback");
+
+			item.setAttribute("data-bg", srcBgFallback);
+		})
+	}
+
+	function lazyImages() {
+		var lazyLoadInstance = new LazyLoad({
+			elements_selector: ".lazy"
+		});
+	}
+
+	lazyImages();
+});
+

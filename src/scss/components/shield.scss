@@ -48,6 +48,9 @@
 		border-radius: 1.2rem;
 		background-color: var(--shield-bg-color);
 		overflow: hidden;
+		background-repeat: no-repeat;
+		background-size: 65.4rem 24.9rem;
+		background-position: 96% 50%;
 	}
 
 	&__heading {
@@ -74,6 +77,28 @@
 		bottom: -5rem;
 		width: 51.1rem;
 		height: 42.1rem;
+
+		&._type2 {
+			bottom: 0 !important;
+		}
+	}
+
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		color: var(--color-green);
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+
+		&-icon {
+			fill: var(--color-green);
+			display: block;
+			margin-left: 0.5rem;
+			stroke-width: 0.4rem;
+			width: 1.4rem;
+			height: 1.4rem;
+		}
 	}
 }
 

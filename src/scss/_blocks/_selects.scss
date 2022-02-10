@@ -1,0 +1,113 @@
+.select {
+	position: relative;
+	width: 100%;
+
+	&__placeholder {
+		position: absolute;
+		top: 1rem;
+		left: 1.6rem;
+		z-index: 15;
+		font-size: 1.3rem;
+		line-height: 1.9rem;
+		color: var(--color-grey3);
+		pointer-events: none;
+	}
+
+	.choices {
+		&::after {
+			content: "";
+			right: 1.6rem;
+			top: 50%;
+			transform: translateY(-50%);
+			margin-top: 0;
+			height: 0.6rem;
+			width: 1.3rem;
+			background-image: url(/local/assets/img/arow-shevron.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			border: none !important;
+			transition: transform 200ms;
+		}
+
+		&.is-open {
+			.choices__inner {
+				border-bottom-color: transparent;
+				border-radius: 0.5rem 0.5rem 0 0;
+			}
+
+			.choices__list--dropdown {
+				border-top-color: transparent;
+			}
+
+			&::after {
+				margin-top: 0;
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+	}
+
+	.choices__list--single {
+		font-size: 1.6rem;
+		line-height: 1.9rem;
+		font-weight: 500;
+	}
+
+	.choices__inner {
+		padding: 3.3rem 1.6rem 1.2rem !important;
+		background-color: var(--color-white);
+		border-radius: 0.5rem;
+		border: 1px solid var(--border-color);
+		min-height: 0;
+		height: 6.4rem;
+	}
+
+	.choices__list--single {
+		padding: 0 !important;
+	}
+
+	.choices__placeholder {
+		font-weight: 700;
+		font-size: 1.2rem;
+		line-height: 1.6rem;
+		text-transform: uppercase;
+		color: var(--color-orange);
+	}
+
+	.choices__list--dropdown {
+		border-radius: 0 0 0.5rem 0.5rem;
+		border: 1px solid var(--border-color);
+		padding: 0.5rem 0 0 0;
+
+		/* полоса прокрутки (скроллбар) */
+		::-webkit-scrollbar {
+			width: 0.5rem; /* ширина для вертикального скролла */
+			height: 0.5rem; /* высота для горизонтального скролла */
+			background-color: transparent;
+		}
+
+		/* ползунок скроллбара */
+		::-webkit-scrollbar-thumb {
+			background-color: var(--color-green);
+		}
+
+		.choices__item {
+			padding: 1.3rem 1.6rem;
+			background-color: transparent;
+			font-size: 1.6rem;
+			line-height: 1.9rem;
+			transition: color 200ms;
+			// border-top: 1px solid var(--border-color);
+			text-transform: none;
+			color: var(--color-dark);
+
+			&.is-selected {
+				color: var(--color-orange);
+			}
+
+			&:hover {
+				background-color: var(--color-grey-bg);
+			}
+		}
+	}
+}

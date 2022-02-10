@@ -62,7 +62,6 @@ const stylesVendor = () => {
 
 const scripts = () => {
 	return src("./src/js/**/*.js")
-		.pipe(uglify().on("error", notify.onError()))
 		.pipe(dest("./app/local/assets/js"))
 		.pipe(browserSync.stream());
 
@@ -145,7 +144,7 @@ const watchFiles = () => {
 	watch("./src/pug/**/*.pug", pugBuild)
 	watch("./src/img/**/*.{png,jpg,jpeg,svg}", imgToApp)
 	watch("./src/img/sprite/*.svg", svgSprites)
-	watch("./src/resourses/**", resourses)
+	watch("./src/include/**", resourses)
 	watch("./src/js/**/*.js", scripts)
 	watch("./src/js/vendor/**.js", scriptsVendor)
 	watch("./src/img/*.{png,jpg,jpeg}", toWebp)
