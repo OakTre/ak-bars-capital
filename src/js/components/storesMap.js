@@ -36,15 +36,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	let response;
 	let placemark;
-	let cityId;
-
-	// инициализирум селект с пунктом продаж
-	const selectStores = new Choices(selectStoresEl, {
-		searchEnabled: false,
-		itemSelectText: '',
-		shouldSort: false,
-		allowHTML: true,
-	});
+	let cityId = 0;
 
 	// отправдяем запрос в бд
 	sendRequest("GET", url)
@@ -66,6 +58,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 			// инициализирум селект с городами
 			const selectCity = new Choices(selectCityEl, {
+				searchEnabled: false,
+				itemSelectText: '',
+				shouldSort: false,
+				allowHTML: true,
+			});
+
+			// заходим в бд и в Казани(id=0) забираем пункты продаж с адишниками
+			for (let i = 0; i < response[0].stores.length; i++) {
+				let selectStoreOption = `
+					<option value="${response[0].stores[i].id}">
+						${response[0].stores[i].slectName}
+					</option>
+				`;
+
+				// подставляем в селект
+				selectStoresEl.innerHTML += selectStoreOption;
+			}
+
+			// инициализирум селект с пунктом продаж
+			const selectStores = new Choices(selectStoresEl, {
 				searchEnabled: false,
 				itemSelectText: '',
 				shouldSort: false,
@@ -98,10 +110,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				response.forEach((city) => {
 					let marActive = `<a data-img="" href="" class="map__logo-svg"><img src="/local/assets/img/map-logo.svg"></a>`
 
-					let infoCoordinates = [
-						[0, 0],
-						[140, 64],
-					];
+					let infoCoordinates = [[55.70, 37.30], [55.80, 37.40]];
 
 					placemark = new ymaps.Placemark(
 						city.coords, {}, {
@@ -111,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 						zIndexActive: 700,
 						iconShape: {
 							type: "Rectangle",
-							coordinates: infoCoordinates
+							coordinates: [[55.70, 37.30], [55.80, 37.40]],
 						},
 					});
 
@@ -138,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 					// проходимся по бд и подставляем нужную инфу на страницу
 					for (i = 0; i < response.length; i++) {
-						if(response[i].id == Number(value)) {
+						if (response[i].id == Number(value)) {
 							// сохраняем айдишник города
 							cityId = response[i].id;
 
@@ -151,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 							contentWorkingHours.innerHTML = "";
 							contentMobile.innerHTML = response[i].phone;
 
-							for (let k=0; k<response[i].workingHours.length; k++) {
+							for (let k = 0; k < response[i].workingHours.length; k++) {
 								let workingHoursTemplate = `
 									<div class="map__working-time-row">
 										<span class="map__working-time-day">${response[i].workingHours[k].day}</span>
@@ -168,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 							// подставляепм во второй селект данный из бд
 							for (let k = 0; k < response[i].stores.length; k++) {
 								selectStores.setChoices([
-									{value: response[i].stores[k].id, label: response[i].stores[k].slectName, selected: k == 0 ? true : false}
+									{ value: response[i].stores[k].id, label: response[i].stores[k].slectName, selected: k == 0 ? true : false }
 								])
 							}
 						}
@@ -183,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 					// в уже известоном городе(cityId) проходимся по пунктам продаж и подставлеям данные
 					for (let k = 0; k < response[cityId].stores.length; k++) {
 
-						if (response[cityId].stores[k].id == Number(value) ) {
+						if (response[cityId].stores[k].id == Number(value)) {
 
 							// выставляем иконки на карту(пока почему-то не работает))))
 							placemark.options.set(
@@ -202,10 +211,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 							// подставляем нужную инфу на страницу
 							contentHeading.innerHTML = response[cityId].stores[k].heading;
 							contentStreet.innerHTML = response[cityId].stores[k].street;
-							contentWorkingHours.innerHTML = "";
 							contentMobile.innerHTML = response[cityId].stores[k].phone;
 
-							for (let l=0; l<response[cityId].stores[k].workingHours.length; l++) {
+							contentWorkingHours.innerHTML = "";
+							for (let l = 0; l < response[cityId].stores[k].workingHours.length; l++) {
 								let workingHoursTemplate = `
 									<div class="map__working-time-row">
 										<span class="map__working-time-day">${response[cityId].stores[k].workingHours[l].day}</span>
@@ -223,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			// инициализируем карту
 			ymaps.ready(init);
 		})
-		.catch(()=>{
+		.catch(() => {
 			// ошибка запроса
 		})
 });

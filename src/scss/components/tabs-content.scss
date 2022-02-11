@@ -253,7 +253,46 @@
 			font-size: 1.2rem;
 			line-height: 2.7rem;
 			letter-spacing: 0.04em;
-			margin-bottom: 1.8rem;
+			margin: 1.8rem 0;
+
+			&:nth-of-type(1) {
+				margin-top: 0;
+			}
+		}
+
+		ul {
+			max-width: 113.6rem;
+			margin: 1.5rem 0;
+
+			li {
+				position: relative;
+				padding-left: 1.5rem;
+				color: var(--color-grey2);
+				margin-bottom: 0.5rem;
+
+				a {
+					display: inline;
+					margin: 0;
+				}
+
+				&::before {
+					position: absolute;
+					top: 0.7rem;
+					left: 0;
+					width: 0.4rem;
+					height: 0.4rem;
+					background-color: currentColor;
+					border-radius: 50%;
+					content: "";
+				}
+
+				span {
+					display: block;
+					margin: 0.2rem 0 0 0;
+					font-size: 1.3rem;
+					line-height: 1.6rem;
+				}
+			}
 		}
 
 		p {
@@ -261,8 +300,22 @@
 			color: var(--color-grey2);
 			margin-bottom: 2rem;
 
+			b {
+				font-weight: 700;
+			}
+
 			&:nth-last-of-type(1) {
 				margin-bottom: 0;
+			}
+		}
+
+		a {
+			display: inline-block;
+			margin: 0.8rem 0;
+			color: var(--color-green);
+
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}

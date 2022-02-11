@@ -45,6 +45,20 @@
 				transform: translateY(-50%) rotate(180deg);
 			}
 		}
+
+		&.is-flipped {
+			.choices__inner {
+				border-top-color: transparent;
+				border-bottom-color: var(--border-color);
+				border-radius: 0 0 0.5rem 0.5rem;
+			}
+
+			.choices__list--dropdown {
+				border-bottom-color: transparent;
+				border-top-color: var(--border-color);
+				border-radius: 0.5rem 0.5rem 0 0 ;
+			}
+		}
 	}
 
 	.choices__list--single {
