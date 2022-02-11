@@ -1,0 +1,37 @@
+.management-feautures {
+	&__heading {
+		margin-bottom: 7.3rem;
+		max-width: 63.1rem;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 32px;
+	}
+
+	&__item {
+		grid-column: 4 span;
+
+		&:last-child {
+			.management-feautures__item-text {
+				max-width: 33.9rem;
+			}
+		}
+	}
+
+	&__item-icon {
+		display: block;
+		width: 7rem;
+		height: 7rem;
+		object-fit: cover;
+		margin-bottom: 2.4rem;
+	}
+
+	&__item-text {
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 2.7rem;
+		max-width: 28.7rem;
+	}
+}

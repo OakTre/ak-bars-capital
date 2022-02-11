@@ -1,0 +1,49 @@
+.solo-management {
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 32px;
+	}
+
+	&__left-block {
+		grid-column: 5 span;
+	}
+
+	&__right-block {
+		grid-column: 7 span;
+	}
+
+	&__heading {
+		margin-bottom: 3.2rem;
+	}
+
+	&__txt {
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 2.7rem;
+	}
+
+	&__content {
+		width: 100%;
+		padding: 3.2rem 1.8rem 3.2rem 3.2rem;
+		background-color: var(--color-grey-bg);
+		border-radius: 0.8rem;
+
+		p {
+			color: var(--color-grey4);
+
+			b, strong {
+				color: var(--color-green);
+			}
+		}
+	}
+
+	&__content-heading {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2rem;
+		line-height: 2.7rem;
+		margin-bottom: 1.8rem;
+		letter-spacing: 0.04em;
+	}
+}

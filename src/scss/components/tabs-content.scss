@@ -1,6 +1,17 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .tabs-content {
 	padding: 6.4rem 0 7.2rem;
 	background-color: var(--color-grey-bg);
+
+	&.managment-margin {
+		margin-bottom: 4.8rem;
+
+		@include mq(md) {
+			margin-bottom: 4rem;
+		}
+	}
 
 	&__heading {
 		margin-bottom: 4.8rem;
@@ -145,6 +156,17 @@
 		font-size: 2rem;
 		line-height: 3.6rem;
 		margin: 3.2rem 0 1.8rem;
+
+		&:nth-of-type(1) {
+			margin-top: 0;
+		}
+	}
+
+	h5 {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 22px;
+		margin: 0;
 	}
 
 	p {

@@ -291,6 +291,10 @@
 		font-size: 1.8rem;
 		line-height: 2.4rem;
 		max-width: 31.5rem;
+
+		&._max-width {
+			max-width: 33.5rem;
+		}
 	}
 
 	&__size {
