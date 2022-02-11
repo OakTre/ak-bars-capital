@@ -1,0 +1,118 @@
++linkCSS("materials")
++linkCSS("info-card")
+
+-
+	let nav_arr = [
+		{
+			name: "Все материалы",
+			count: ""
+		},
+		{
+			name: "Первые шаги",
+			count: "13"
+		},
+		{
+			name: "Законодательство",
+			count: "29"
+		},
+		{
+			name: "Налогооблажение",
+			count: "8"
+		},
+		{
+			name: "Словарь инвестора",
+			count: "14"
+		},
+		{
+			name: "Все о ПИФах",
+			count: "16"
+		}
+	]
+
+	let nav_arr2 = ["Все теги", "Бизнес", "Кризис", "Мнение", "Аналитика", "инструкция", "Про деньги", "Обзор"]
+
+	let cards_arr = [
+		{
+			name: "Что такое ПИФ",
+			tags: ["#про_деньги", "#обзор"]
+		},
+		{
+			name: "Виды паевых фондов",
+			tags: ["#аналитика", "#обзор"]
+		},
+		{
+			name: "Как выбирать ПИФ",
+			tags: ["#мнение", "#про_деньги", "#инструкция"]
+		},
+		{
+			name: "Когда покупать и продавать паи",
+			tags: ["#мнение", "#аналитика", "#кризис"]
+		},
+		{
+			name: "Как купить и продать паи",
+			tags: ["#инструкция", "#про_деньги"]
+		},
+		{
+			name: "Расходы инвестора",
+			tags: ["#про_деньги", "#обзор"]
+		},
+		{
+			name: "Налоги",
+			tags: ["#про_деньги"]
+		},
+		{
+			name: "О защите интересов инвесторов",
+			tags: ["#бизнес"]
+		},
+		{
+			name: "Словарь терминов",
+			tags: ["#словарь_инвестора"]
+		}
+	]
+
+section.section_small-margin.materials
+	.site-container.materials__container
+		.materials__left-block
+			ul.materials__nav
+				for item, index in nav_arr
+					- let activeClass = index == 1 ? "is-active" : false
+					li.materials__nav-item
+						a.materials__nav-link(class=activeClass  href="/")
+							span=item.name
+							span=item.count
+		.materials__rihgt-block
+			.materials__tags-wrapper
+				.materials__tags
+					for item, index in nav_arr2
+						- let activeClass2 = index == 0 ? "is-active" : false
+						a.materials__tags-link(class=activeClass2 href="/")=item
+				button.button-reset.materials__tags-more-btn
+					span
+						|	Ещё
+					+icon("arrow-shevron-bottom-small")(width="3" height="6" class="materials__tags-more-btn-icon")
+			.materials__card-list
+				for item, index in cards_arr
+					.materials__card-item.info-card
+						a.info-card__link(href="/")
+						.info-card__top
+							img.info-card__img(src=`/local/assets/img/info-card/img${index}.jpg`, alt="")
+						.info-card__content
+							.info-card__tags
+								for tag in item.tags
+									a(href="")=tag
+							h3.info-card__heading=item.name
+							span.info-card__date
+								|	 17.10.2021
+			ul.pagination
+				li.pagination__item
+					a.pagination__link.is-active(href="/")
+						| 	1
+				li.pagination__item
+					a.pagination__link(href="/")
+						| 	2
+				li.pagination__item
+					a.pagination__link(href="/")
+						| 3
+				li.pagination__item
+					a.pagination__link(href="/")
+						| 4

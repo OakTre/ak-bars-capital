@@ -1,10 +1,38 @@
 .form {
 	margin-bottom: 10.5rem;
 
+	&_grey-bg {
+		background-color: var(--color-grey-bg);
+		margin-bottom: 0;
+		padding: 8rem 0;
+	}
+
 	&__container {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+
+	&__img {
+		position: absolute;
+		display: block;
+		width: 23.5rem;
+		height: 12rem;
+		object-fit: cover;
+
+		&._right {
+			right: -2rem;
+			bottom: 0;
+		}
+
+		&._left {
+			width: 29.1rem;
+			height: 14.8rem;
+			left: -2rem;
+			top: 0;
+			transform: scale(-1, 1);
+		}
 	}
 
 	&__inner {
@@ -77,6 +105,7 @@
 
 	&__btn {
 		padding: 1.8rem 3.5rem;
+		min-width: 26rem;
 	}
 
 	&__agreement {

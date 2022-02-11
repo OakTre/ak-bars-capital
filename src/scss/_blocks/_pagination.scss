@@ -1,0 +1,28 @@
+.pagination {
+	display: inline-flex;
+	align-items: center;
+	margin-top: 4.8rem;
+
+	&__link {
+		display: inline-block;
+		padding: 1.3rem 1rem;
+		border-radius: 0.4rem;
+		font-weight: 700;
+		font-size: 1.8rem;
+		line-height: 2.1rem;
+		letter-spacing: 0.02em;
+		transition: color var(--transition), background-color var(--transition);
+
+		&:hover {
+			background-color: var(--color-green);
+			color: var(--color-white);
+		}
+
+
+		&.is-active {
+			pointer-events: none;
+			background-color: var(--color-green);
+			color: var(--color-white);
+		}
+	}
+}
