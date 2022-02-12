@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 				storesMap.geoObjects.add(housesCollection);
 
+				// сдвигаем ценрт карты от блока справа
 				let pixelCenter = storesMap.getGlobalPixelCenter(center);
 
 				pixelCenter = [
