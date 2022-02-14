@@ -59,7 +59,11 @@
 		font-size: 1.4rem;
 		line-height: 2.1rem;
 		letter-spacing: 0.02em;
+		transition: color var(--transition);
 
+		&:hover {
+			color: var(--color-green);
+		}
 	}
 
 	&__links-link-icon {
@@ -67,5 +71,48 @@
 		width: 2.2rem;
 		height: 2.2rem;
 		fill: var(--color-green);
+	}
+
+	&__info {
+		a {
+			color: var(--color-green);
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+
+		ul {
+			max-width: 75rem;
+			margin-bottom: 2.5rem;
+
+			&:nth-last-of-type(1) {
+				margin-bottom: 0;
+			}
+
+			li {
+				position: relative;
+				margin-bottom: 1.2rem;
+				font-size: 1.6rem;
+				line-height: 2.4rem;
+				padding-left: 1rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				&::before {
+					position: absolute;
+					top: 1rem;
+					left: 0;
+					width: 0.4rem;
+					height: 0.4rem;
+					background-color: var(--color-dark);
+					border-radius: 50%;
+					content: "";
+				}
+			}
+		}
 	}
 }
