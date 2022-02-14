@@ -24,5 +24,20 @@
 		max-width: 74.3rem;
 		font-size: 4.8rem;
 		line-height: 5.7rem;
+
+		&._small-font {
+			max-width: 83.7rem;
+			font-size: 3.2rem;
+			line-height: 3.8rem;
+			letter-spacing: 0.02em;
+		}
+	}
+
+	&__text {
+		margin-top: 2.4rem;
+		font-size: 1.8rem;
+		line-height: 2.4rem;
+		letter-spacing: 0.01em;
+		color: rgba($color: #10002B, $alpha: 0.4);
 	}
 }

@@ -1,0 +1,11 @@
+.news-list {
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 32px;
+	}
+
+	&__item {
+		grid-column: 4 span;
+	}
+}
