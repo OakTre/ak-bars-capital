@@ -196,3 +196,16 @@
 		font-family: var(--second-ff);
 	}
 }
+
+.intro.agent-offer__intro {
+	.intro-slider__item {
+		padding-top: 10.4rem;
+	}
+
+	.intro-slider__img {
+		bottom: 0;
+		right: -4rem;
+		width: 65.1rem;
+		height: 49.2rem;
+	}
+}

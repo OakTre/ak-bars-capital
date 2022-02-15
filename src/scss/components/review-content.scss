@@ -1,0 +1,129 @@
+.review-content {
+	&__nav {
+		display: inline-flex;
+		align-items: center;
+		margin-bottom: 6.4rem;
+	}
+
+	&__select {
+		position: relative;
+		width: auto;
+		margin-left: 1.9rem;
+
+		.choices {
+			padding-right: 2rem;
+
+			&::after {
+				content: "";
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				margin-top: 0;
+				height: 0.6rem;
+				width: 1.3rem;
+				background-image: url(/local/assets/img/arow-shevron.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				border: none !important;
+				transition: transform 200ms;
+			}
+
+			&.is-open {
+				&::after {
+					margin-top: 0;
+					transform: translateY(-50%) rotate(180deg);
+				}
+			}
+		}
+
+		.choices__list--single {
+			position: relative;
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+			font-weight: 700;
+			font-family: var(--second-ff);
+			color: var(--color-green);
+
+			&::before {
+				position: absolute;
+				bottom: -1px;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				border-bottom: 1px dashed var(--color-green);
+				content: "";
+			}
+		}
+
+		.choices__inner {
+			padding: 0 !important;
+			background-color: transparent;
+			border-radius: 0;
+			border: none;
+			min-height: 0;
+			height: auto;
+		}
+
+		.choices__list--single {
+			padding: 0 !important;
+		}
+
+		.choices__placeholder {
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+			font-weight: 700;
+		}
+
+		.choices__list--dropdown {
+			border-radius: 0;
+			border: none;
+			padding: 0.5rem 0 0 0;
+			background-color: var(--color-grey-bg);
+
+			/* полоса прокрутки (скроллбар) */
+			::-webkit-scrollbar {
+				width: 0.5rem;
+				/* ширина для вертикального скролла */
+				height: 0.5rem;
+				/* высота для горизонтального скролла */
+				background-color: transparent;
+			}
+
+			/* ползунок скроллбара */
+			::-webkit-scrollbar-thumb {
+				background-color: var(--color-green);
+			}
+
+			.choices__item {
+				padding: 1.3rem 0;
+				text-align: center;
+				background-color: transparent;
+				font-size: 1.6rem;
+				line-height: 1.9rem;
+				transition: color 200ms;
+				// border-top: 1px solid var(--border-color);
+				text-transform: none;
+				color: var(--color-dark);
+
+				&.is-selected {
+					color: var(--color-orange);
+				}
+
+				&:hover {
+					color: var(--color-green);
+				}
+			}
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 32px;
+	}
+
+	&__item {
+		grid-column: 4 span;
+	}
+}

@@ -1,0 +1,39 @@
+.agents-get {
+	&__heading {
+		margin-bottom: 5.6rem;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 32px;
+		counter-reset: section;
+	}
+
+	&__item {
+		position: relative;
+		grid-column: 4 span;
+		background-color: var(--color-grey-bg);
+		padding: 7.2rem 4.2rem 3.2rem 3.2rem;
+		border-radius: 1rem;
+
+		p {
+			font-weight: 500;
+			font-size: 2rem;
+			line-height: 2.7rem;
+		}
+
+		&::before {
+			position: absolute;
+			top: 3rem;
+			left: 3.2rem;
+			font-weight: 700;
+			font-size: 2.4rem;
+			line-height: 2.7rem;
+			letter-spacing: -0.02em;
+			color: var(--color-green);
+			counter-increment: section;
+			content: "0" counters(section, "");
+		}
+	}
+}
