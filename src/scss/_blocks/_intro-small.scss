@@ -39,5 +39,10 @@
 		line-height: 2.4rem;
 		letter-spacing: 0.01em;
 		color: rgba($color: #10002B, $alpha: 0.4);
+
+		&._max-width {
+			max-width: 51rem;
+			padding-bottom: 11.4rem;
+		}
 	}
 }

@@ -1,0 +1,20 @@
++linkCSS("form")
+
+section.form
+	.site-container.form__container
+		form.form__inner(data-need-validation action="/")
+			h2.form__heading.second-title
+				|	Хотите стать агентом?
+			p.form__txt
+				|	Оставьте заявку и наши эксперты бесплатно проконсультируют и помогут в выборе инвестиционных продуктов
+			label.form__label
+				input.form__input(type="text" placeholder="Как к Вам обращаться?" name="name" data-parsley-required)
+			label.form__label
+				input.form__input.js-phone-mask(type="tel" placeholder="Ваш номер телефона" name="tel" data-parsley-required data-parsley-phone)
+			.form__agreement-wrapper
+				button.button-reset.button.form__btn
+					|	Получить консультацию
+				label.form__agreement
+					input.form__input-agreement.visually-hidden(type="checkbox" name="agreemnet" data-parsley-required)
+					p
+						|	Я соглашаюсь с условиями и даю свое согласие на обработку и использование моих персональных данных
