@@ -478,3 +478,12 @@
 	line-height: 2.4rem;
 	max-width: 101.1rem;
 }
+
+.drop-menu-container {
+	overflow: hidden;
+	transition: max-height var(--transition);
+
+	&:not(.mod-open) {
+		max-height: 0;
+	}
+}
