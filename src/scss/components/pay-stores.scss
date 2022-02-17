@@ -7,7 +7,12 @@
 		max-width: 71.3rem;
 		font-size: 1.8rem;
 		line-height: 2.7rem;
-		margin-bottom: 4.8rem;
+
+		margin-bottom: 2.4rem;
+
+		&:nth-last-of-type(1) {
+			margin-bottom: 4.8rem;
+		}
 	}
 
 	&__selects-container {

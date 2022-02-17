@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 						hideIconOnBalloonOpen: false,
 					});
 
+					storesMap.behaviors.disable('scrollZoom');
 				// storesMap.behaviors.disable('scrollZoom');
 
 				// проходимся по бз и подставляем иконки на карту

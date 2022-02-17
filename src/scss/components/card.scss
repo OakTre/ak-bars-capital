@@ -23,8 +23,12 @@
 	border: 1px solid var(--border-color);
 	border-radius: 1rem;
 	padding: 3rem 2.4rem 2.4rem;
+	transition: background-color var(--transition), border-color var(--transition);
 
 	&:hover {
+		background-color: var(--color-grey-bg);
+		border-color: var(--color-green);
+
 		.card__link-text {
 			text-decoration: underline;
 		}
@@ -44,7 +48,7 @@
 		font-weight: 500;
 		font-size: 1.4rem;
 		line-height: 2.4rem;
-		color: var(--color-grey3);
+		color: var(--color-green);
 	}
 
 	&__date-icon {
@@ -53,8 +57,9 @@
 		height: 1.9rem;
 		fill: none;
 		stroke-width: 1.54545px;
-		stroke: var(--color-grey3);
+		stroke: var(--color-green);
 		margin-right: 0.8rem;
+		transform: translateY(-0.3rem);
 	}
 
 	&__feauture {
@@ -89,5 +94,6 @@
 		font-size: 1.6rem;
 		line-height: 2.7rem;
 		color: var(--color-green);
+		transition: all var(--transition)
 	}
 }

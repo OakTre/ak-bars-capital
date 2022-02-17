@@ -22,7 +22,8 @@
 
 section.section.review-content
 	.site-container.review-content__container
-		.review-content__nav
+		// убрать класс visually-hidden если нужен блок
+		.review-content__nav.visually-hidden
 			span
 				|	Обзоры рынков за период:
 			.review-content__select
@@ -48,7 +49,8 @@ section.section.review-content
 					.file-small__link-name
 						|	Смотреть обзор
 						+icon("link-open-icon")(width="13" height="13" class="file-small__link-name-icon")
-		ul.pagination
+		// убрать класс visually-hidden если нужен блок
+		ul.pagination.visually-hidden
 			li.pagination__item
 				a.pagination__link.is-active(href="/")
 					| 	1
