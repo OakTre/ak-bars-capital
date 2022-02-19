@@ -1,3 +1,18 @@
+window.onload = () => {
+	const preloader = document.querySelector(".prealoder");
+
+	setTimeout(() => {
+		preloader.classList.add("is-hidden");
+	}, 3000);
+
+	setTimeout(() => {
+		preloader.style.disaply = "none";
+		preloader.querySelector("svg").remove();
+	}, 3250);
+}
+
+
+
 document.addEventListener("DOMContentLoaded", function(event) {
 	const options = BodyScrollOptions = {
 		reserveScrollBarGap: true,

@@ -496,3 +496,34 @@
 .fancybox__content>.carousel__button.is-close {
 	right: -40px;
 }
+
+.prealoder {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 190;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-white);
+	transition: opacity var(--transition), visibility var(--transition);
+
+	&.is-hidden {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.svg-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		overflow: hidden;
+		width: 25rem;
+		height: 8.8rem;
+	}
+
+	svg {
+		width: 25rem;
+		height: 8.7rem;
+	}
+}
