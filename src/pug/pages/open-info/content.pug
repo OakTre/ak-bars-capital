@@ -1,0 +1,26 @@
++linkCSS("open-info")
+
+-
+	let arr = [
+		"Обязательная информация",
+		"Управляющая компания",
+		"Информация о сотрудниках Управляющей компании",
+		"Информация о должностных лицах управляющей компании",
+		"Информация о структуре собственности",
+		"Расчет размера собственных средств",
+		"Доверительное управление ценными бумагами",
+		"Информация об Агентах",
+		"Паевые инвестиционные фонды",
+		"Пенсионные накопления",
+		"Информация о конфликте интересов УК ДУ ПИФ"
+	]
+
+
+section.open-info__section.section(data-anim-fade)
+	.site-container.open-info__container
+		for item, index in arr
+			a.open-info__link(href="/")
+				img.open-info__link-img(src=`/local/assets/img/open-info/img${index}.svg`, alt="")
+				h3.open-info__link-heading=item
+				span.open-info__link-text
+					|	 Подробнее

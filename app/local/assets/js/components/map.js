@@ -20,7 +20,46 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			hideIconOnBalloonOpen: false,
 		});
 
-		// contactsMap.behaviors.disable('scrollZoom');
+		contactsMap.behaviors.disable('scrollZoom');
+
+		var ctrlKey = false;
+        var ctrlMessVisible = false;
+        var timer;
+
+        // Отслеживаем скролл мыши на карте, чтобы показывать уведомление
+        contactsMap.events.add(['wheel', 'mousedown'], function (e) {
+            if (e.get('type') == 'wheel') {
+                if (!ctrlKey) { // Ctrl не нажат, показываем уведомление
+                    $('#ymap_ctrl_display').fadeIn(300);
+                    ctrlMessVisible = true;
+                    clearTimeout(timer); // Очищаем таймер, чтобы продолжать показывать уведомление
+                    timer = setTimeout(function () {
+                        $('#ymap_ctrl_display').fadeOut(300);
+                        ctrlMessVisible = false;
+                    }, 1500);
+                }
+                else { // Ctrl нажат, скрываем сообщение
+                    $('#ymap_ctrl_display').fadeOut(100);
+                }
+            }
+            if (e.get('type') == 'mousedown' && ctrlMessVisible) { // Скрываем уведомление при клике на карте
+                $('#ymap_ctrl_display').fadeOut(100);
+            }
+        });
+
+        // Обрабатываем нажатие на Ctrl
+        $(document).keydown(function (e) {
+            if (e.which === 17 && !ctrlKey) { // Ctrl нажат: включаем масштабирование мышью
+                ctrlKey = true;
+                contactsMap.behaviors.enable('scrollZoom');
+            }
+        });
+        $(document).keyup(function (e) { // Ctrl не нажат: выключаем масштабирование мышью
+            if (e.which === 17) {
+                ctrlKey = false;
+                contactsMap.behaviors.disable('scrollZoom');
+            }
+        });
 
 		let marActive = `<a data-img="" href="" class="map__logo-svg"><img src="/local/assets/img/map-logo.svg"></a>`
 

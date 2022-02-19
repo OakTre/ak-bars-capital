@@ -1,5 +1,16 @@
 +linkCSS("partners")
 
+-
+	let partners = [
+		"АО «НПФ «Волга-Капитал»",
+		"ЗАО «Первый специализированный депозитарий»",
+		"ЗАО ВТБ Специализированный депозитарий",
+		"АО «Специализированный депозитарий «ИНФИНИТУМ»",
+		"ЗАО «Аудиторско-консалтинговая фирма «АУДЭКС»"
+	]
+
+
+
 section.section.partners
 	.site-container.partners__container
 		.partners__heading-wrapper
@@ -18,11 +29,10 @@ section.section.partners
 					+icon("arrow-shevron-right")(width="10" height="16" class="slider-nav__btn-icon partners__nav-btn-icon")
 		.partners__slider.js-partners-slider
 			.swiper-wrapper
-				-for(let i = 0; i<7; i++)
+				for item, index in partners
 					.partners__item.swiper-slide
-						img.partners__img(src="/local/assets/img/partners/img.png", alt="")
-						p.partners__text
-							|	АО «Специализированный депозитарий «ИНФИНИТУМ»
+						img.partners__img(src=`/local/assets/img/partners/img.png`, alt="")
+						p.partners__text=item
 
 
 

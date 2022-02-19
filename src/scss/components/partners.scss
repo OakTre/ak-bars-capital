@@ -32,9 +32,14 @@
 	&__slider {
 		display: flex;
 		margin-bottom: 4.8rem;
+
+		.swiper-wrapper {
+			height: auto;
+		}
 	}
 
 	&__item {
+		height: 100%;
 		flex-shrink: 0;
 		background-color: var(--color-white);
 		padding: 4.8rem 3.2rem;
