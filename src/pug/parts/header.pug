@@ -28,7 +28,8 @@ header.header(class=headerClass)
 										|	Пресс-центр
 									a.header-dropdown__link(href="/")
 										|	Информация
-				a.header__search(href="/")
+				// убрать класс если понадобится кнопка поиска
+				a.header__search.visually-hidden(href="/")
 					+icon("search")(width="18" height="18" class="header__search-icon")
 				a.button.header__btn(href="/")
 					|	  Личный кабинет

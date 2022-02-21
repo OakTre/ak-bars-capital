@@ -1,0 +1,99 @@
++linkCSS("staff")
+
+-
+	let arr = [
+		{
+			name: "Гайзатуллин Рамиль Ринатович",
+			position: "Генеральный директор"
+		},
+		{
+			name: "Наталья Нафигина",
+			position: "Заместитель Генерального директора"
+		},
+		{
+			name: "Юлия Эльдарова",
+			position: "Управляющий Директор по продажам"
+		},
+		{
+			name: "Ирина Агафонова",
+			position: "Финансовый директор"
+		}
+	]
+
+	let arr2 = [
+		{
+			name: "Марс Булатов",
+			position: "Начальник инвестиционного управления"
+		},
+		{
+			name: "Аяз Ишбаев",
+			position: "Портфельный менеджер"
+		},
+		{
+			name: "Олег Кокорев",
+			position: "Портфельный менеджер"
+		}
+	]
+
+	let arr3 = [
+		{
+			name: "Руслан Халиуллин",
+			position: "Начальник управления этических финансовых инструментов"
+		}
+	]
+
+	let arr4 = [
+		{
+			name: "Сулейманов Ильдар ",
+			position: "Начальник отдела по управлению рисками"
+		}
+	]
+
+section.section.staff
+	.site-container.staff__container
+		.staff__block(data-anim-fade)
+			h2.staff__heading.second-title
+				|	Руководство
+			.staff__list
+				for item, index in arr
+					a.staff__item(href="/")
+						img(src=`/local/assets/img/staff/img${index}.jpg`, alt="" class="staff__item-img")
+						span.staff__item-heading=item.name
+						span.staff__item-position=item.position
+						span.staff__item-link-name
+							|	Подробнее
+		.staff__block(data-anim-fade)
+			h2.staff__heading.second-title
+				|	Инвестиционное управление
+			.staff__list
+				for item, index in arr2
+					a.staff__item(href="/")
+						img(src=`/local/assets/img/staff/img${index}.jpg`, alt="" class="staff__item-img")
+						span.staff__item-heading=item.name
+						span.staff__item-position=item.position
+						span.staff__item-link-name
+							|	Подробнее
+
+		.staff__block(data-anim-fade)
+			h2.staff__heading.second-title
+				|	Управление этических финансовых инструментов
+			.staff__list
+				for item, index in arr3
+					a.staff__item(href="/")
+						img(src=`/local/assets/img/staff/img${index}.jpg`, alt="" class="staff__item-img")
+						span.staff__item-heading=item.name
+						span.staff__item-position=item.position
+						span.staff__item-link-name
+							|	Подробнее
+
+		.staff__block(data-anim-fade)
+			h2.staff__heading.second-title
+				|	Отдел по управлению рисками
+			.staff__list
+				for item, index in arr4
+					a.staff__item(href="/")
+						img(src=`/local/assets/img/staff/img${index}.jpg`, alt="" class="staff__item-img")
+						span.staff__item-heading=item.name
+						span.staff__item-position=item.position
+						span.staff__item-link-name
+							|	Подробнее

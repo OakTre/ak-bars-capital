@@ -190,4 +190,26 @@
 		width: 100%;
 		margin-bottom: 3.2rem;
 	}
+
+	&__info-list {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		gap: 32px;
+		margin-bottom: 5.6rem;
+	}
+
+	&__info-item {
+		grid-column: 4 span;
+	}
+
+	&__info-item-small-legend {
+		display: block;
+		margin-bottom: 1.2rem;
+		color: var(--color-grey3);
+	}
+
+	&__info-item-legend {
+		display: block;
+		font-weight: 500;
+	}
 }

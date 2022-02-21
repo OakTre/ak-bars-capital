@@ -461,6 +461,7 @@
 	}
 
 	&__icon {
+		flex-shrink: 0;
 		display: block;
 		margin-right: 0.5rem;
 		width: 2.2rem;
