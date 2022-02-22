@@ -62,10 +62,15 @@
 
 	@include mq(md) {
 		margin-bottom: 7.2rem;
+		background-size: contain;
+		background-position: center center;
+		height: 59.2rem;
 	}
 
 	@include mq(sm) {
 		margin-bottom: 4.8rem;
+		background-image: none !important;
+		height: 38.7rem;
 	}
 
 	&__container {
@@ -85,6 +90,10 @@
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
+
+		@include mq(sm) {
+			margin-bottom: 1.6rem;
+		}
 	}
 
 	&__text {
@@ -101,11 +110,29 @@
 			font-size: 1.8rem;
 			line-height: 2.4rem;
 		}
+
+		@include mq(md) {
+			font-size: 1.6rem;
+			line-height: 3.3rem;
+			max-width: 43.5rem;
+		}
 	}
 
 	&__btn {
 		margin-top: 4.8rem;
 		min-width: 26rem;
+
+		@include mq(md) {
+			padding: 1.4rem 3.4rem;
+		}
+
+		@include mq(sm) {
+			margin-top: 1.6rem;
+			width: 100%;
+			padding: 1.8rem;
+			font-size: 1.8rem;
+			line-height: 2.7rem;
+		}
 	}
 
 	&__breadcrumbs {
@@ -123,6 +150,14 @@
 		position: relative;
 		height: 100%;
 		padding-top: 10.4rem;
+
+		@include mq(md) {
+			padding-top: 12.4rem;
+		}
+
+		@include mq(sm) {
+			padding-top: 4.6rem;
+		}
 	}
 
 	&__img {
@@ -141,6 +176,12 @@
 			width: 48.2rem;
 			height: 41.4rem;
 			object-fit: contain;
+
+			@include mq(md) {
+				bottom: 0;
+				width: 33.2rem;
+				height: 34.4rem;
+			}
 		}
 
 		&._type3 {
@@ -149,6 +190,16 @@
 			right: 0;
 			bottom: 0;
 		}
+
+		@include mq(md) {
+			right: 2rem;
+			width: 34.7rem;
+			height: 50.4rem;
+		}
+
+		@include mq(sm) {
+			display: none;
+		}
 	}
 
 	&__nav {
@@ -156,6 +207,12 @@
 		right: 0;
 		bottom: 4.8rem;
 		z-index: 4;
+
+		@include mq(sm) {
+			right: auto;
+			left: 0;
+			bottom: 4rem;
+		}
 	}
 }
 

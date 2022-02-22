@@ -9,6 +9,14 @@ header.header(class=headerClass)
 				img(src="/local/assets/img/logo-white.svg", alt="Логотип" class="logo__img")
 		.header__rihgt-block
 			.header__top
+				button.button-reset.header__mobile-btn
+					span
+					span
+					span
+				a(href="/" class="header__tablet-logo")
+					img(src="/local/assets/img/logo-mobile.svg", alt="")
+				a(href="/" class="header__mobile-logo")
+					img(src="/local/assets/img/logo-mobile2.svg", alt="")
 				ul.top-nav
 					for item in top_arr
 						li.top-nav__item
@@ -28,11 +36,16 @@ header.header(class=headerClass)
 										|	Пресс-центр
 									a.header-dropdown__link(href="/")
 										|	Информация
+				.header__mobile-links
+					a(href="tel:+78435186677").header__mobile-link
+						+icon("tel")(width="19" height="19" class="header__tel-icon")
 				// убрать класс если понадобится кнопка поиска
 				a.header__search.visually-hidden(href="/")
 					+icon("search")(width="18" height="18" class="header__search-icon")
 				a.button.header__btn(href="/")
-					|	  Личный кабинет
+					span
+						|	Личный кабинет
+					+icon("person")(width="20" height="20" class="header__btn-mobile-icon")
 			.header__bottom
 				ul.bottom-nav
 					li.bottom-nav__item

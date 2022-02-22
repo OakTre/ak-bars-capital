@@ -51,12 +51,32 @@
 		background-repeat: no-repeat;
 		background-size: 65.4rem 24.9rem;
 		background-position: 96% 50%;
+
+		@include mq(md) {
+			padding: 4.8rem 4.2rem 5.4rem 4.2rem;
+			padding-bottom: 10.7rem;
+		}
+
+		@include mq(sm) {
+			padding: 2.4rem 1.6rem;
+			padding-bottom: 18.2rem;
+		}
 	}
 
 	&__heading {
 		max-width: 59.6rem;
 		margin-bottom: 3.2rem;
 		color: var(--shield-heading-color);
+
+		@include mq(md) {
+			margin-bottom: 1.6rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			margin-bottom: 1.2rem;
+		}
 	}
 
 	&__text {
@@ -65,10 +85,33 @@
 		margin-bottom: 4.8rem;
 		max-width: 58.3rem;
 		color: var(--shield-text-color);
+
+		@include mq(md) {
+			font-size: 1.6rem;
+			line-height: 1.9rem;
+			margin-bottom: 2.4rem;
+			max-width: 40.6rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.4rem;
+			line-height: 2.4rem;
+			margin-bottom: 1.2rem;
+		}
 	}
 
 	&__btn {
 		padding: 1.8rem 9.4rem;
+
+		@include mq(md) {
+			padding: 1.4rem 6.7rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.7rem;
+			padding: 1.2rem 6.7rem;
+		}
 	}
 
 	&__img {
@@ -80,6 +123,17 @@
 
 		&._type2 {
 			bottom: 0 !important;
+		}
+
+		@include mq(md) {
+			width: 37.2rem;
+			height: 28.6rem;
+			right: 4.5rem;
+			bottom: -9rem;
+		}
+
+		@include mq(sm) {
+			right: -2rem;
 		}
 	}
 
@@ -107,6 +161,27 @@
 	&__inner {
 		background-color: var(--color-dark-blue);
 		padding-bottom: 9.9rem;
+
+		@include mq(md) {
+			padding: 4.4rem 4.3rem;
+			padding-bottom: 5.4rem;
+		}
+
+		@include mq(sm) {
+			padding: 2.4rem 1.6rem;
+		}
+	}
+
+	&__heading {
+		@include mq(md) {
+			margin-bottom: 1rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.8rem;
+			line-height: 2.1rem;
+			margin-bottom: 1.6rem;
+		}
 	}
 
 	&__text {
@@ -123,10 +198,24 @@
 				text-decoration: none;
 			}
 		}
+
+		@include mq(md) {
+			margin-bottom: 4.5rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.4rem;
+			line-height: 2.4rem;
+			margin-bottom: 2.4rem;
+		}
 	}
 
 	&__form {
 		width: 55.6rem;
+
+		@include mq(md) {
+			width: 100%;
+		}
 	}
 
 	&__wrapper {
@@ -134,6 +223,14 @@
 		align-items: center;
 		width: 100%;
 		margin-bottom: 1.6rem;
+
+		@include mq(md) {
+			margin-bottom: 2.6rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 0.6rem;
+		}
 	}
 
 	&__label {
@@ -143,6 +240,10 @@
 
 		.input {
 			border-radius: 0.4rem 0 0 0.4rem;
+		}
+
+		@include mq(sm) {
+			width: calc(100% - 4.8rem);
 		}
 	}
 
@@ -167,6 +268,19 @@
 				display: inline;
 			}
 		}
+
+		@include mq(md) {
+			height: 5.6rem;
+			padding: 1.5rem 3.9rem;
+		}
+
+		@include mq(sm) {
+			height: 4.8rem;
+			font-size: 1.8rem;
+			line-height: 2.1rem;
+			width: 4.8rem;
+			padding: 1.3rem;
+		}
 	}
 
 	&__agreement {
@@ -190,5 +304,9 @@
 		bottom: 8.8rem;
 		width: 43.6rem;
 		height: 30rem;
+
+		@include mq(md) {
+			display: none;
+		}
 	}
 }

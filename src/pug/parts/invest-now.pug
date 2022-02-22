@@ -3,7 +3,7 @@
 +linkCSS("invest-now")
 +linkCSS("invest-table")
 
-section.invest-now.section_small-margin
+section.invest-now.section_small-margin(data-anim-fade)
 	.site-container.invest-now__container
 		h2.second-title.invest-now__title
 			|	Инвестируйте прямо сейчас
@@ -20,7 +20,9 @@ section.invest-now.section_small-margin
 		.invest-now__list.js-invest-list.invest-list.is-cards
 			for item in invest_arr
 				a.invest-list__item(href="/")
-					span.invest-list__heading=item.name
+					.invest-list__heading-wrapper
+						span.invest-list__heading=item.name
+						p.invest-list__text=item.text
 					p.invest-list__text=item.text
 					.invest-list__percents
 						.invest-list__percents-item

@@ -37,6 +37,10 @@ body {
 		background-color: var(--color-green);
 		color: var(--color-white);
 	}
+
+	@include mq(lg) {
+		--header-height: 8.3rem;
+	}
 }
 
 img {
