@@ -14,11 +14,10 @@ main.page-main.main
 				.yield-table__nav
 					span
 						|	Доходность фондов на
-					.yield-table__select
-						select(name="period" class="js-custom-select")
-							while n<3
-								option(value="22 ноября 2021")
-									|	22 ноября 202#{n++}
+					label.site-dates
+						span.site-dates__text.js-date-text
+							|	23 ноября 2021
+						input(type="text" class="visually-hidden js-dates site-dates__input")
 
 
 			include yield-table

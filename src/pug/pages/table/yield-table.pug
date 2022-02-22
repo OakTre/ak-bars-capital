@@ -80,13 +80,15 @@
 							span.yield-info-table__info-legend
 								|	Динамика стоимости пая
 
-							.yield-info-table__info-dates
-								+icon("calendar2")(width="20" height="20" class="yield-info-table__info-dates-icon")
-								span
-									|	22 ноября 2021
-								|	-
-								span
-									|	23 ноября 2021
+							.yield-info-table__info-dates.js-dates-parent
+								label.yield-info-table__info-dates-icon-wrapper
+									input(type="text" class="visually-hidden js-yield-info-dates site-dates__input")
+									+icon("calendar2")(width="20" height="20" class="yield-info-table__info-dates-icon")
+									span.js-start-date
+										|	22 ноября 2021
+									|	-
+									span.js-end-date
+										|	23 ноября 2021
 
 							.yield-info-table__info-statistics
 								.yield-info-table__info-statistics-item

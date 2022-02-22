@@ -423,11 +423,30 @@
 		}
 	}
 
-	&__info-dates-icon {
+	&__info-dates-icon-wrapper {
+		display: flex;
+		align-items: center;
+		position: relative;
 		width: 2rem;
 		height: 2rem;
-		fill: var(--color-dark);
+		cursor: pointer;
+
+		&:hover {
+			.icon {
+				fill: var(--color-green);
+			}
+		}
+
+		span {
+			flex-shrink: 0;
+		}
+	}
+
+	&__info-dates-icon {
+		flex-shrink: 0;
 		margin-right: 0.5rem;
+		fill: var(--color-dark);
+		transition: fill var(--transition);
 	}
 
 	&__info-statistics {
