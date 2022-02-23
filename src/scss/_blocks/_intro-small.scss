@@ -10,7 +10,7 @@
 	@include mq(sm) {
 		min-height: 22.4rem;
 		padding-top: 6rem;
-		padding-bottom: 2.4rem;
+		padding-bottom: 6rem;
 	}
 
 	&__breadcrumbs {
@@ -96,5 +96,15 @@
 			line-height: 2.4rem;
 			margin-top: 2.4rem;
 		}
+	}
+}
+
+.open-info-detail__intro {
+	@include mq(md) {
+		margin-bottom: 2.4rem;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 2.4rem;
 	}
 }

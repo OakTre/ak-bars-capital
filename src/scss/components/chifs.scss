@@ -1,3 +1,6 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .chifs {
 	&__heading {
 		margin-bottom: 3.2rem;
@@ -8,6 +11,15 @@
 		grid-template-columns: repeat(12, 1fr);
 		gap: 32px;
 		margin-bottom: 7.2rem;
+
+		@include mq(md) {
+			grid-template-columns: repeat(8, 1fr);
+			gap: 24px;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 4rem;
+		}
 	}
 
 	&__item {
@@ -19,6 +31,26 @@
 
 		&:nth-child(3) {
 			grid-column: 4 span;
+		}
+
+		@include mq(md) {
+			grid-column: 4 span !important;
+
+			&:nth-child(1) {
+				order: 1;
+			}
+
+			&:nth-child(2) {
+				order: 3;
+			}
+
+			&:nth-child(3) {
+				order: 2;
+			}
+		}
+
+		@include mq(sm) {
+			grid-column: 8 span !important;
 		}
 	}
 
@@ -37,6 +69,16 @@
 				text-decoration: underline;
 			}
 		}
+
+		@include mq(md) {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 6rem 2.4rem;
+		}
+
+		@include mq(sm) {
+			padding: 3.2rem 1.6rem;
+		}
 	}
 
 	&__shield-logo {
@@ -45,6 +87,15 @@
 		width: 19.6rem;
 		height: 2.5rem;
 		margin-right: 6.6rem;
+
+		@include mq(md) {
+			margin-right: 0;
+			margin-bottom: 2.5rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__shield-text {
@@ -52,12 +103,26 @@
 		font-size: 1.6rem;
 		line-height: 2.7rem;
 		max-width: 74.3rem;
+
+		@include mq(md) {
+			margin-bottom: 3.2rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.4rem;
+			line-height: 2.4rem;
+			margin-bottom: 2.4rem;
+		}
 	}
 
 	&__shield-link-name {
 		display: block;
 		margin-left: auto;
 		color: var(--color-green);
+
+		@include mq(md) {
+			margin-left: 0;
+		}
 	}
 }
 
@@ -71,6 +136,17 @@
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: 32px;
+
+		@include mq(lg) {
+			display: flex;
+			gap: 0;
+			grid-template-columns: none;
+		}
+
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 
 	&__link {
@@ -81,10 +157,32 @@
 		flex-wrap: nowrap;
 		display: inline-flex;
 
+		@include mq(lg) {
+			margin-right: 4.8rem;
+			grid-column: none !important;
+
+			&:not(:last-child) {
+				flex-shrink: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@include mq(sm) {
+			margin-bottom: 1.7rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
 		&:last-child {
 			grid-column: 3 span;
 			align-items: flex-start;
 			font-weight: 400;
+
 		}
 	}
 }

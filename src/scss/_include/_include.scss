@@ -415,6 +415,24 @@
 	width: 62rem;
 	transition: background-color var(--transition);
 
+	> div {
+		display: flex;
+		flex-grow: 1;
+
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	@include mq(md) {
+		width: 100%;
+	}
+
+	@include mq(sm) {
+		padding: 2.4rem 1.6rem;
+	}
+
 	&__icon {
 		display: block;
 		margin-right: 3rem;
@@ -449,6 +467,10 @@
 		font-size: 1.4rem;
 		line-height: 1.9rem;
 		margin-left: auto;
+
+		@include mq(sm) {
+			margin-left: 0;
+		}
 	}
 
 	&:hover {
