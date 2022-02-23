@@ -83,6 +83,12 @@
 			}
 		}
 
+		&._max-width {
+			@include mq(md) {
+				max-width: 60.3rem;
+			}
+		}
+
 		@include mq(sm) {
 			font-size: 1.6rem !important;
 			line-height: 2.4rem !important;

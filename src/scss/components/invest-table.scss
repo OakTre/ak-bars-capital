@@ -104,6 +104,14 @@
 		color: var(--color-green);
 		transition: color var(--transition);
 
+		@include mq(sm) {
+			display: block;
+
+			br {
+				display: block;
+			}
+		}
+
 		&:hover {
 			color: var(--color-purple);
 
@@ -118,6 +126,12 @@
 		margin-left: 1rem;
 		fill: var(--color-green);
 		transition: fill var(--transition);
+
+		@include mq(sm) {
+			display: inline;
+			margin-left: 0.7rem;
+			transform: translateY(0.3rem);
+		}
 	}
 
 	&__links {

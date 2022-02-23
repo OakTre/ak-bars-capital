@@ -1,9 +1,25 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
+
 .chief {
 	background-color: var(--color-grey-bg);
 	padding: 12.4rem 0;
 
+	@include mq(md) {
+		padding: 8rem 0;
+	}
+
+	@include mq(sm) {
+		padding: 4rem 0;
+	}
+
 	&__container {
 		display: flex;
+
+		@include mq(md) {
+			flex-direction: column;
+		}
 	}
 
 	&__img {
@@ -13,6 +29,19 @@
 		object-fit: cover;
 		border-radius: 1.2rem;
 		margin-right: 16.2rem;
+
+		@include mq(md) {
+			align-self: center;
+			margin-right: 0;
+			margin-bottom: 4rem;
+			height: 36.2rem;
+		}
+
+		@include mq(sm) {
+			width: 28.8rem;
+			height: 32rem;
+			margin-bottom: 2.4rem;
+		}
 	}
 
 	&__text {
@@ -22,6 +51,16 @@
 		font-family: var(--second-ff);
 		letter-spacing: 0.02em;
 		margin-bottom: 1.6rem;
+
+		@include mq(md) {
+			margin-bottom: 3.2rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			margin-bottom: 1.2rem;
+		}
 	}
 
 	&__name {
@@ -31,6 +70,16 @@
 		line-height: 3.6rem;
 		letter-spacing: 0.02em;
 		margin-bottom: 0.8rem;
+
+		@include mq(md) {
+			margin-bottom: 1.2rem;
+		}
+
+		@include mq(sm) {
+			font-size: 2rem;
+			line-height: 2.8rem;
+			margin-bottom: 0.4rem;
+		}
 	}
 
 	&__position {
@@ -39,6 +88,14 @@
 		font-size: 1.6rem;
 		line-height: 2.4rem;
 		color: rgba($color: #616264, $alpha: 0.6);
+
+		@include mq(md) {
+			margin-bottom: 2.4rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__link {
@@ -48,6 +105,18 @@
 		font-size: 1.8rem;
 		line-height: 2.7rem;
 		color: var(--color-green);
+
+		br {
+			display: none;
+		}
+
+		@include mq(sm) {
+			display: block;
+
+			br {
+				display: block;
+			}
+		}
 	}
 
 	&__link-icon {
@@ -56,5 +125,10 @@
 		width: 1.3rem;
 		height: 1.3rem;
 		fill: var(--color-green);
+
+		@include mq(sm) {
+			display: inline;
+			margin-left: 0.7rem;
+		}
 	}
 }

@@ -1,6 +1,18 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
+
 .licenses {
 	&__heading {
 		margin-bottom: 5.6rem;
+
+		@include mq(md) {
+			margin-bottom: 4rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 2.4rem;
+		}
 	}
 
 	&__list {
@@ -8,10 +20,24 @@
 		grid-template-columns: repeat(12, 1fr);
 		gap: 32px;
 		margin-bottom: 4.8rem;
+
+		@include mq(md) {
+			column-gap: 0;
+			row-gap: 24px;
+		}
+
+		@include mq(sm) {
+			row-gap: 12px;
+			margin-bottom: 2.4rem;
+		}
 	}
 
 	&__items {
 		grid-column: 6 span;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
 	}
 
 	&__item-file {
@@ -21,6 +47,16 @@
 		border-radius: 1rem;
 		background-color: var(--color-grey-bg);
 		height: 100%;
+
+		@include mq(md) {
+			padding: 3rem 3.2rem;
+		}
+
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 2.4rem 1.6rem;
+		}
 
 		&:hover {
 			span {
@@ -48,6 +84,10 @@
 		width: 10.3rem;
 		height: 12.4rem;
 		margin-right: 1.2rem;
+
+		@include mq(sm) {
+			margin-bottom: 1.2rem;
+		}
 	}
 
 	&__file {

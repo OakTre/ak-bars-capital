@@ -4,6 +4,7 @@
 	--rgba-border-color: rgba(255, 255, 255, 0.2);
 	--color-header-bg: #10002B;
 	--icon-fill: #fff;
+	--burger-menu-color: var(--color-white);
 
 	&._header-black {
 		--color-header-white: #10002B;
@@ -11,6 +12,7 @@
 		--rgba-border-color: rgba(16, 0, 43, 0.2);
 		--color-header-bg: #fff;
 		--icon-fill: rgba(16, 0, 43, 0.6);
+		--burger-menu-color: var(--color-green);
 
 		box-shadow: 0 0 5px rgba(16, 0, 43, 0.1);
 
@@ -21,6 +23,18 @@
 		.logo_white {
 			display: block;
 		}
+
+		.log-tablet-black {
+			display: block;
+		}
+
+		.log-tablet-white {
+			display: none;
+		}
+	}
+
+	.log-tablet-black {
+		display: none;
 	}
 
 	.logo_white {
@@ -186,7 +200,7 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			background-color: var(--color-white);
+			background-color: var(--burger-menu-color);
 			border-radius: 0.1rem;
 
 			&:nth-child(1) {
