@@ -92,7 +92,7 @@ section.open-info-detail.section(data-anim-fade)
 								span.open-info-detail__link-size
 									|	691 Кб
 
-			.open-info-detail__content-block
+			.open-info-detail__content-block(data-anim-fade)
 				h3.open-info-detail__legend
 					|	Финансовая отчетность
 				for item in blocks
@@ -120,11 +120,24 @@ section.open-info-detail.section(data-anim-fade)
 
 
 		.open-info-detail__block-right
-			h4.open-info-detail__small-legend
+			h4.open-info-detail__small-legend.open-info-detail__mobile-heading
 				|	Раскрытие информации
+
+
+			.select.open-info-detail__mobile-select
+				.select__container
+					select(name="city" class="js-custom-select js-detailed-select")
+						option(value="/local/html/news.html" placeholder)
+							|	Раскрытие информации
+						for item in nav_arr
+							option(value="/local/html/news.html")=item.name
+
+
 			ul.open-info-detail__nav
 				for item in nav_arr
 					- let isActive = item.active ? "is-active" : false
 					li.open-info-detail__nav-item
 						a.open-info-detail__nav-link(href="/" class=isActive)=item.name
 
++linkJs("initSelects")
++linkJs("detailInfoMobileRedirect")

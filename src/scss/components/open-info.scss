@@ -185,23 +185,39 @@
 		padding: 1.8rem 1.6rem 1.6rem;
 		border-radius: 1rem;
 		background-color: var(--color-grey-bg);
-		transition: box-shadow var(--transition);
+		transition: box-shadow var(--transition), background-color var(--transition);
 
 		&:hover {
-			z-index: 2;
-			box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
+			background-color: var(--color-green-lighter) !important;
+			// z-index: 2;
+			// box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
 		}
 
 		&:nth-of-type(even) {
 			background-color: transparent;
 		}
+
+		@include mq(md) {
+			padding: 2.4rem 1.6rem;
+		}
 	}
 
 	&__link-icon {
+		flex-shrink: 0;
 		display: block;
 		width: 1.8rem;
 		height: 2.2rem;
 		margin-right: 1.6rem;
+
+		@include mq(md) {
+			width: 4rem;
+			height: 5rem;
+			margin-right: 3rem;
+		}
+
+		@include mq(sm) {
+			margin-right: 1.2rem;
+		}
 	}
 
 	&__link-heading {
@@ -209,6 +225,11 @@
 		font-weight: 500;
 		max-width: 65.2rem;
 		margin-bottom: 0.7rem;
+
+		@include mq(sm) {
+			font-size: 1.2rem;
+			line-height: 1.4rem;
+		}
 	}
 
 	&__link-info {
@@ -225,6 +246,12 @@
 		font-size: 1.2rem;
 		line-height: 1.6rem;
 		color: var(--color-grey2);
+
+		@include mq(sm) {
+			position: static;
+			display: block;
+			margin-top: 1.2rem;
+		}
 	}
 
 	&__btn-more {
@@ -236,6 +263,10 @@
 		&:hover {
 			color: var(--color-green-light);
 			text-decoration: underline;
+		}
+
+		@include mq(md) {
+			margin-top: 2.4rem 0 4rem;
 		}
 	}
 

@@ -80,6 +80,16 @@ section.section_small-margin.materials
 						a.materials__nav-link(class=activeClass  href="/")
 							span=item.name
 							span=item.count
+
+			.select.materials__mobile-select
+				.select__container
+					select(name="city" class="js-custom-select js-detailed-select")
+						option(value="/local/html/news.html" placeholder)
+							|	Все материалы
+						for item in nav_arr
+							option(value="/local/html/news.html")=item.name
+
+
 		.materials__rihgt-block
 			.materials__tags-wrapper
 				.materials__tags
@@ -116,3 +126,7 @@ section.section_small-margin.materials
 				li.pagination__item
 					a.pagination__link(href="/")
 						| 4
+
+
++linkJs("initSelects")
++linkJs("detailInfoMobileRedirect")

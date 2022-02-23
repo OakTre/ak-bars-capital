@@ -1,16 +1,50 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
+
 .materials {
+	&__intro {
+		@include mq(md) {
+			overflow: hidden;
+			margin-bottom: 2.4rem;
+
+			.intro-small__img {
+				bottom: -3rem;
+			}
+		}
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: 32px;
+
+		@include mq(md) {
+			column-gap: 0;
+			row-gap: 24px;
+		}
 	}
 
 	&__left-block {
 		grid-column: 4 span;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
 	}
 
 	&__rihgt-block {
 		grid-column: 8 span;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
+	}
+
+	&__nav {
+		@include mq(md) {
+			display: none;
+		}
 	}
 
 	&__nav-item {
@@ -79,12 +113,23 @@
 		justify-content: space-between;
 		margin-bottom: 3rem;
 		width: 100%;
+
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 3.2rem;
+		}
 	}
 
 	&__tags {
 		display: flex;
 		align-items: center;
 		flex-shrink: 0;
+
+		@include mq(sm) {
+			flex-wrap: wrap;
+			margin: -0.6rem -0.4rem;
+		}
 	}
 
 	&__tags-link {
@@ -112,6 +157,17 @@
 		&:last-child {
 			margin-right: 0;
 		}
+
+		@include mq(md) {
+			&:nth-child(n+7) {
+				display: none;
+			}
+		}
+
+		@include mq(sm) {
+			flex-wrap: wrap;
+			margin: 0.6rem 0.4rem;
+		}
 	}
 
 	&__tags-more-btn {
@@ -130,15 +186,62 @@
 			display: block;
 			margin-left: 0.5rem;
 		}
+
+		@include mq(sm) {
+			margin-top: 1.2rem;
+		}
 	}
 
 	&__card-list {
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
 		gap: 32px;
+
+		@include mq(sm) {
+			gap: 24px;
+		}
 	}
 
 	&__card-item {
 		grid-column: 4 span;
+
+		@include mq(sm) {
+			grid-column: 8 span;
+		}
+	}
+
+	&__mobile-select {
+		.choices__inner {
+			padding: 3.2rem 2.4rem !important;
+			height: 8.6rem;
+			background-color: var(--color-grey-bg);
+			border-radius: 1.2rem;
+			border: none;
+
+			@include mq(sm) {
+				padding: 2.4rem 1.6rem !important;
+				height: 7.2rem;
+			}
+		}
+
+		.choices__list--single,
+		.choices__placeholder {
+			font-weight: 700;
+			font-size: 1.8rem;
+			line-height: 2.1rem;
+			letter-spacing: 0.02em;
+			font-family: var(--second-ff);
+			text-transform: none;
+			opacity: 1;
+
+			@include mq(sm) {
+				font-size: 1.6rem;
+				line-height: 2.4rem;
+			}
+		}
+
+		@include mq(md, min) {
+			display: none;
+		}
 	}
 }

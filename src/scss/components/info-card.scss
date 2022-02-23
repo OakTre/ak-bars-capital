@@ -1,3 +1,7 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
+
 .info-card {
 	position: relative;
 	width: 100%;
@@ -7,6 +11,10 @@
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+
+	@include mq(sm) {
+		height: 37.4rem;
+	}
 
 	&:hover {
 		.info-card__img {
@@ -27,6 +35,10 @@
 		width: 100%;
 		height: 24.2rem;
 		overflow: hidden;
+
+		@include mq(sm) {
+			height: 18.6rem;
+		}
 	}
 
 	&__img {
@@ -43,6 +55,10 @@
 		flex-direction: column;
 		align-items: flex-start;
 		flex-grow: 1;
+
+		@include mq(sm) {
+			padding: 2.4rem 1.6rem;
+		}
 	}
 
 	&__tags {
@@ -64,6 +80,11 @@
 			&:hover {
 				color: var(--color-green-light);
 			}
+
+			@include mq(sm) {
+				font-size: 1.2rem;
+				line-height: 1.6rem;
+			}
 		}
 	}
 
@@ -76,6 +97,11 @@
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+		}
 	}
 
 	&__date {
