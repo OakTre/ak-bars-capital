@@ -1,5 +1,16 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .about-short {
 	&__heading {
 		margin-bottom: 4.8rem;
+
+		@include mq(md) {
+			margin-bottom: 4rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 2.4rem;
+		}
 	}
 }

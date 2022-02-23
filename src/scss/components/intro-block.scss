@@ -151,7 +151,7 @@
 		min-width: 26rem;
 
 		@include mq(md) {
-			padding: 1.4rem 3.4rem;
+			// padding: 1.4rem 3.4rem;
 		}
 
 		@include mq(sm) {
@@ -218,6 +218,24 @@
 			height: 48.3rem;
 			right: 0;
 			bottom: 0;
+
+			@include mq(md) {
+				width: 39.7rem;
+				height: 43.3rem;
+				right: -44px;
+			}
+		}
+
+		&._desctop {
+			@include mq(md) {
+				display: none;
+			}
+		}
+
+		&._mobile {
+			@include mq(md, min) {
+				display: none;
+			}
 		}
 
 		@include mq(md) {
@@ -293,5 +311,19 @@
 		right: -4rem;
 		width: 65.1rem;
 		height: 49.2rem;
+	}
+}
+
+
+.trust-management__intro {
+	@include mq(sm) {
+		height: auto;
+		padding-bottom: 5.6rem;
+	}
+
+	&-btn {
+		@include mq(sm) {
+			margin-top: 8rem;
+		}
 	}
 }

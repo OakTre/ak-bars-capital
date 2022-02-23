@@ -5,6 +5,12 @@
 	padding: 6.4rem 0 7.2rem;
 	background-color: var(--color-grey-bg);
 
+	@include mq(md) {
+		padding: 4rem 0;
+		overflow: hidden;
+		position: relative;
+	}
+
 	&.managment-margin {
 		margin-bottom: 4.8rem;
 
@@ -23,10 +29,34 @@
 		align-items: center;
 		border-bottom: 2px solid #ECECEC;
 		margin-bottom: 4.7rem;
+
+		@include mq(md) {
+			overflow: auto;
+			margin-right: -44px;
+			padding-right: 44px;
+			width: auto;
+			margin-bottom: 3rem;
+			padding-bottom: 2px;
+
+			&::-webkit-scrollbar { display: none; }
+		}
+
+		@include mq(sm) {
+			margin-right: -16px;
+			padding-right: 16px;
+		}
 	}
 
 	&__nav-item {
 		margin-right: 4.8rem;
+
+		@include mq(md) {
+			flex-shrink: 0;
+		}
+
+		@include mq(sm) {
+			margin-right: 1.2rem;
+		}
 
 		&:last-child {
 			margin-right: 0;
@@ -63,6 +93,12 @@
 			transition: opacity var(--transition);
 			content: "";
 		}
+
+		@include mq(sm) {
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+			padding-bottom: 1.2rem;
+		}
 	}
 
 	&__content {
@@ -82,6 +118,10 @@
 
 				&::before {
 					opacity: 1;
+				}
+
+				@include mq(sm) {
+					text-shadow: 0 0 0.1px var(--color-dark);
 				}
 			}
 		}
@@ -144,6 +184,14 @@
 	background-color: var(--color-white);
 	border-radius: 1rem;
 
+	@include mq(md) {
+		padding: 3.2rem;
+	}
+
+	@include mq(sm) {
+		padding: 2.4rem 1.6rem;
+	}
+
 	h3 {
 		font-weight: 500;
 		font-size: 2.4rem;
@@ -167,6 +215,11 @@
 		font-size: 16px;
 		line-height: 22px;
 		margin: 0;
+
+		@include mq(sm) {
+			font-size: 1.4rem;
+			line-height: 2.4rem;
+		}
 	}
 
 	p {
@@ -176,6 +229,11 @@
 		margin-bottom: 1.5rem;
 		&:nth-last-of-type(1) {
 			margin-bottom: 0;
+		}
+
+		@include mq(sm) {
+			font-size: 1.4rem;
+			line-height: 2.4rem;
 		}
 	}
 }
@@ -450,9 +508,17 @@
 	grid-template-columns: repeat(12,1fr);
 	gap: 32px;
 
+	@include mq(md) {
+		gap: 24px;
+	}
+
 	&__file {
 		width: 100%;
 		grid-column: 6 span;
 		border: 1px solid var(--color-green-lighter);
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
 	}
 }

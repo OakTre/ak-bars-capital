@@ -11,6 +11,10 @@
 			column-gap: 0;
 			row-gap: 24px;
 		}
+
+		@include mq(sm) {
+			row-gap: 12px;
+		}
 	}
 
 	&__item {
@@ -22,6 +26,12 @@
 
 		@include mq(md) {
 			grid-column: 12 span;
+			padding: 3.2rem;
+		}
+
+		@include mq(sm) {
+			padding: 2.4rem 1.6rem;
+			min-height: 18rem;
 		}
 	}
 
@@ -46,6 +56,7 @@
 			font-size: 4rem;
 			line-height: 1;
 			letter-spacing: -0.04em;
+			margin-bottom: 2rem;
 		}
 	}
 
@@ -66,6 +77,16 @@
 			font-weight: 500;
 			font-size: 2rem;
 			line-height: 2.7rem;
+
+			@include mq(md) {
+				max-width: 43.9rem;
+			}
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem !important;
+			line-height: 2.4rem !important;
+			max-width: 100%;
 		}
 	}
 
@@ -82,5 +103,14 @@
 		// z-index: -1;
 		width: 14.9rem;
 		height: 14.9rem;
+
+		@include mq(sm) {
+			width: 13.2rem;
+			height: 12.4rem;
+			bottom: 2.6rem;
+			right: 2.4rem;
+			object-fit: contain;
+			display: block;
+		}
 	}
 }

@@ -1,26 +1,58 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .solo-management {
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: 32px;
+
+		@include mq(md) {
+			display: block;
+		}
 	}
 
 	&__left-block {
 		grid-column: 5 span;
+
+		@include mq(md) {
+			grid-column: none;
+			width: 100%;
+			margin-bottom: 4rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 2.4rem;
+		}
 	}
 
 	&__right-block {
 		grid-column: 7 span;
+
+		@include mq(md) {
+			grid-column: none;
+			width: 100%;
+		}
 	}
 
 	&__heading {
 		margin-bottom: 3.2rem;
+
+		@include mq(md) {
+			max-width: 43.1rem;
+			margin-bottom: 1.2rem;
+		}
 	}
 
 	&__txt {
 		font-weight: 500;
 		font-size: 2rem;
 		line-height: 2.7rem;
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+		}
 	}
 
 	&__content {
@@ -35,6 +67,19 @@
 			b, strong {
 				color: var(--color-green);
 			}
+
+			@include mq(sm) {
+				font-size: 1.4rem;
+				line-height: 2.4rem;
+			}
+		}
+
+		@include mq(md) {
+			padding: 3.2rem;
+		}
+
+		@include mq(sm) {
+			padding: 2rem 1.6rem;
 		}
 	}
 
@@ -45,5 +90,9 @@
 		line-height: 2.7rem;
 		margin-bottom: 1.8rem;
 		letter-spacing: 0.04em;
+
+		@include mq(sm) {
+			margin-bottom: 1.2rem;
+		}
 	}
 }
