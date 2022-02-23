@@ -61,14 +61,14 @@
 
 
 	@include mq(md) {
-		margin-bottom: 7.2rem;
+		margin-bottom: 8rem;
 		background-size: contain;
 		background-position: center center;
 		height: 59.2rem;
 	}
 
 	@include mq(sm) {
-		margin-bottom: 4.8rem;
+		margin-bottom: 4rem;
 		background-image: none !important;
 		height: 38.7rem;
 	}
@@ -93,6 +93,34 @@
 
 		@include mq(sm) {
 			margin-bottom: 1.6rem;
+		}
+	}
+
+	&__text2 {
+		font-size: 2.2rem;
+		line-height: 3.3rem;
+		color: var(--intro-color-text);
+		max-width: 55.5rem;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+
+		&.mod-small-text {
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+		}
+
+		@include mq(md) {
+			font-size: 1.8rem;
+			line-height: 2.7rem;
+			max-width: 55.5rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			max-width: 43.5rem;
 		}
 	}
 
@@ -127,7 +155,7 @@
 		}
 
 		@include mq(sm) {
-			margin-top: 1.6rem;
+			margin-top: 2.4rem;
 			width: 100%;
 			padding: 1.8rem;
 			font-size: 1.8rem;
@@ -148,6 +176,7 @@
 
 	&__item {
 		position: relative;
+		z-index: 2;
 		height: 100%;
 		padding-top: 10.4rem;
 

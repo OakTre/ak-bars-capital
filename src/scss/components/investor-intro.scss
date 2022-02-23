@@ -1,8 +1,26 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .investor-intro {
 	&__img {
 		right: 0;
 		bottom: 0;
 		width: 70.2rem;
 		height: 56.2rem;
+
+		@include mq(md) {
+			z-index: -1;
+			right: -9rem;
+			width: 70.2rem;
+			height: 52.2rem;
+		}
+	}
+
+	@include mq(md) {
+		margin-bottom: 8rem;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 4rem;
 	}
 }

@@ -1,16 +1,42 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .rights {
 	background-color: var(--color-grey-bg);
 	padding: 6.7rem 0 6.5rem;
+
+	@include mq(md) {
+		padding: 4rem 0;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 4rem;
+	}
 
 	&__container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@include mq(md) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 
 	&__text {
 		max-width: 101rem;
 		font-size: 1.4rem;
 		line-height: 2.4rem;
+
+		@include mq(md) {
+			margin-bottom: 3.2rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 1.6rem;
+			font-size: 1.2rem;
+			line-height: 2rem;
+		}
 	}
 }

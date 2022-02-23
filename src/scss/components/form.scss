@@ -1,5 +1,17 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
+
 .form {
 	margin-bottom: 10.5rem;
+
+	@include mq(md) {
+		margin-bottom: 8rem;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 4rem;
+	}
 
 	&_grey-bg {
 		background-color: var(--color-grey-bg);
@@ -40,10 +52,18 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+
+		@include mq(md) {
+			width: 100%;
+		}
 	}
 
 	&__heading {
 		margin-bottom: 2.4rem;
+
+		@include mq(sm) {
+			margin-bottom: 1.2rem;
+		}
 	}
 
 	&__txt {
@@ -51,6 +71,12 @@
 		line-height: 2.4rem;
 		margin-bottom: 5.6rem;
 		text-align: center;
+
+		@include mq(sm) {
+			font-size: 1.4rem;
+			line-height: 2.4rem;
+			margin-bottom: 2.4rem;
+		}
 	}
 
 	&__label {
@@ -61,6 +87,10 @@
 
 		&:nth-last-of-type(1) {
 			margin-bottom: 3.2rem;
+
+			@include mq(sm) {
+				margin-bottom: 2.4rem;
+			}
 		}
 
 		.parsley-errors-list {
@@ -101,17 +131,33 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
+
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 
 	&__btn {
 		padding: 1.8rem 3.5rem;
 		min-width: 26rem;
+
+		@include mq(sm) {
+			align-self: stretch;
+			width: 100%;
+			order: 2;
+		}
 	}
 
 	&__agreement {
 		cursor: pointer;
 		position: relative;
 		display: block;
+
+		@include mq(sm) {
+			order: 1;
+			margin-bottom: 2.4rem;
+		}
 
 		&.parsley-error {
 			p {
