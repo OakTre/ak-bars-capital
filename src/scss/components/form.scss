@@ -17,6 +17,10 @@
 		background-color: var(--color-grey-bg);
 		margin-bottom: 0;
 		padding: 8rem 0;
+
+		@include mq(sm) {
+			padding: 4rem 0;
+		}
 	}
 
 	&__container {
@@ -33,9 +37,20 @@
 		height: 12rem;
 		object-fit: cover;
 
+		@include mq(sm) {
+			display: none;
+		}
+
 		&._right {
 			right: -2rem;
 			bottom: 0;
+
+			@include mq(md) {
+				width: 13rem;
+				height: 6.6rem;
+				right: -6rem;
+				bottom: -4rem;
+			}
 		}
 
 		&._left {
@@ -44,6 +59,13 @@
 			left: -2rem;
 			top: 0;
 			transform: scale(-1, 1);
+
+			@include mq(md) {
+				width: 16.7rem;
+				height: 7.1rem;
+				left: -6rem;
+				top: 12rem;
+			}
 		}
 	}
 
@@ -63,6 +85,7 @@
 
 		@include mq(sm) {
 			margin-bottom: 1.2rem;
+			text-align: center;
 		}
 	}
 

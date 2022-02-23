@@ -3,9 +3,29 @@
 	background-color: var(--color-grey-bg);
 	padding-top: 3.2rem;
 
+	@include mq(md) {
+		padding-top: 4rem;
+	}
+
+	@include mq(sm) {
+		min-height: 22.4rem;
+		padding-top: 6rem;
+		padding-bottom: 2.4rem;
+	}
+
+	&__breadcrumbs {
+		@include mq(md) {
+			margin-bottom: 4.9rem;
+		}
+	}
+
 	&__container {
 		position: relative;
 		height: 100%;
+
+		@include mq(sm) {
+			height: auto;
+		}
 	}
 
 	&__img {
@@ -14,10 +34,26 @@
 		right: 7.3rem;
 		width: 44.7rem;
 		height: 30rem;
+
+		@include mq(md) {
+			width: 24.8rem;
+			height: 22.4rem;
+			right: 0;
+			bottom: 0;
+		}
+
+		@include mq(sm) {
+			display: none;
+		}
 	}
 
 	&._type2 {
 		height: 32.3rem;
+
+		@include mq(sm) {
+			height: auto;
+			min-height: 22.4rem;
+		}
 	}
 
 	&__heading {
@@ -30,6 +66,16 @@
 			font-size: 3.2rem;
 			line-height: 3.8rem;
 			letter-spacing: 0.02em;
+
+			@include mq(sm) {
+				font-size: 2.4rem;
+				line-height: 3.2rem;
+			}
+		}
+
+		@include mq(sm) {
+			font-size: 2.4rem;
+			line-height: 3.2rem;
 		}
 	}
 
@@ -43,6 +89,12 @@
 		&._max-width {
 			max-width: 51rem;
 			padding-bottom: 11.4rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			margin-top: 2.4rem;
 		}
 	}
 }

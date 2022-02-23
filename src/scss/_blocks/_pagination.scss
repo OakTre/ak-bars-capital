@@ -3,6 +3,15 @@
 	align-items: center;
 	margin-top: 4.8rem;
 
+	@include mq(md) {
+		display: flex;
+		justify-content: center;
+	}
+
+	@include mq(sm) {
+		margin-top: 3.2rem;
+	}
+
 	&__link {
 		display: inline-block;
 		padding: 1.3rem 1rem;

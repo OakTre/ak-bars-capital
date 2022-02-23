@@ -1,11 +1,31 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .news-list {
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: 32px;
+
+		@include mq(md) {
+			gap: 24px;
+		}
+
+		@include mq(sm) {
+			row-gap: 16px;
+			column-gap: 0;
+		}
 	}
 
 	&__item {
 		grid-column: 4 span;
+
+		@include mq(md) {
+			grid-column: 6 span;
+		}
+
+		@include mq(sm) {
+			grid-column: 12 span;
+		}
 	}
 }
