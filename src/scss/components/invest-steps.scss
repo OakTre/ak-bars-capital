@@ -1,13 +1,34 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .invest-steps {
 	&__heading {
 		max-width: 30rem;
 		margin-bottom: 6.4rem;
+
+		@include mq(md) {
+			margin-bottom: 4rem;
+		}
 	}
 
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: 32px;
+
+		@include mq(md) {
+			display: flex;
+			grid-template-columns: none;
+			column-gap: 0;
+			overflow: auto;
+			width: auto;
+			margin-right: -44px;
+			padding-right: 44px;
+			margin-left: -44px;
+			padding-left: 44px;
+
+			&::-webkit-scrollbar { display: none; }
+		}
 	}
 
 	&__item {
@@ -18,10 +39,33 @@
 		border-radius: 1rem;
 		min-height: 44.1rem;
 
+		@include mq(md) {
+			flex-shrink: 0;
+			grid-column: none;
+			width: 40.2rem;
+			margin-right: 3.2rem;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@include mq(sm) {
+			padding: 3.2rem 1.6rem;
+			min-height: 27.3rem;
+			width: 23.4rem;
+			margin-right: 1.6rem;
+		}
+
 		&:nth-child(1) {
 			.invest-steps__img {
 				width: 18.8rem;
 				height: 24rem;
+
+				@include mq(sm) {
+					width: 8.9rem;
+					height: 12.1rem;
+				}
 			}
 		}
 
@@ -29,13 +73,23 @@
 			.invest-steps__img {
 				width: 25.9rem;
 				height: 19rem;
+
+
+				@include mq(sm) {
+					display: none;
+				}
 			}
 		}
 
-		&:nth-child(2) {
+		&:nth-child(3) {
 			.invest-steps__img {
 				width: 21.4rem;
 				height: 17.8rem;
+
+
+				@include mq(sm) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -49,6 +103,12 @@
 		color: var(--color-green);
 		text-transform: uppercase;
 		margin-bottom: 1.6rem;
+
+		@include mq(sm) {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			margin-bottom: 0.4rem;
+		}
 	}
 
 	&__item-heading {
@@ -58,6 +118,11 @@
 		line-height: 2.6rem;
 		font-family: var(--second-ff);
 		margin-bottom: 1.6rem;
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+		}
 	}
 
 	&__item-text {

@@ -14,16 +14,42 @@
 		.shield__img {
 			width: 30.5rem;
 			height: 39.3rem;
+
+			@include mq(md) {
+				bottom: 0;
+				width: 25.3rem;
+				height: 33.3rem;
+				right: 1.6rem;
+			}
+
+			@include mq(sm) {
+				display: none;
+			}
 		}
 
 		.shield__inner {
 			background-repeat: no-repeat;
 			background-size: 65.4rem 24.9rem;
 			background-position: 96% 50%;
+
+			@include mq(md) {
+				background-position: 800% 50%;
+				padding: 8rem 3.2rem;
+			}
+
+			@include mq(sm) {
+				padding: 3.2rem 1.6rem;
+				background-position: 170% 6.4rem;
+				background-size: 30.6rem 11.7rem;
+			}
 		}
 
 		.shield__btn {
 			padding: 1.8rem 2.6rem;
+
+			@include mq(sm) {
+				width: 100%;
+			}
 		}
 	}
 

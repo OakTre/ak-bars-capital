@@ -1,14 +1,39 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
+
 .review-content {
+	&__intro {
+		@include mq(md) {
+			margin-bottom: 2.4rem;
+		}
+	}
+
 	&__nav {
 		display: inline-flex;
 		align-items: center;
 		margin-bottom: 6.4rem;
+
+		@include mq(md) {
+			margin-bottom: 3.2rem;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 2.4rem;
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 
 	&__select {
 		position: relative;
 		width: auto;
 		margin-left: 1.9rem;
+
+		@include mq(sm) {
+			margin-left: 0;
+			margin-top: 1.2rem;
+		}
 
 		.choices {
 			padding-right: 2rem;
@@ -121,9 +146,25 @@
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: 32px;
+
+		@include mq(md) {
+			gap: 24px;
+		}
+
+		@include mq(sm) {
+			gap: 16px 0;
+		}
 	}
 
 	&__item {
 		grid-column: 4 span;
+
+		@include mq(md) {
+			grid-column: 6 span;
+		}
+
+		@include mq(sm) {
+			grid-column: 12 span;
+		}
 	}
 }
