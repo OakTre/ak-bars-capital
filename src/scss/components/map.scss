@@ -1,8 +1,20 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .map {
 	position: relative;
 	z-index: 2;
 	height: 73rem;
 	background-color: var(--color-grey);
+
+	@include mq(md) {
+		height: 75rem;
+	}
+
+	@include mq(sm) {
+		height: auto;
+		background-color: var(--color-white);
+	}
 
 	&__map {
 		position: absolute;
@@ -11,12 +23,24 @@
 		z-index: -1;
 		width: 100%;
 		height: 100%;
+
+		@include mq(sm) {
+			display: none;
+		}
 	}
 
 	&__container {
 		position: relative;
 		padding-top: 3.6rem;
 		pointer-events: none;
+
+		@include mq(md) {
+			padding-top: 14.6rem;
+		}
+
+		@include mq(sm) {
+			padding-top: 4rem;
+		}
 	}
 
 	&__logo-svg {
@@ -34,6 +58,16 @@
 		background-color: var(--color-white);
 		border-radius: 1rem;
 		pointer-events: auto;
+
+		@include mq(md) {
+			padding: 2.4rem;
+		}
+
+		@include mq(sm) {
+			border: 1px solid var(--border-color);
+			max-width: 100%;
+			padding: 2.4rem 1.6rem;
+		}
 	}
 
 	&__heading {
@@ -43,6 +77,16 @@
 		line-height: 3.2rem;
 		color: var(--color-green);
 		margin-bottom: 4.6rem;
+
+		@include mq(md) {
+			margin-bottom: 2.2rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			margin-bottom: 1.6rem;
+		}
 	}
 
 	&__adress {
@@ -53,6 +97,15 @@
 		line-height: 2.1rem;
 		letter-spacing: 0.02em;
 		margin-bottom: 1.6rem;
+
+		@include mq(md) {
+			margin-bottom: 2rem;
+			align-items: flex-start;
+		}
+
+		@include mq(sm) {
+			margin-bottom: 1.6rem;
+		}
 	}
 
 	&__adres-icon {
@@ -83,6 +136,11 @@
 			color: var(--color-green);
 		}
 
+
+		@include mq(md) {
+			margin-bottom: 2.1rem;
+		}
+
 	}
 
 	&__link-icon {
@@ -104,6 +162,10 @@
 	&__working-time-row {
 		display: flex;
 		align-items: center;
+
+		@include mq(sm) {
+			align-items: flex-start;
+		}
 	}
 
 	&__working-time-day {
@@ -128,5 +190,10 @@
 
 	&__working-time-list {
 		margin-bottom: 4.5rem;
+
+
+		@include mq(md) {
+			margin-bottom: 2.1em;
+		}
 	}
 }

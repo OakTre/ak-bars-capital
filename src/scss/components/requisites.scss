@@ -1,7 +1,18 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .requisites {
 	margin-bottom: 8rem;
 
+	@include mq(sm) {
+		margin-bottom: 4rem;
+	}
+
 	&__heading {
 		margin-bottom: 3.2rem;
+
+		@include mq(sm) {
+			margin-bottom: 2.4rem;
+		}
 	}
 }

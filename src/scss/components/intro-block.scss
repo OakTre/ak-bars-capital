@@ -304,6 +304,22 @@
 .intro.agent-offer__intro {
 	.intro-slider__item {
 		padding-top: 10.4rem;
+
+		@include mq(md) {
+			padding-top: 5.1rem;
+		}
+
+		@include mq(sm) {
+			padding-top: 6rem;
+		}
+
+		.intro__text {
+			@include mq(sm) {
+				display: block;
+				font-size: 1.6rem;
+				line-height: 2.4rem;
+			}
+		}
 	}
 
 	.intro-slider__img {
@@ -311,6 +327,13 @@
 		right: -4rem;
 		width: 65.1rem;
 		height: 49.2rem;
+
+		@include mq(md) {
+			width: 38rem;
+			height: 29rem;
+			bottom: 0;
+			right: -16rem;
+		}
 	}
 }
 

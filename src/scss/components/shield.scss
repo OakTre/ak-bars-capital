@@ -36,6 +36,31 @@
 			bottom: 3rem;
 			width: 35.7rem;
 			height: 35.7rem;
+
+			@include mq(md) {
+				width: 33.8rem;
+				height: 33.7rem;
+				bottom: 3rem;
+				right: -1rem;
+				left: auto;
+				z-index: -1;
+			}
+
+			@include mq(sm) {
+				display: none;
+			}
+		}
+
+		.shield__inner {
+			@include mq(sm) {
+				padding: 2.4rem 1.6rem;
+			}
+		}
+
+		.shield__btn {
+			@include mq(sm) {
+				width: 100%;
+			}
 		}
 	}
 
@@ -44,6 +69,7 @@
 
 	&__inner {
 		position: relative;
+		z-index: 2;
 		padding: 8rem 6.5rem;
 		border-radius: 1.2rem;
 		background-color: var(--shield-bg-color);
