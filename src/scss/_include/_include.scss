@@ -680,6 +680,11 @@
 	color: var(--color-white);
 	transition: color var(--transition);
 
+	@include mq(sm) {
+		font-size: 1.4rem;
+		line-height: 2rem;
+	}
+
 	&:hover {
 		color: var(--color-green);
 	}

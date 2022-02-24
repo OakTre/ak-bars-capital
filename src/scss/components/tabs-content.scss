@@ -21,6 +21,10 @@
 
 	&__heading {
 		margin-bottom: 4.8rem;
+
+		@include mq(md) {
+			margin-bottom: 2.6rem;
+		}
 	}
 
 	&__nav {
@@ -44,6 +48,7 @@
 		@include mq(sm) {
 			margin-right: -16px;
 			padding-right: 16px;
+			margin-bottom: 2.4rem;
 		}
 	}
 
@@ -275,12 +280,34 @@
 	&__heading-text {
 		max-width: 80.5rem;
 		margin-bottom: 4.8rem;
+
+		@include mq(md) {
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+			margin-bottom: 4rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			margin-bottom: 3.2rem;
+		}
 	}
 
 	&__legend {
 		font-size: 2rem;
 		line-height: 4rem;
 		margin-bottom: 2.4rem;
+
+		@include mq(md) {
+			margin-bottom: 3.2rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			margin-bottom: 1.6rem;
+		}
 	}
 
 	&__list {
@@ -288,6 +315,16 @@
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: 32px;
 		margin-bottom: 4.8rem;
+
+		@include mq(md) {
+			gap: 24px;
+			margin-bottom: 4rem;
+		}
+
+		@include mq(sm) {
+			gap: 16px 0;
+			margin-bottom: 3.2rem;
+		}
 	}
 
 	&__link {
@@ -299,6 +336,15 @@
 		padding-top: 4.5rem;
 		background-color: var(--color-white);
 		border-radius: 1rem;
+
+		@include mq(md) {
+			grid-column: 6 span;
+		}
+
+		@include mq(sm) {
+			grid-column: 12 span;
+			padding: 3.2rem 1.6rem;
+		}
 
 		&:hover {
 			.online-payment__link-name {
@@ -314,6 +360,12 @@
 		line-height: 2.4rem;
 		font-family: var(--second-ff);
 		margin-bottom: 3rem;
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			margin-bottom: 1.2rem;
+		}
 	}
 
 	&__link-txt {
@@ -323,6 +375,12 @@
 		line-height: 2.4rem;
 		color: var(--color-grey3);
 		margin-bottom: 1.3rem;
+
+		@include mq(sm) {
+			font-size: 1.4rem;
+			line-height: 2.4rem;
+			margin-bottom: 3.2rem;
+		}
 	}
 
 	&__link-name {
@@ -337,6 +395,10 @@
 		border-radius: 1rem;
 		background-color: var(--color-white);
 
+		@include mq(sm) {
+			padding: 2rem 1.6rem;
+		}
+
 		h4 {
 			font-weight: 700;
 			font-size: 1.2rem;
@@ -346,6 +408,14 @@
 
 			&:nth-of-type(1) {
 				margin-top: 0;
+			}
+
+			@include mq(sm) {
+				margin: 1.2rem 0;
+
+				&:nth-of-type(1) {
+					margin-top: 0;
+				}
 			}
 		}
 
@@ -358,6 +428,11 @@
 				padding-left: 1.5rem;
 				color: var(--color-grey2);
 				margin-bottom: 0.5rem;
+
+				@include mq(sm) {
+					font-size: 1.4rem;
+					line-height: 2.4rem;
+				}
 
 				a {
 					display: inline;
@@ -389,6 +464,11 @@
 			color: var(--color-grey2);
 			margin-bottom: 2rem;
 
+			@include mq(sm) {
+				font-size: 1.4rem;
+				line-height: 2.4rem;
+			}
+
 			b {
 				font-weight: 700;
 			}
@@ -414,6 +494,18 @@
 	p {
 		max-width: 80.5rem;
 		margin-bottom: 2.4rem;
+
+		@include mq(md) {
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+			margin-bottom: 3.2rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			margin-bottom: 2.4rem;
+		}
 	}
 
 	a {
@@ -429,6 +521,15 @@
 		grid-template-columns: repeat(12, 1fr);
 		gap: 32px;
 		margin-bottom: 3.2rem;
+
+		@include mq(md) {
+			margin-bottom: 4rem;
+		}
+
+		@include mq(sm) {
+			gap: 16px 0;
+			margin-bottom: 2.4rem;
+		}
 	}
 
 	&__item {
@@ -436,6 +537,15 @@
 		background-color: var(--color-white);
 		border-radius: 1rem;
 		padding: 2.5rem 3.2rem;
+
+		@include mq(md) {
+			padding: 2.4rem 1.8rem;
+		}
+
+		@include mq(sm) {
+			grid-column: 12 span;
+			padding: 3.2rem 1.6rem;
+		}
 	}
 
 	&__heading {
@@ -443,6 +553,10 @@
 		font-size: 1.8rem;
 		line-height: 2.4rem;
 		margin-bottom: 1.2rem;
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+		}
 	}
 
 	&__text {
@@ -454,6 +568,20 @@
 		&:nth-last-of-type(1) {
 			padding-right: 0;
 		}
+
+		@include mq(md) {
+			display: block;
+			margin-bottom: 0.8rem;
+			padding: 0;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include mq(sm) {
+			margin-bottom: 1.2rem;
+		}
 	}
 }
 
@@ -462,6 +590,17 @@
 	p {
 		max-width: 80.5rem;
 		margin-bottom: 3.2rem;
+
+		@include mq(md) {
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+			margin-bottom: 2.4rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+		}
 	}
 
 	&__item {
@@ -470,6 +609,14 @@
 		border-radius: 1rem;
 		background-color: var(--color-white);
 		margin-bottom: 3.2rem;
+
+		@include mq(md) {
+			padding-top: 5.3rem;
+		}
+
+		@include mq(sm) {
+			padding: 3.2rem 1.6rem;
+		}
 	}
 
 	&__heading {
@@ -477,12 +624,35 @@
 		font-size: 2rem;
 		line-height: 2.6rem;
 		margin-bottom: 2.4rem;
+
+		@include mq(md) {
+			max-width: 54.9rem;
+		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__row_mobile {
+		display: none;
+
+		@include mq(md) {
+			display: block;
+		}
 	}
 
 	&__row {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: 3.2rem;
+
+		@include mq(md) {
+			gap: 24px 0;
+			display: none;
+		}
 	}
 
 	&__col {
@@ -496,6 +666,12 @@
 		display: block;
 		margin-bottom: 0.4rem;
 		color: var(--color-grey3);
+
+		@include mq(sm) {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			margin-bottom: 0.4rem;
+		}
 	}
 
 	&__legend {
@@ -503,11 +679,21 @@
 		font-weight: 500;
 		margin-bottom: 2.4rem;
 		max-width: 41.5rem;
+
+		@include mq(sm) {
+			font-size: 1.4rem;
+			line-height: 2rem;
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__link {
 		margin-bottom: 2.6rem;
 		color: var(--color-dark);
+
+		@include mq(sm) {
+			margin-bottom: 2.3rem;
+		}
 
 		&.mo-margin {
 			margin-bottom: 0;
@@ -518,6 +704,11 @@
 		position: absolute;
 		top: 3.2rem;
 		right: 3.2rem;
+
+		@include mq(sm) {
+			position: static;
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__file {
@@ -532,6 +723,10 @@
 
 		.file__name {
 			max-width: 36.5rem;
+		}
+
+		@include mq(md) {
+			margin-top: 2.4rem;
 		}
 	}
 }

@@ -5,6 +5,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	gradient.addColorStop(0, 'rgba(0, 178, 169, 0.2)');
 	gradient.addColorStop(1, 'rgba(0, 178, 169, 0)');
 
+	function generateLabels() {
+        var chartLabels = [];
+        for (x = 0; x < 100; x++) {
+            chartLabels.push("Label" + x);
+        }
+        return chartLabels;
+    }
+
+    function generateData() {
+        var chartData = [];
+        for (x = 0; x < 100; x++) {
+            chartData.push(Math.floor((Math.random() * 100) + 1));
+        }
+        return chartData;
+    }
+
 	const labels = [
 		'янв `21',
 		'фев `21',

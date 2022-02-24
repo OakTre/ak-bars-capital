@@ -1,27 +1,27 @@
 +linkCSS("tabs-content")
 
-section.tabs-content.section
+section.tabs-content.section#tab
 	.site-container
 		h2.tabs-content__heading.second-title
 			|	Где оплатить
 		.tabs-content__container.js-tabs-container
 			ul.tabs-content__nav
-				li.tabs-content__nav-item
+				li.tabs-content__nav-item.js-payment-tab(data-payment-tab="online")
 					label.tabs-content__nav-label
 						input.visually-hidden.js-tab(type="radio" checked name="tab" value="online-pay")
 						span.tabs-content__btn
 							|	Оплата в интернет-банке
-				li.tabs-content__nav-item
+				li.tabs-content__nav-item.js-payment-tab(data-payment-tab="bank")
 					label.tabs-content__nav-label
 						input.visually-hidden.js-tab(type="radio" name="tab" value="pay-bankomat")
 						span.tabs-content__btn
 							|	Оплата в банкоматах
-				li.tabs-content__nav-item
+				li.tabs-content__nav-item.js-payment-tab(data-payment-tab="stock")
 					label.tabs-content__nav-label
 						input.visually-hidden.js-tab(type="radio" name="tab" value="stock-pay")
 						span.tabs-content__btn
 							|	Биржевое обращение
-				li.tabs-content__nav-item
+				li.tabs-content__nav-item.js-payment-tab(data-payment-tab="agents")
 					label.tabs-content__nav-label
 						input.visually-hidden.js-tab(type="radio" name="tab" value="agents-pay")
 						span.tabs-content__btn
@@ -213,6 +213,47 @@ section.tabs-content.section
 							img(src="/local/assets/img/logo-white.svg" alt="" class="agent-tab__item-img")
 							h4.agent-tab__heading
 								|	ПАО «АК БАРС» БАНК
+
+							.agent-tab__row_mobile
+								span.agent-tab__small-legend
+									|	Полное наименование
+								sapn.agent-tab__legend
+									|	Акционерный коммерческий банк «АК БАРС» (публичное акционерное общество)
+								span.agent-tab__small-legend
+									|	Сокращенное наименование
+								sapn.agent-tab__legend
+									|	ПАО «АК БАРС» БАНК
+								span.agent-tab__small-legend
+									|	Основоной государственный регистрационный номер (ОГРН)
+								sapn.agent-tab__legend
+									|	1021600000124
+								span.agent-tab__small-legend
+									|	Лицензия на осуществление брокерской деятельности
+								sapn.agent-tab__legend
+									|	№ 116-03460-100000 от 07.12.2000, выдана ФКЦБ РФ без ограничения срока действия
+
+								.site-link.agent-tab__link
+									+icon("marker")(class="site-link__icon")
+									| РФ, 420066, г. Казань, ул. Декабристов, 1
+								a.site-link.agent-tab__link.mo-margin(href="tel:+78435193958")
+									+icon("mobile")(class="site-link__icon")
+									| +7 (843) 519-39-58
+
+								a.file-transparent.agent-tab__file(href="/" download)
+									<svg class="file__icon" width="44" height="54" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.12354 47V7C2.12354 4.23858 4.36212 2 7.12354 2H24.7955C26.1618 2 27.4685 2.55908 28.412 3.54729L40.74 16.4599C41.628 17.3901 42.1235 18.6266 42.1235 19.9126V47C42.1235 49.7614 39.885 52 37.1235 52H7.12354C4.36211 52 2.12354 49.7614 2.12354 47Z" stroke="#00B2A9" stroke-width="3"/>
+										<path d="M26.4094 2V12.7143C26.4094 15.4757 28.648 17.7143 31.4094 17.7143H42.1237" stroke="#00B2A9" stroke-width="3"/>
+										<rect x="2" y="25.4568" width="40.1235" height="18.5185" fill="#00B2A9"/>
+										<path d="M9.86367 35.992V40.3269H7.83643V28.6603H12.2996C13.603 28.6603 14.6366 28.9995 15.4005 29.6779C16.1698 30.3563 16.5544 31.2538 16.5544 32.3702C16.5544 33.5134 16.1778 34.4028 15.4246 35.0385C14.6767 35.6742 13.627 35.992 12.2755 35.992H9.86367ZM9.86367 34.3654H12.2996C13.0207 34.3654 13.5709 34.1971 13.9502 33.8606C14.3295 33.5187 14.5191 33.0273 14.5191 32.3862C14.5191 31.7559 14.3268 31.2538 13.9422 30.8798C13.5576 30.5006 13.0287 30.3056 12.3557 30.2949H9.86367V34.3654Z" fill="white"/>
+										<path d="M18.3332 40.3269V28.6603H21.7787C22.8097 28.6603 23.7232 28.89 24.5191 29.3494C25.3204 29.8088 25.9401 30.4605 26.3781 31.3045C26.8161 32.1485 27.0351 33.1154 27.0351 34.2052V34.7901C27.0351 35.8959 26.8135 36.8681 26.3701 37.7068C25.932 38.5454 25.3044 39.1918 24.4871 39.6459C23.6751 40.0999 22.7429 40.3269 21.6906 40.3269H18.3332ZM20.3605 30.2949V38.7084H21.6826C22.7456 38.7084 23.5603 38.3772 24.1265 37.7148C24.6981 37.047 24.9892 36.0908 24.9999 34.8462V34.1971C24.9999 32.9311 24.7248 31.9642 24.1746 31.2965C23.6244 30.6288 22.8257 30.2949 21.7787 30.2949H20.3605Z" fill="white"/>
+										<path d="M35.7771 35.383H31.0816V40.3269H29.0544V28.6603H36.4662V30.2949H31.0816V33.7644H35.7771V35.383Z" fill="white"/>
+									</svg>
+									div
+										span.file__name
+											|	Порядок приема заявок в местах приема заявок агента по выдаче, погашению и&nbsp;обмену инвестиционных
+										span.file__size
+											|	 pdf – 159 Кб
+
 							.agent-tab__row
 								.agent-tab__col
 									span.agent-tab__small-legend
@@ -263,6 +304,59 @@ section.tabs-content.section
 							img(src="/local/assets/img/logo-infinite.svg" alt="" class="agent-tab__item-img")
 							h4.agent-tab__heading
 								|	АО «Специализированный депозитарий «ИНФИНИТУМ»
+
+							.agent-tab__row_mobile
+								span.agent-tab__small-legend
+									|	Полное наименование
+								sapn.agent-tab__legend
+									|	Акционерное общество «Специализированный депозитарий «ИНФИНИТУМ»
+
+								span.agent-tab__small-legend
+									|	Сокращенное наименование
+								sapn.agent-tab__legend
+									|	АО «Специализированный депозитарий «ИНФИНИТУМ»
+
+								span.agent-tab__small-legend
+									|	Основоной государственный регистрационный номер (ОГРН)
+								sapn.agent-tab__legend
+									|	1021600000124
+								span.agent-tab__small-legend
+									|	Лицензия на осуществление специализированного депозитария инвестиционных фондов, паевых инвестиционных фондов и негосударственных пенсионных фондов
+								sapn.agent-tab__legend
+									|	№ 22-000-1-00013 от 04.10.2000, выдана ФКЦБ РФ
+
+
+								span.agent-tab__small-legend
+									|	Лицензия на осуществление профессионального участника рынка ценных бумаг на осуществление депозитарной деятельности
+								sapn.agent-tab__legend
+									|	№ 045-07071-000100 от 31.10.2003, выдана ФКЦБ РФ
+
+								.site-link.agent-tab__link
+									+icon("marker")(class="site-link__icon")
+									| РФ, 115162, г. Москва, ул. Шаболовка, д. 31, корп. Б
+								a.site-link.agent-tab__link(href="tel:+74952523232")
+									+icon("mobile")(class="site-link__icon")
+									| 8 (495) 252-32-32
+								a.site-link.agent-tab__link.mo-margin(href="tel:+74956443770")
+									+icon("mobile")(class="site-link__icon")
+									| 8 (495) 644-37-70
+
+								a.file-transparent.agent-tab__file(href="/" download)
+									<svg class="file__icon" width="44" height="54" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.12354 47V7C2.12354 4.23858 4.36212 2 7.12354 2H24.7955C26.1618 2 27.4685 2.55908 28.412 3.54729L40.74 16.4599C41.628 17.3901 42.1235 18.6266 42.1235 19.9126V47C42.1235 49.7614 39.885 52 37.1235 52H7.12354C4.36211 52 2.12354 49.7614 2.12354 47Z" stroke="#00B2A9" stroke-width="3"/>
+										<path d="M26.4094 2V12.7143C26.4094 15.4757 28.648 17.7143 31.4094 17.7143H42.1237" stroke="#00B2A9" stroke-width="3"/>
+										<rect x="2" y="25.4568" width="40.1235" height="18.5185" fill="#00B2A9"/>
+										<path d="M9.86367 35.992V40.3269H7.83643V28.6603H12.2996C13.603 28.6603 14.6366 28.9995 15.4005 29.6779C16.1698 30.3563 16.5544 31.2538 16.5544 32.3702C16.5544 33.5134 16.1778 34.4028 15.4246 35.0385C14.6767 35.6742 13.627 35.992 12.2755 35.992H9.86367ZM9.86367 34.3654H12.2996C13.0207 34.3654 13.5709 34.1971 13.9502 33.8606C14.3295 33.5187 14.5191 33.0273 14.5191 32.3862C14.5191 31.7559 14.3268 31.2538 13.9422 30.8798C13.5576 30.5006 13.0287 30.3056 12.3557 30.2949H9.86367V34.3654Z" fill="white"/>
+										<path d="M18.3332 40.3269V28.6603H21.7787C22.8097 28.6603 23.7232 28.89 24.5191 29.3494C25.3204 29.8088 25.9401 30.4605 26.3781 31.3045C26.8161 32.1485 27.0351 33.1154 27.0351 34.2052V34.7901C27.0351 35.8959 26.8135 36.8681 26.3701 37.7068C25.932 38.5454 25.3044 39.1918 24.4871 39.6459C23.6751 40.0999 22.7429 40.3269 21.6906 40.3269H18.3332ZM20.3605 30.2949V38.7084H21.6826C22.7456 38.7084 23.5603 38.3772 24.1265 37.7148C24.6981 37.047 24.9892 36.0908 24.9999 34.8462V34.1971C24.9999 32.9311 24.7248 31.9642 24.1746 31.2965C23.6244 30.6288 22.8257 30.2949 21.7787 30.2949H20.3605Z" fill="white"/>
+										<path d="M35.7771 35.383H31.0816V40.3269H29.0544V28.6603H36.4662V30.2949H31.0816V33.7644H35.7771V35.383Z" fill="white"/>
+									</svg>
+									div
+										span.file__name
+											|	РЕГЛАМЕНТ оказания услуг агента по выдаче, погашению и обмену инвестиционных паев Редакция №4
+										span.file__size
+											|	 pdf – 159 Кб
+
+
 							.agent-tab__row
 								.agent-tab__col
 									span.agent-tab__small-legend

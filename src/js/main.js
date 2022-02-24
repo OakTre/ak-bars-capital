@@ -8,8 +8,40 @@ window.onload = () => {
 	setTimeout(() => {
 		preloader.style.disaply = "none";
 		preloader.querySelector("svg").remove();
+
+		toTab();
 	}, 3250);
 }
+
+
+function toTab() {
+	const tab = document.querySelector("#tab");
+	const jsPeymtnTabs = document.querySelectorAll(".js-payment-tab");
+	// let headerHeight = getComputedStyle(document.documentElement).getPropertyValue('--header-height');
+	// headerHeight = headerHeight.replace(/[^0-9]/g,"");
+
+	if (tab) {
+		if (getParams().tabs.length) {
+			$('html, body').animate({
+				scrollTop: $("#tab").offset().top
+			}, 900);
+
+			let tabId = getParams().tabs;
+
+			jsPeymtnTabs.forEach((tab)=>{
+				let tabAttr = tab.dataset.paymentTab;
+
+				if (tabAttr == tabId) {
+					jsPeymtnTabs.forEach((el)=>{el.querySelector(".js-tab").checked = false});
+
+					tab.querySelector(".js-tab").checked = true;
+				}
+			});
+
+		}
+	}
+}
+
 
 function disableScroll() {
 	let pagePosition = window.scrollY;
@@ -35,6 +67,18 @@ function lockPadding() {
 
 function unlockPadding() {
 	document.body.style.paddingRight = '0px';
+}
+
+function getParams() {
+	var a = window.location.search;
+	var b = new Object();
+	a = a.substring(1).split("&");
+	let c;
+	for (var i = 0; i < a.length; i++) {
+		c = a[i].split("=");
+		b[c[0]] = c[1]
+	}
+	return b
 }
 
 
@@ -118,5 +162,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 		// bodyScrollLock.enableBodyScroll(mobileMenu, options);
 	});
-
 });

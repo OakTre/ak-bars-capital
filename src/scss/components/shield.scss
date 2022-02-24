@@ -78,8 +78,14 @@
 		}
 
 		.shield__inner {
+			@include mq(md) {
+				background-size: 54.9rem 18.9rem;
+				background-position: 216% 50%;
+			}
+
 			@include mq(sm) {
 				padding: 2.4rem 1.6rem;
+				background-image: none !important;
 			}
 		}
 

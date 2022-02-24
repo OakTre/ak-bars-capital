@@ -1,8 +1,16 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .chart {
 	position: relative;
 	width: 100%;
 	height: 38.6rem;
 	margin-bottom: 5.2rem;
+
+	@include mq(md) {
+		width: 600rem;
+		margin-bottom: 0;
+	}
 
 	&__canvas {
 		position: absolute;
@@ -10,5 +18,19 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+
+		@include mq(md) {
+			width: auto;
+			height: auto;
+		}
+	}
+
+	&__container {
+		@include mq(md) {
+			padding: 0;
+			max-width: none;
+			overflow: auto;
+			margin-bottom: 3.2rem;
+		}
 	}
 }

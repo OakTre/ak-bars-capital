@@ -1,20 +1,40 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .income {
 	padding: 8rem 0 10.3rem;
 	background-color: var(--color-dark);
+
+	@include mq(md) {
+		padding: 8rem 0;
+	}
 
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: 32px;
+
+		@include mq(md) {
+			gap: 24px 0;
+		}
 	}
 
 	&__left-block {
 		grid-column: 5 span;
+
+		@include mq(md) {
+			grid-column: 12 span;
+		}
 	}
 
 	&__right-block {
 		grid-column: 7 span;
 		justify-self: end;
+
+		@include mq(md) {
+			grid-column: 12 span;
+			justify-self: stretch;
+		}
 	}
 
 	&__heading {
@@ -25,6 +45,10 @@
 	&__txt {
 		color: var(--rgba-white-08);
 		margin-bottom: 5rem;
+
+		@include mq(md) {
+			margin-bottom: 4rem;
+		}
 	}
 
 	&__warning {
@@ -46,6 +70,15 @@
 	border-radius: 1rem;
 	padding: 5.1rem 0 5.3rem 3.2rem;
 
+	@include mq(md) {
+		min-width: 0;
+		width: 100%;
+	}
+
+	@include mq(sm) {
+		padding: 2.4rem 1.6rem;
+	}
+
 	&__heading {
 		display: block;
 		font-weight: 700;
@@ -54,6 +87,12 @@
 		font-family: var(--second-ff);
 		margin-bottom: 1.5rem;
 		color: var(--color-white);
+
+		@include mq(sm) {
+			font-size: 2rem;
+			line-height: 2.8rem;
+			margin-bottom: 2.4rem;
+		}
 	}
 
 	&__body {
@@ -61,10 +100,27 @@
 		align-items: flex-start;
 		justify-content: space-between;
 		margin-bottom: 5rem;
+
+		@include mq(sm) {
+			flex-direction: column;
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__left {
 		margin-right: 1.5rem;
+
+		@include mq(sm) {
+			margin-right: 0;
+			width: 100%;
+		}
+	}
+
+	&__rigth {
+		@include mq(sm) {
+			width: 100%;
+			margin-top: 2rem;
+		}
 	}
 
 	&__text {
@@ -75,6 +131,12 @@
 		line-height: 5.6rem;
 		font-family: var(--second-ff);
 		color: var(--color-white);
+
+		@include mq(sm) {
+			font-size: 3.2rem;
+			line-height: 1;
+			margin-bottom: 1.2rem;
+		}
 	}
 
 	&__plus {
@@ -85,16 +147,34 @@
 		font-size: 1.6rem;
 		line-height: 2rem;
 		color: var(--rgba-white-06);
+
+		@include mq(sm) {
+			font-size: 1.4rem;
+			line-height: 2.4rem;
+		}
 	}
 
 	&__btn {
 		padding: 1.8rem 10rem;
+
+		@include mq(sm) {
+			width: 100%;
+		}
 	}
 
 	&__percents {
 		padding: 1rem 2.6rem 1rem 2rem;
 		background-color: #EAB772;
 		border-radius: 1rem 0px 0px 1rem;
+
+		@include mq(sm) {
+			width: 100%;
+			border-radius: 1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 1rem 1rem 1.2rem;
+		}
 	}
 
 	&__percents-nubmer {
@@ -105,6 +185,11 @@
 		line-height: 3.6rem;
 		font-family: var(--second-ff);
 		color: var(--color-white);
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+		}
 	}
 
 	&__percents-nubmer-icon {
@@ -118,6 +203,11 @@
 		line-height: 2.1rem;
 		letter-spacing: 0.02em;
 		color: var(--color-white);
+
+		@include mq(sm) {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+		}
 	}
 }
 

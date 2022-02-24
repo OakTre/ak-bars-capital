@@ -54,9 +54,11 @@ section.section.data
 		.data__fund-info
 			for item in found_arr
 				- let greenClass = item.green ? "is-green" : false
-				.data__fund-info-item(data-heading=item.attr class=greenClass)=item.name
-					- if (item.green == true)
-						+icon("small-green-triangle")(width="12" height="11" class="data__fund-info-item-icon")
+				.data__fund-info-item(data-heading=item.attr class=greenClass)
+					span
+						span=item.name
+						- if (item.green == true)
+							+icon("small-green-triangle")(width="12" height="11" class="data__fund-info-item-icon")
 
 
 		.data__btns-wrapper
@@ -91,8 +93,9 @@ section.section.data
 					input(type="radio" name="period" value="5year" class="visually-hidden")
 					span
 						|	5 лет
-		include chart
+	include chart
 
+	.site-container
 		.data__text-info
 			p
 				|	* Прирост определяется в соответствии с Указанием Банка России от 02.11.2020 г. №5609-У "О раскрытии,распространений и предоставлении информации акционерными инвестиционными фондами и управляющими компаниями инвестиционных фондов, паевых инвестиционных фондов и негосударственных пенсионных фондов, а также о требованиях к расчету доходности инвестиционной деятельности акционерного инвестиционного фонда и управляющей компании паевого инвестиционного фонда"

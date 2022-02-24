@@ -1,6 +1,13 @@
+@import "../_include/variables";
+@import "../_include/_mixins/_media";
+
 .pay-stores {
 	&__heading {
 		margin-bottom: 3.2rem;
+
+		@include mq(sm) {
+			margin-bottom: 1.2rem;
+		}
 	}
 
 	&__heading-text {
@@ -13,6 +20,15 @@
 		&:nth-last-of-type(1) {
 			margin-bottom: 4.8rem;
 		}
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+
+			&:nth-last-of-type(1) {
+				margin-bottom: 2.4rem;
+			}
+		}
 	}
 
 	&__selects-container {
@@ -22,10 +38,23 @@
 		grid-template-columns: repeat(12, 1fr);
 		column-gap: 32px;
 		margin-bottom: 3.2rem;
+
+		@include mq(md) {
+			column-gap: 24px;
+		}
+
+		@include mq(sm) {
+			gap: 16px 0;
+			margin-bottom: 2.4rem;
+		}
 	}
 
 	&__select {
 		grid-column: 6 span;
+
+		@include mq(sm) {
+			grid-column: 12 span;
+		}
 	}
 
 	&__map {
@@ -33,10 +62,21 @@
 		z-index: 2;
 		height: 75rem;
 		background-color: var(--color-grey-bg);
+
+		@include mq(sm) {
+			height: auto;
+			background-color: var(--color-white);
+		}
 	}
 
 	&__map-container {
 		display: flex;
 		justify-content: flex-end;
+
+		@include mq(sm) {
+			display: block;
+			padding-top: 0;
+			padding-bottom: 4rem;
+		}
 	}
 }

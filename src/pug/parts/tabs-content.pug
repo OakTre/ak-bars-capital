@@ -1,6 +1,6 @@
 +linkCSS("tabs-content")
 
-section.tabs-content.section
+section.tabs-content.section#tabs
 	.site-container.tabs-content__container.js-tabs-container(data-anim-fade)
 		ul.tabs-content__nav
 			li.tabs-content__nav-item
@@ -106,25 +106,25 @@ section.tabs-content.section
 
 			.tabs-content__content.js-tab-content(data-content="payment")
 				.payment
-					a.payment__item(href="")
+					a.payment__item(href="/local/html/where-buy.html?tabs=online" target="_blank")
 						img.payment__img(src="/local/assets/img/pifs/payment-img.svg" alt="")
 						span.payment__heading
 							|	Оплата паев в&nbsp;банкоматах
 						p.payment__text
 							|	В банкоматах ПАО «АК БАРС» БАНКА, с помощью пластиковых карт
-					a.payment__item(href="")
+					a.payment__item(href="/local/html/where-buy.html?tabs=bank" target="_blank")
 						img.payment__img(src="/local/assets/img/pifs/payment-img2.svg" alt="")
 						span.payment__heading
 							|	Оплата паев в интернет&nbsp;-&nbsp;банке
 						p.payment__text
 							|	Без комиссии, с подключенной услугой «Дистанционного банковского обслуживания»
-					a.payment__item(href="")
+					a.payment__item(href="/local/html/where-buy.html?tabs=stock" target="_blank")
 						img.payment__img(src="/local/assets/img/pifs/payment-img3.svg" alt="")
 						span.payment__heading
 							|	Биржевое обращение&nbsp;паев
 						p.payment__text
 							|	Паи ряда паевых инвестиционных фондов
-					a.payment__item(href="")
+					a.payment__item(href="/local/html/where-buy.html?tabs=agents" target="_blank")
 						img.payment__img(src="/local/assets/img/pifs/payment-img4.svg" alt="")
 						span.payment__heading
 							|	Агенты «АК&nbsp;БАРС&nbsp;КАПИТАЛ»
