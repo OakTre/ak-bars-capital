@@ -1,0 +1,204 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity var(--transition-time), visibility var(--transition-time);
+
+	&.is-open {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity var(--transition-time), visibility var(--transition-time);
+	}
+
+	&__container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: var(--color-white);
+		border-radius: 0.4rem;
+		max-width: 61.4rem;
+		width: 100%;
+		display: none;
+
+		&.modal-open {
+			display: block;
+		}
+
+		@include mq(md) {
+			max-width: 53.4rem;
+		}
+
+		@include mq(sm) {
+			max-width: 100%;
+			border-radius: 0;
+			height: 100%;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		height: 100%;
+		padding: 4.2rem 2.4rem 3.2rem 2.4rem;
+		position: relative;
+
+		@include mq(md) {
+			padding: 3.2rem 2rem;
+			overflow-y: scroll;
+		}
+
+		@include mq(sm) {
+			padding: 4.4rem 1.6rem 2.4rem 1.6rem;
+		}
+	}
+
+	&__close-btn {
+		position: absolute;
+		top: 1.6rem;
+		right: 1.6rem;
+		z-index: 3;
+		width: 2.4rem;
+		height: 2.4rem;
+		display: block;
+		cursor: pointer;
+		outline: none;
+
+		span {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 90%;
+			height: 2px;
+			border-radius: 2px;
+			background-color: var(--color-dark);
+
+			&:nth-child(1) {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+
+			&:nth-child(2) {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+		}
+
+		@include mq(md) {
+			top: 1.6rem;
+			right: 1.6rem;
+			width: 2rem;
+			height: 2rem;
+		}
+	}
+
+	&__heading {
+		display: block;
+		font-weight: 700;
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+		font-family: var(--second-ff);
+		margin-bottom: 3.2rem;
+		text-align: center;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&__form-agreement {
+		display: flex;
+		flex-direction: column;
+
+		p {
+			max-width: 100%;
+			font-size: 1rem;
+			line-height: 1.3rem;
+			letter-spacing: 0.02em;
+			padding-left: 3.2rem;
+
+			&::before {
+				height: 2rem;
+				width: 2rem;
+			}
+
+			&::after {
+				top: 0.3rem;
+				left: 0.3rem;
+			}
+		}
+	}
+
+	&__form-btn {
+		align-self: center;
+		margin-bottom: 3.2rem;
+	}
+}
+
+
+.modal-seccuss {
+	@include mq(sm) {
+		max-width: 90%;
+		height: 80%;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding-top: 9.7rem;
+		padding-bottom: 13.3rem;
+
+		@include mq(md) {
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+	}
+
+	&__img {
+		display: block;
+		margin-bottom: 8.6rem;
+		object-fit: cover;
+		width: 17.8rem;
+		height: 10.6rem;
+
+		@include mq(sm) {
+			width: 14rem;
+			height: 10rem;
+			margin-bottom: 3.2rem;
+			object-fit: contain;
+		}
+	}
+
+	&__text {
+		text-align: center;
+		font-family: var(--second-ff);
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+		margin-bottom: 8.5rem;
+
+		@include mq(sm) {
+			font-size: 1.6rem;
+			line-height: 2rem;
+			margin-bottom: 4.2rem;
+		}
+	}
+
+	&__btn {
+		width: 27.6rem;
+		padding: 1.5rem;
+		text-align: center;
+
+		@include mq(sm) {
+			width: 100%;
+		}
+	}
+}

@@ -11,8 +11,8 @@
     <link rel="mask-icon" href="/local/include/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <title>О компании | Ак Барс Капитал</title>
-    <link rel="stylesheet" href="/local/assets/css/vendor.min.css?v=0.0.4.2">
-    <link rel="stylesheet" href="/local/assets/css/style.min.css?v=0.0.4.2">
+    <link rel="stylesheet" href="/local/assets/css/vendor.min.css?v=0.0.4.4">
+    <link rel="stylesheet" href="/local/assets/css/style.min.css?v=0.0.4.4">
   </head>
   <body>
     <div class="prealoder">
@@ -131,7 +131,7 @@
       </div>
     </div>
     <div class="page-wrapper">
-      <header class="header _header-black">
+      <header class="header fix-block _header-black">
         <div class="site-container header__container">
           <div class="header__left-block">
             <a class="logo" href="/">
@@ -254,8 +254,8 @@
             <h1 class="intro-middle__title">	Лучшая управляющая компания Приволжского Федерального округа</h1>
           </div>
         </section>
-        <link rel="stylesheet" href="/local/assets/css/components/about-short.min.css?v=0.0.4.2"/>
-        <link rel="stylesheet" href="/local/assets/css/components/feautures.min.css?v=0.0.4.2"/>
+        <link rel="stylesheet" href="/local/assets/css/components/about-short.min.css?v=0.0.4.4"/>
+        <link rel="stylesheet" href="/local/assets/css/components/feautures.min.css?v=0.0.4.4"/>
         <section class="section about-short">
           <div class="site-container about-short__container">
             <h2 class="about-short__heading second-title">	Коротко о компании</h2>
@@ -284,7 +284,7 @@
             </div>
           </div>
         </section>
-        <link rel="stylesheet" href="/local/assets/css/components/chief.min.css?v=0.0.4.2"/>
+        <link rel="stylesheet" href="/local/assets/css/components/chief.min.css?v=0.0.4.4"/>
         <section class="section chief">
           <div class="site-container chief__container">
             <img class="chief__img" src="/local/assets/img/chief.jpg" alt="">
@@ -300,7 +300,7 @@
             </div>
           </div>
         </section>
-        <link rel="stylesheet" href="/local/assets/css/components/founders.min.css?v=0.0.4.2"/>
+        <link rel="stylesheet" href="/local/assets/css/components/founders.min.css?v=0.0.4.4"/>
         <section class="section founders">
           <div class="site-container founders__container">
             <h2 class="founders__heading second-title">	Учредители</h2>
@@ -348,7 +348,7 @@
             </a>
           </div>
         </section>
-        <link rel="stylesheet" href="/local/assets/css/components/partners.min.css?v=0.0.4.2"/>
+        <link rel="stylesheet" href="/local/assets/css/components/partners.min.css?v=0.0.4.4"/>
         <section class="section partners">
           <div class="site-container partners__container">
             <div class="partners__heading-wrapper">
@@ -397,8 +397,8 @@
             <a class="button partners__btn" href="/">	 Стать агентом</a>
           </div>
         </section>
-        <script src="/local/assets/js/components/partners.js?v=0.0.4.2"></script>
-        <link rel="stylesheet" href="/local/assets/css/components/licenses.min.css?v=0.0.4.2"/>
+        <script src="/local/assets/js/components/partners.js?v=0.0.4.4"></script>
+        <link rel="stylesheet" href="/local/assets/css/components/licenses.min.css?v=0.0.4.4"/>
         <section class="section licenses">
           <div class="site-container licenses__container">
             <h2 class="licenses__heading second-title">	Лицензии</h2>
@@ -431,7 +431,7 @@
             </p>
           </div>
         </section>
-        <link rel="stylesheet" href="/local/assets/css/components/invest-table.min.css?v=0.0.4.2"/>
+        <link rel="stylesheet" href="/local/assets/css/components/invest-table.min.css?v=0.0.4.4"/>
         <section class="section_small-margin">
           <div class="site-container">
             <div class="invest-table">
@@ -472,7 +472,7 @@
               <a class="footer__legend" href="/">	 Контакты</a>
             </div>
             <div class="footer__grid-block">
-              <button class="button-reset button footer__btn">	Онлайн заявка</button>
+              <button class="button-reset button footer__btn" data-path="callback">	Онлайн заявка</button>
             </div>
           </div>
         </div>
@@ -671,9 +671,62 @@
         </div>
       </footer>
     </div>
+    <div class="modal">
+      <div class="modal__container" data-target="callback">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close">
+            <span></span>
+            <span></span>
+          </button>
+          <span class="modal__heading">Обращение в компанию</span>
+          <form class="form__inner modal__form" data-need-validation action="/local/include/test.php">
+            <label class="form__label">
+              <input class="form__input" type="text" placeholder="ФИО" name="modalName" data-parsley-required>
+            </label>
+            <label class="form__label">
+              <input class="form__input js-phone-mask" type="tel" placeholder="Ваш номер телефона" name="modalTel" data-parsley-required data-parsley-phone>
+            </label>
+            <label class="form__label">
+              <input class="form__input js-phone-mask" type="email" placeholder="Электронная почта" name="modalEmail">
+            </label>
+            <label class="form__label">
+              <textarea class="form__textarea" name="text" placeholder="Введите сообщение"></textarea>
+            </label>
+            <div class="form__agreement-wrapper modal__form-agreement">
+              <button class="button-reset button form__btn modal__form-btn">	Отправить</button>
+              <label class="form__agreement">
+                <input class="form__input-agreement visually-hidden" type="checkbox" name="modalAgree" data-parsley-required>
+                <p>	Настоящим в соответствии с Федеральным законом от 27/07/2006 № 152-ФЗ «О персональных данных» и иными нормами законодательства Российской Федерации своей волей и в своем интересе даю согласие на обработку всех предоставленных данных ООО УК «АК БАРС КАПИТАЛ». Данное согласие может быть отозвано мной, при этом прекращение обработки и уничтожение персональных данных осуществляется в сроки и в порядке, которые установлены законодательством Российской Федерации"</p>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal__container modal-seccuss" data-target="succes">
+        <div class="modal__content modal-seccuss__content">
+          <button class="button-reset modal__close-btn modal-close">
+            <span></span>
+            <span></span>
+          </button>
+          <img class="modal-seccuss__img" src="/local/assets/img/success.svg" alt="">
+          <p class="modal-seccuss__text">	Спасибо!<br>	Сообщение успешно отправлено.</p>
+          <a class="modal-seccuss__btn button" href="/">	На главную</a>
+        </div>
+      </div>
+      <div class="modal__container modal-seccuss" data-target="error">
+        <div class="modal__content modal-seccuss__content">
+          <button class="button-reset modal__close-btn modal-close">
+            <span></span>
+            <span></span>
+          </button>
+          <p class="modal-seccuss__text">Что-то пошло не так,<br>	сообщение не отправлено, повторите позже.</p>
+          <a class="modal-seccuss__btn button" href="/">	На главную</a>
+        </div>
+      </div>
+    </div>
   </body>
-  <script src="/local/assets/js/vendor.js?v=0.0.4.2"></script>
-  <script src="/local/assets/js/global.js?v=0.0.4.2"></script>
-  <script src="/local/assets/js/validation.js?v=0.0.4.2"></script>
-  <script src="/local/assets/js/main.js?v=0.0.4.2"></script>
+  <script src="/local/assets/js/vendor.js?v=0.0.4.4"></script>
+  <script src="/local/assets/js/global.js?v=0.0.4.4"></script>
+  <script src="/local/assets/js/validation.js?v=0.0.4.4"></script>
+  <script src="/local/assets/js/main.js?v=0.0.4.4"></script>
 </html>

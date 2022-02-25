@@ -1,0 +1,53 @@
+.modal
+	//- форма
+	.modal__container(data-target="callback")
+		.modal__content
+			button.button-reset.modal__close-btn.modal-close
+				span
+				span
+			span.modal__heading
+				| Обращение в компанию
+			form.form__inner.modal__form(data-need-validation action="/local/include/test.php")
+				label.form__label
+					input.form__input(type="text" placeholder="ФИО" name="modalName" data-parsley-required)
+				label.form__label
+					input.form__input.js-phone-mask(type="tel" placeholder="Ваш номер телефона" name="modalTel" data-parsley-required data-parsley-phone)
+				label.form__label
+					input.form__input.js-phone-mask(type="email" placeholder="Электронная почта" name="modalEmail")
+				label.form__label
+					textarea(name="text" class="form__textarea" placeholder="Введите сообщение")
+				.form__agreement-wrapper.modal__form-agreement
+					button.button-reset.button.form__btn.modal__form-btn
+						|	Отправить
+					label.form__agreement
+						input.form__input-agreement.visually-hidden(type="checkbox" name="modalAgree" data-parsley-required)
+						p
+							|	Настоящим в соответствии с Федеральным законом от 27/07/2006 № 152-ФЗ «О персональных данных» и иными нормами законодательства Российской Федерации своей волей и в своем интересе даю согласие на обработку всех предоставленных данных ООО УК «АК БАРС КАПИТАЛ». Данное согласие может быть отозвано мной, при этом прекращение обработки и уничтожение персональных данных осуществляется в сроки и в порядке, которые установлены законодательством Российской Федерации"
+
+	//- успех
+	.modal__container.modal-seccuss(data-target="succes")
+		.modal__content.modal-seccuss__content
+			button.button-reset.modal__close-btn.modal-close
+				span
+				span
+			img(src="/local/assets/img/success.svg", alt="" class="modal-seccuss__img")
+			p.modal-seccuss__text
+				|	Спасибо!
+				br
+				|	Сообщение успешно отправлено.
+
+			a.modal-seccuss__btn.button(href="/")
+				|	На главную
+	//- ошибка отправки
+	.modal__container.modal-seccuss(data-target="error")
+		.modal__content.modal-seccuss__content
+			button.button-reset.modal__close-btn.modal-close
+				span
+				span
+			p.modal-seccuss__text
+				| Что-то пошло не так,
+				br
+				|	сообщение не отправлено, повторите позже.
+
+			a.modal-seccuss__btn.button(href="/")
+				|	На главную

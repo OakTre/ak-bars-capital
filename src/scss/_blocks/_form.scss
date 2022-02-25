@@ -1,0 +1,262 @@
+
+.form {
+	margin-bottom: 10.5rem;
+
+	@include mq(md) {
+		margin-bottom: 8rem;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 4rem;
+	}
+
+	&_grey-bg {
+		background-color: var(--color-grey-bg);
+		margin-bottom: 0;
+		padding: 8rem 0;
+
+		@include mq(sm) {
+			padding: 4rem 0;
+		}
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__img {
+		position: absolute;
+		display: block;
+		width: 23.5rem;
+		height: 12rem;
+		object-fit: cover;
+
+		@include mq(sm) {
+			display: none;
+		}
+
+		&._right {
+			right: -2rem;
+			bottom: 0;
+
+			@include mq(md) {
+				width: 13rem;
+				height: 6.6rem;
+				right: -6rem;
+				bottom: -4rem;
+			}
+		}
+
+		&._left {
+			width: 29.1rem;
+			height: 14.8rem;
+			left: -2rem;
+			top: 0;
+			transform: scale(-1, 1);
+
+			@include mq(md) {
+				width: 16.7rem;
+				height: 7.1rem;
+				left: -6rem;
+				top: 12rem;
+			}
+		}
+	}
+
+	&__inner {
+		width: 62.1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include mq(md) {
+			width: 100%;
+		}
+	}
+
+	&__heading {
+		margin-bottom: 2.4rem;
+
+		@include mq(sm) {
+			margin-bottom: 1.2rem;
+			text-align: center;
+		}
+	}
+
+	&__txt {
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		margin-bottom: 5.6rem;
+		text-align: center;
+
+		@include mq(sm) {
+			font-size: 1.4rem;
+			line-height: 2.4rem;
+			margin-bottom: 2.4rem;
+		}
+	}
+
+	&__label {
+		position: relative;
+		display: block;
+		width: 100%;
+		margin-bottom: 1.6rem;
+
+		&:nth-last-of-type(1) {
+			margin-bottom: 3.2rem;
+
+			@include mq(sm) {
+				margin-bottom: 2.4rem;
+			}
+		}
+
+		.parsley-errors-list {
+			position: absolute;
+			right: 1rem;
+			bottom: 0.5rem;
+			color: var(--color-red);
+			font-size: 1.2rem;
+			line-height: 1.4rem;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		height: 6.4rem;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		padding: 2rem 1.6rem;
+		background-color: var(--color-white);
+
+		border: 1px solid var(--border-color);
+		border-radius: 0.5rem;
+		outline: none;
+
+		&.parsley-error {
+			border-color: var(--color-red);
+		}
+
+		&::placeholder {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			color: var(--color-grey2);
+		}
+	}
+
+	&__textarea {
+		width: 100%;
+		height: 8.8rem;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		padding: 1.7rem 1.6rem;
+		background-color: var(--color-white);
+		resize: none;
+
+		border: 1px solid var(--border-color);
+		border-radius: 0.5rem;
+		outline: none;
+
+		&::placeholder {
+			font-weight: 400;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			font-family: var(--main-ff) !important;
+			color: var(--color-grey2);
+		}
+	}
+
+	&__agreement-wrapper {
+		align-self: stretch;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		@include mq(sm) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__btn {
+		padding: 1.8rem 3.5rem;
+		min-width: 26rem;
+
+		@include mq(sm) {
+			align-self: stretch;
+			width: 100%;
+			order: 2;
+		}
+	}
+
+	&__agreement {
+		cursor: pointer;
+		position: relative;
+		display: block;
+
+		@include mq(sm) {
+			order: 1;
+			margin-bottom: 2.4rem;
+		}
+
+		&.parsley-error {
+			p {
+				color: var(--color-red);
+			}
+		}
+
+		~ .parsley-errors-list {
+			display: none;
+		}
+
+		p {
+			position: relative;
+			padding-left: 3.7rem;
+			max-width: 27.6rem;
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			letter-spacing: 0.02em;
+			color: var(--color-grey2);
+
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 2.5rem;
+				height: 2.5rem;
+				border-radius: 0.5rem;
+				border: 1px solid var(--border-color);
+				background-color: var(--color-white);
+				content: "";
+			}
+
+			&::after {
+				position: absolute;
+				top: 0.6rem;
+				left: 0.6rem;
+				width: 1.5rem;
+				height: 1.4rem;
+				background-image: url("/local/assets/img/tick.svg");
+				background-position: center center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: opacity var(--transition);
+				content: "";
+			}
+		}
+
+	}
+
+	&__input-agreement {
+		&:checked {
+			~ p {
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
