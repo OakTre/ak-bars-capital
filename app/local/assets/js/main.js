@@ -17,8 +17,6 @@ window.onload = () => {
 function toTab() {
 	const tab = document.querySelector("#tab");
 	const jsPeymtnTabs = document.querySelectorAll(".js-payment-tab");
-	// let headerHeight = getComputedStyle(document.documentElement).getPropertyValue('--header-height');
-	// headerHeight = headerHeight.replace(/[^0-9]/g,"");
 
 	if (tab) {
 		if (getParams().tabs.length) {
@@ -81,11 +79,26 @@ function getParams() {
 	return b
 }
 
+// якорный скролл
+function scrollByAnchor() {
+	let headerHeight = getComputedStyle(document.documentElement).getPropertyValue('--header-height');
+	headerHeight = headerHeight.replace(/[^0-9]/g,"");
+	headerHeight+="0"
+
+    $("a[href^='#']").click(function() {
+        const _href = $(this).attr('href');
+        $('html, body').animate({ scrollTop: $(_href).offset().top - Number(headerHeight) + 'px' }, 800);
+        return false;
+    });
+}
+
 
 document.addEventListener("DOMContentLoaded", function(event) {
 	const options = BodyScrollOptions = {
 		reserveScrollBarGap: true,
 	};
+
+	scrollByAnchor();
 
 	// локализация для дат
 	dayjs.locale('ru');
