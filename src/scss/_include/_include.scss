@@ -861,3 +861,33 @@
 		}
 	}
 }
+
+.full-txt {
+	&.is-active {
+		height: auto;
+
+		&::before {
+			content: none;
+		}
+
+		.full-btn-hide {
+
+		}
+	}
+}
+
+.full-txt-btn {
+	.full-btn-show {
+		display: none;
+	}
+
+	&.is-active {
+		.full-btn-hide {
+			display: none;
+		}
+
+		.full-btn-show {
+			display: inline;
+		}
+	}
+}

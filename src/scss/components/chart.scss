@@ -8,8 +8,9 @@
 	margin-bottom: 5.2rem;
 
 	@include mq(md) {
-		width: 600rem;
+		width: 100rem;
 		margin-bottom: 0;
+		height: 33rem;
 	}
 
 	&__canvas {
