@@ -22,15 +22,26 @@
 
 section.section.review-content
 	.site-container.review-content__container
-		// убрать класс visually-hidden если нужен блок
-		.review-content__nav.visually-hidden
+		.review-content__nav
 			span
 				|	Обзоры рынков за период:
-			.review-content__select
-				select(name="period" class="js-custom-select")
-					while n<3
-						option(value="ноября 2021 - декабрь 2021")
-							|	ноября 2021 - декабрь 202#{n++}
+
+			.site-info-dates.js-dates-parent.review-content__dates
+				label.site-info-dates__icon-wrapper
+					input(type="text" class="visually-hidden js-info-dates site-info-dates__input")
+					span.js-start-date
+						|	ноября 2021
+					|	-
+					span.js-end-date
+						|	 декабрь 2021
+
+			//- .review-content__select
+			//- 	select(name="period" class="js-custom-select")
+			//- 		while n<3
+			//- 			option(value="ноября 2021 - декабрь 2021")
+			//- 				|	ноября 2021 - декабрь 202#{n++}
+
+
 		.review-content__list
 			for item in file_arr
 				a.file.file-small.review-content__item(href=item.filePath target="_blank")
@@ -50,7 +61,7 @@ section.section.review-content
 						|	Смотреть обзор
 						+icon("link-open-icon")(width="13" height="13" class="file-small__link-name-icon")
 		// убрать класс visually-hidden если нужен блок
-		ul.pagination.visually-hidden
+		ul.pagination
 			li.pagination__item
 				a.pagination__link.is-active(href="/")
 					| 	1
@@ -64,4 +75,4 @@ section.section.review-content
 				a.pagination__link(href="/")
 					| 4
 
-+linkJs("initSelects")
++linkJs("initDatePicker")

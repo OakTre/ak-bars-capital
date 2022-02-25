@@ -87,6 +87,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		reserveScrollBarGap: true,
 	};
 
+	// локализация для дат
+	dayjs.locale('ru');
+
 	Fancybox.bind('[data-fancybox="gallery"]', {
 		Toolbar: {
 			display: [

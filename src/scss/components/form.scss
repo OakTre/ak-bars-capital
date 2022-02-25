@@ -212,11 +212,32 @@
 				background-color: var(--color-white);
 				content: "";
 			}
+
+			&::after {
+				position: absolute;
+				top: 0.6rem;
+				left: 0.6rem;
+				width: 1.5rem;
+				height: 1.4rem;
+				background-image: url("/local/assets/img/tick.svg");
+				background-position: center center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: opacity var(--transition);
+				content: "";
+			}
 		}
 
 	}
 
 	&__input-agreement {
-
+		&:checked {
+			~ p {
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
 	}
 }

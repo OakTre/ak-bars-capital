@@ -9,10 +9,19 @@
 		}
 	}
 
+	&__dates {
+		margin-left: 1.3rem;
+
+		@include mq(sm) {
+			margin-left: 0;
+			margin-top: 1.2rem;
+		}
+	}
+
 	&__nav {
 		display: inline-flex;
 		align-items: center;
-		margin-bottom: 6.4rem;
+		margin-bottom: 3.2rem;
 
 		@include mq(md) {
 			margin-bottom: 3.2rem;

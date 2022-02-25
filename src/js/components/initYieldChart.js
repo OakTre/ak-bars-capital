@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	let dateText = document.querySelector(".js-date-text");
 	const chartDates = document.querySelectorAll(".js-yield-info-dates");
 
-	// локализация для дат
-	dayjs.locale('ru');
 	// подставляем текущую дату
 	dateText.innerHTML = dayjs(new Date()).format('DD MMMM YYYY');
 
