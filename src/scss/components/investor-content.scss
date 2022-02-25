@@ -14,6 +14,10 @@
 		}
 	}
 
+	&__swiper {
+		overflow: visible;
+	}
+
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -23,13 +27,6 @@
 			display: flex;
 			grid-template-columns: none;
 			column-gap: 0;
-			overflow: auto;
-			margin-right: -44px;
-			padding-right: 44px;
-			margin-left: -44px;
-			padding-left: 44px;
-
-			&::-webkit-scrollbar { display: none; }
 		}
 	}
 
@@ -45,6 +42,7 @@
 			width: 40.3rem;
 			padding: 2.9rem 2.4rem;
 			margin-right: 2.4rem;
+			height: auto;
 
 			&:last-child {
 				margin-right: 0;

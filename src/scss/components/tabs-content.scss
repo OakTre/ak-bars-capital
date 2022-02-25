@@ -46,8 +46,8 @@
 		}
 
 		@include mq(sm) {
-			margin-right: -16px;
-			padding-right: 16px;
+			margin-right: 0;
+			padding-right: 0;
 			margin-bottom: 2.4rem;
 		}
 	}

@@ -685,7 +685,7 @@
 		line-height: 2rem;
 	}
 
-	&:hover {
+	&:not(._text):hover {
 		color: var(--color-green);
 	}
 

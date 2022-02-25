@@ -15,6 +15,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			  slidesPerView: 3,
 			  spaceBetween: 32,
 			},
-		  },
+		},
 	});
 });

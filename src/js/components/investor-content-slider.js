@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-	const newsSlider = new Swiper('.js-news-slider', {
-		slidesPerView: 3,
+	const introSlider = new Swiper('.js-swiper', {
+		slidesPerView: "auto",
         spaceBetween: 32,
 		breakpoints: {
 			310: {
@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				spaceBetween: 16,
 			},
 			767: {
-				slidesPerView: 2,
-				spaceBetween: 16,
+				slidesPerView: 1.5,
+				spaceBetween: 24,
 			},
 			991: {
-			  slidesPerView: 3,
+			  slidesPerView: "auto",
 			  spaceBetween: 32,
 			},
 		},
