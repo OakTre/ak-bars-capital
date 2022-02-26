@@ -1,0 +1,10 @@
+extends layout/default
+
+block variables
+	- const bodyClass = ""
+	- const pageTitle = "Ой, что-то пошло не так"
+	- const siteLang = "ru"
+	- const headerClass = "_header-black"
+
+block content
+	include pages/error/main.pug

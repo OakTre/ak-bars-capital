@@ -1,0 +1,101 @@
+.error-page {
+	&__container {
+		position: relative;
+		padding-top: 23rem;
+		padding-bottom: 23rem;
+		// height: calc(100vh - var(--header-height));
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+
+		@include mq(custom,max,1366) {
+			padding-top: 18rem;
+			padding-bottom: 18rem;
+		}
+
+		@include mq(lg) {
+			padding-top: 8rem;
+			padding-bottom: 28rem;
+		}
+
+		@include mq(md) {
+			padding-top: 6rem;
+			padding-bottom: 6rem;
+		}
+
+		@include mq(sm) {
+			padding-top: 4rem;
+			padding-bottom: 6rem;
+		}
+
+		p {
+			font-size: 2.2rem;
+			line-height: 3.3rem;
+			letter-spacing: 0.01em;
+			color: rgba($color: #10002B, $alpha: 0.7);
+			margin-bottom: 4.8rem;
+
+			@include mq(sm) {
+				font-size: 1.6rem;
+				line-height: 2.4rem;
+				margin-bottom: 3.2rem;
+			}
+		}
+	}
+
+	&__heading {
+		font-weight: 500;
+		font-size: 3.2rem;
+		line-height: 4.8rem;
+		letter-spacing: 0.02em;
+		margin-bottom: 2.4rem;
+		max-width: 61.9rem;
+
+		@include mq(sm) {
+			font-size: 2.4rem;
+			line-height: 3rem;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 50%;
+		right: 44px;
+		transform: translateY(-50%);
+		width: 51.7rem;
+		height: 36rem;
+		display: block;
+		object-fit: cover;
+
+		@include mq(lg) {
+			top: 57%;
+			right: 8.9rem;
+			width: 48.7rem;
+			height: 34rem;
+		}
+
+		@include mq(md) {
+			position: static;
+			transform: none;
+			margin-bottom: 3.2rem;
+			width: 35.7rem;
+			height: 25rem;
+			align-self: center;
+		}
+
+		@include mq(sm) {
+			width: 19.7rem;
+			height: 14rem;
+		}
+	}
+
+	&__btn {
+		@include mq(sm) {
+			width: 100%;
+			padding: 1.6rem;
+			font-size: 1.8rem;
+			line-height: 2.4rem;
+		}
+	}
+}
