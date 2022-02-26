@@ -70,7 +70,7 @@
 	@include mq(sm) {
 		margin-bottom: 4rem;
 		background-image: none !important;
-		height: 38.7rem;
+		height: auto;
 	}
 
 	&__container {
@@ -173,6 +173,10 @@
 .intro-slider {
 	position: relative;
 	height: 100%;
+
+	@include mq(sm) {
+		padding-bottom: 4.6rem;
+	}
 
 	&__item {
 		position: relative;
@@ -396,6 +400,7 @@
 	@include mq(sm) {
 		.intro-slider {
 			padding-top: 5.3rem;
+			padding-bottom: 5.3rem;
 		}
 	}
 }

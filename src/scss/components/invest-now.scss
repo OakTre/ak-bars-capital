@@ -107,15 +107,12 @@
 	}
 
 	@include mq(sm) {
+		position: relative;
 		grid-template-columns: none;
 		gap: 0;
 		display: flex;
-		overflow: auto;
+		overflow-x: scroll;
 		width: auto;
-		margin-right: -16px;
-		padding-right: 16px;
-		margin-left: -16px;
-		padding-left: 16px;
 
 		&::-webkit-scrollbar { display: none; }
 	}
