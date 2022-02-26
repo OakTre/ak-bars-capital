@@ -29,6 +29,18 @@
 		}
 	}
 
+	&__mobile-link {
+		display: none;
+		font-size: 1.6rem;
+		line-height: 2.7rem;
+		color: var(--color-green);
+		margin-bottom: 1.6rem;
+
+		@include mq(sm) {
+			display: inline-flex;
+		}
+	}
+
 	&__container {
 		position: relative;
 		padding-top: 3.6rem;
@@ -104,7 +116,7 @@
 		}
 
 		@include mq(sm) {
-			margin-bottom: 1.6rem;
+			margin-bottom: 0.4rem;
 		}
 	}
 

@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	const contentStreet = document.querySelector(".js-content-street");
 	const contentWorkingHours = document.querySelector(".js-content-working-hours");
 	const contentMobile = document.querySelector(".js-content-mobile");
+	const contentRoute = document.querySelector(".js-map-route");
 
 	let response;
 	let placemark;
@@ -162,6 +163,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 							contentWorkingHours.innerHTML = "";
 							contentMobile.innerHTML = response[i].phone;
 
+							contentRoute.setAttribute("href",
+								`yandexmaps://build_route_on_map?lat_to=${response[i].coords[0]}&lon_to=${response[i].coords[1]}`
+							)
+
 							for (let k = 0; k < response[i].workingHours.length; k++) {
 								let workingHoursTemplate = `
 									<div class="map__working-time-row">
@@ -214,6 +219,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 							contentHeading.innerHTML = response[cityId].stores[k].heading;
 							contentStreet.innerHTML = response[cityId].stores[k].street;
 							contentMobile.innerHTML = response[cityId].stores[k].phone;
+							contentRoute.setAttribute("href",
+								`yandexmaps://build_route_on_map?lat_to=${response[cityId].stores[k].coords[0]}&lon_to=${response[cityId].stores[k].coords[1]}`
+							)
 
 							contentWorkingHours.innerHTML = "";
 							for (let l = 0; l < response[cityId].stores[k].workingHours.length; l++) {
