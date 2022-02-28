@@ -12,7 +12,7 @@
 		gap: 32px;
 		margin-bottom: 7.2rem;
 
-		@include mq(md) {
+		@include mq(lg) {
 			grid-template-columns: repeat(8, 1fr);
 			gap: 24px;
 		}
@@ -33,7 +33,7 @@
 			grid-column: 4 span;
 		}
 
-		@include mq(md) {
+		@include mq(lg) {
 			grid-column: 4 span !important;
 
 			&:nth-child(1) {
@@ -70,7 +70,7 @@
 			}
 		}
 
-		@include mq(md) {
+		@include mq(lg) {
 			flex-direction: column;
 			align-items: flex-start;
 			padding: 6rem 2.4rem;
@@ -88,7 +88,7 @@
 		height: 2.5rem;
 		margin-right: 6.6rem;
 
-		@include mq(md) {
+		@include mq(lg) {
 			margin-right: 0;
 			margin-bottom: 2.5rem;
 		}
@@ -104,7 +104,7 @@
 		line-height: 2.7rem;
 		max-width: 74.3rem;
 
-		@include mq(md) {
+		@include mq(lg) {
 			margin-bottom: 3.2rem;
 		}
 
@@ -120,7 +120,7 @@
 		margin-left: auto;
 		color: var(--color-green);
 
-		@include mq(md) {
+		@include mq(lg) {
 			margin-left: 0;
 		}
 	}

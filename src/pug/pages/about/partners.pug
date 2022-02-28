@@ -33,10 +33,34 @@ section.section.partners
 					.partners__item.swiper-slide
 						img.partners__img(src=`/local/assets/img/partners/img${index}.png`, alt="")
 						p.partners__text=item
+						ul
+							li
+								span
+									|	Фактический и почтовый адрес:
+								|	420061, г.&nbsp;Казань, ул.&nbsp;Ершова, д.&nbsp;55е
+							li
+								span
+									|	Телефон:
+								a(href="tel:+78432731314")
+									|	 (843) 273-13-14
+							li
+								span
+									|	Факс:
+								a(href="tel:+78432735253")
+									|	 (843) 273-52-53
+							li
+								span
+									|	Сайт:
+								a(href="www.volga-capital.ru")
+									|	 www.volga-capital.ru
+						p
+							|	АО «НПФ «Волга-Капитал» создан 25 октября 1999 года как некоммерческая организация социального обеспечения.
+						p
+							|	Виды деятельности: негосударственное пенсионное обеспечение, обязательное пенсионное страхование.
 
 
 
-		a.button.partners__btn(href="/")
+		button.button-reset.button.partners__btn(href="/" data-path="callback" data-modal-heading="Стать агентом")
 			|	 Стать агентом
 
 +linkJs("partners")

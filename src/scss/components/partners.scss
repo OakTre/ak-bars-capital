@@ -79,12 +79,52 @@
 		@include mq(sm) {
 			padding: 2.4rem 1.6rem;
 		}
+
+		ul {
+			margin-top: 1.4rem;
+			margin-bottom: 1.4rem;
+
+			li {
+				margin-bottom: 0.8rem;
+				font-size: 1.5rem;
+				line-height: 2.3rem;
+
+				a {
+					color: var(--color-green);
+					text-decoration: underline;
+
+					&:hover {
+						text-decoration: none;
+					}
+
+				}
+
+				span {
+					display: block;
+					font-size: 1.3rem;
+					line-height: 1.6rem;
+					color: var(--color-grey3);
+				}
+			}
+		}
+
+		p:not(.partners__text) {
+			margin-bottom: 1.2rem;
+			font-size: 1.5rem;
+			line-height: 2.3rem;
+
+			&:nth-last-of-type(1) {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&__img {
 		max-width: 11.9rem;
 		display: block;
 		margin-bottom: 2.5rem;
+		height: 2.7rem;
+		object-fit: contain;
 
 		@include mq(sm) {
 			margin-bottom: 1.2rem;

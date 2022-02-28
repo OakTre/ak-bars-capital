@@ -36,9 +36,6 @@
 
 		@include mq(md) {
 			overflow: auto;
-			margin-right: -44px;
-			padding-right: 44px;
-			width: auto;
 			margin-bottom: 3rem;
 			padding-bottom: 2px;
 
@@ -46,8 +43,6 @@
 		}
 
 		@include mq(sm) {
-			margin-right: 0;
-			padding-right: 0;
 			margin-bottom: 2.4rem;
 		}
 	}

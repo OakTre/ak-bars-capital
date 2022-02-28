@@ -1,21 +1,10 @@
-section.intro(style="background-image: url(/local/assets/img/intro-abb-bg.svg)")
+section.intro.index-intro(style="background-image: url(/local/assets/img/intro-abb-bg.svg)")
 	.site-container.intro__container
 		.intro-slider
-			.slider-nav.intro-slider__nav
-				button.slider-nav__btn.button-reset.js-intro-slider-prev
-					<svg class="slider-nav__btn-circle"  width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<circle cx="25" cy="25" r="24.5" stroke="#00B2A9"/>
-					</svg>
-					+icon("arrow-shevron-left")(width="10" height="16" class="slider-nav__btn-icon")
-				button.slider-nav__btn.button-reset.js-intro-slider-next
-					<svg class="slider-nav__btn-circle"  width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<circle cx="25" cy="25" r="24.5" stroke="#00B2A9"/>
-					</svg>
-					+icon("arrow-shevron-right")(width="10" height="16" class="slider-nav__btn-icon")
 			.swiper.js-intro-slider
 				.swiper-wrapper
 					.intro-slider__item.swiper-slide
-						img(class="intro-slider__img" src="/local/assets/img/intro-block/slider-img.png", alt="Инвестиции с «Ак Барс Капитал»")
+						img(class="intro-slider__img" src="/local/assets/img/intro-block/slider-img.png" alt="Инвестиции с «Ак Барс Капитал»")
 						h1.intro__heading.intro-heading
 							|	Инвестиции с&nbsp;«Ак&nbsp;Барс&nbsp;Капитал»
 
@@ -25,7 +14,7 @@ section.intro(style="background-image: url(/local/assets/img/intro-abb-bg.svg)")
 						a.button.button-reset.intro__btn(href="/")
 							|	Начать инвестировать
 					.intro-slider__item.swiper-slide
-						img(class="intro-slider__img" src="/local/assets/img/intro-block/slider-img2.png", alt="Инвестиции с «Ак Барс Капитал»")
+						img(class="intro-slider__img" src="/local/assets/img/intro-block/slider-img2.png" alt="Инвестиции с «Ак Барс Капитал»")
 						h1.intro__heading.intro-heading
 							|	Начинающему
 							br
@@ -37,7 +26,7 @@ section.intro(style="background-image: url(/local/assets/img/intro-abb-bg.svg)")
 						a.button.button-reset.intro__btn(href="/")
 							|	Узнать подробности
 					.intro-slider__item.swiper-slide
-						img(class="intro-slider__img _type2" src="/local/assets/img/intro-block/slider-img3.svg", alt="Инвестиции с «Ак Барс Капитал»")
+						img(class="intro-slider__img _type2" src="/local/assets/img/intro-block/slider-img3.svg" alt="Инвестиции с «Ак Барс Капитал»")
 						h1.intro__heading.intro-heading
 							|	Паевые инвестиционные фонды
 
@@ -47,7 +36,7 @@ section.intro(style="background-image: url(/local/assets/img/intro-abb-bg.svg)")
 						a.button.button-reset.intro__btn(href="/")
 							|	Начать инвестировать
 					.intro-slider__item.swiper-slide
-						img(class="intro-slider__img _type2" src="/local/assets/img/intro-block/slider-img4.svg", alt="Инвестиции с «Ак Барс Капитал»")
+						img(class="intro-slider__img _type2" src="/local/assets/img/intro-block/slider-img4.svg" alt="Инвестиции с «Ак Барс Капитал»")
 						h1.intro__heading.intro-heading
 							|	Управляйте инвестициями в личном кабинете
 
@@ -56,6 +45,16 @@ section.intro(style="background-image: url(/local/assets/img/intro-abb-bg.svg)")
 
 						a.button.button-reset.intro__btn(href="/")
 							|	Начать инвестировать
-
+			.slider-nav.intro-slider__nav
+				button.slider-nav__btn.button-reset.js-intro-slider-prev
+					<svg class="slider-nav__btn-circle"  width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="25" cy="25" r="24.5" stroke="#00B2A9"/>
+					</svg>
+					+icon("arrow-shevron-left")(width="10" height="16" class="slider-nav__btn-icon")
+				button.slider-nav__btn.button-reset.js-intro-slider-next
+					<svg class="slider-nav__btn-circle"  width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="25" cy="25" r="24.5" stroke="#00B2A9"/>
+					</svg>
+					+icon("arrow-shevron-right")(width="10" height="16" class="slider-nav__btn-icon")
 +linkCSS("intro-block")
 +linkJs("intro-block-slider")

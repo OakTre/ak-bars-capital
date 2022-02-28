@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 							contentMobile.innerHTML = response[i].phone;
 
 							contentRoute.setAttribute("href",
-								`yandexmaps://build_route_on_map?lat_to=${response[i].coords[0]}&lon_to=${response[i].coords[1]}`
+								`https://yandex.ru/maps/?text=${response[i].street}`
 							)
 
 							for (let k = 0; k < response[i].workingHours.length; k++) {
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 							contentStreet.innerHTML = response[cityId].stores[k].street;
 							contentMobile.innerHTML = response[cityId].stores[k].phone;
 							contentRoute.setAttribute("href",
-								`yandexmaps://build_route_on_map?lat_to=${response[cityId].stores[k].coords[0]}&lon_to=${response[cityId].stores[k].coords[1]}`
+								`https://yandex.ru/maps/?text=${response[cityId].stores[k].street}`
 							)
 
 							contentWorkingHours.innerHTML = "";
@@ -237,6 +237,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 						}
 					}
 				});
+
+				if (window.matchMedia("(max-width: 767px)").matches) {
+					storesMap.destroy();
+				}
 			}
 
 			// инициализируем карту

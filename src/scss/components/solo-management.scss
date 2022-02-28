@@ -56,6 +56,7 @@
 	}
 
 	&__content {
+		position: relative;
 		width: 100%;
 		padding: 3.2rem 1.8rem 3.2rem 3.2rem;
 		background-color: var(--color-grey-bg);
@@ -81,6 +82,15 @@
 		@include mq(sm) {
 			padding: 2rem 1.6rem;
 		}
+	}
+
+	&__content-icon {
+		position: absolute;
+		top: 1.6rem;
+		right: 1.6rem;
+		width: 2.4rem;
+		height: 2.4rem;
+		fill: var(--color-green);
 	}
 
 	&__content-heading {

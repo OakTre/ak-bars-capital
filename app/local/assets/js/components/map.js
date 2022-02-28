@@ -84,5 +84,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		housesCollection.add(placemark);
 
 		contactsMap.geoObjects.add(housesCollection);
+
+		if (window.matchMedia("(max-width: 767px)").matches) {
+			contactsMap.destroy();
+		}
 	}
 });
