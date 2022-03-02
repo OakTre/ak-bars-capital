@@ -553,6 +553,8 @@
 .warning-text {
 	display: flex;
 	align-items: flex-start;
+	font-size: 1.3rem;
+	line-height: 1.9rem;
 
 	@include mq(sm) {
 		flex-direction: column;
@@ -563,7 +565,7 @@
 		width: 2.4rem;
 		height: 2.4rem;
 		fill: none;
-		margin-right: 1.3rem;
+		margin-right: 1rem;
 
 		@include mq(sm) {
 			margin-bottom: 1.2rem;

@@ -33,6 +33,12 @@
 		width: 5rem;
 		height: 5rem;
 		fill: var(--color-green);
+
+		@include mq(sm) {
+			width: 2.5rem;
+			height:	2.5rem;
+			left: 0;
+		}
 	}
 
 	&__img {
@@ -73,6 +79,7 @@
 			font-size: 1.6rem;
 			line-height: 2.4rem;
 			margin-bottom: 1.2rem;
+			padding-left: 3rem;
 		}
 	}
 
