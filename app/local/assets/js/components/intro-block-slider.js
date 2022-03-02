@@ -56,8 +56,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		}
 	});
 
-	console.log(document.visibilityState);
-
 	document.addEventListener("visibilitychange", function() {
 		if (document.visibilityState === 'visible') {
 			$(".intro-slider__nav").addClass("anim-start");

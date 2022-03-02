@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 		const dataInfo = [
 			{ x: '2021-01-09', y: 2210 },
-			{ x: '2021-02-09', y: 1217 },
+			{ x: '2021-01-10', y: 2215 },
 			{ x: '2021-03-09', y: 4124 },
 			{ x: '2021-04-09', y: 3112 },
 			{ x: '2021-05-09', y: 1014 },
@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			{ x: '2021-10-09', y: 9124 },
 			{ x: '2021-11-09', y: 3124 },
 			{ x: '2021-12-09', y: 4412 },
+
 		]
 
 		const data = {
@@ -80,11 +81,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 				borderColor: 'rgba(0, 178, 169, 1)',
 				fill: true,
 				backgroundColor: gradient,
-				pointBackgroundColor: "#FC9202",
-				pointBorderColor: 'rgba(255, 255, 255, 0.7)',
-				pointRadius: 5,
-				pointHoverRadius: 5,
-				borderWidth: 2,
+				pointBorderColor: 'rgba(0, 0, 0, 0)',
+				pointBackgroundColor: 'rgba(0, 0, 0, 0)',
+				pointHoverBackgroundColor: '#FC9202',
+				pointHoverBorderColor: 'rgba(255, 255, 255, 0.7)',
 				// data: [40, 10, 5, 2, 20, 30, 30, 15, 21, 60, 42, 12],
 				data: dataInfo,
 			}]
@@ -93,7 +93,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		const config = {
 			type: 'line',
 			data: data,
+			plugins: [{
+				afterDraw: chart => {
+					if (chart.tooltip?._active?.length) {
+						let x = chart.tooltip._active[0].element.x;
+						let yAxis = chart.scales.y;
+						let ctx = chart.ctx;
+						ctx.save();
+						ctx.beginPath();
+						ctx.setLineDash([5, 15]);
+						ctx.moveTo(x, yAxis.top);
+						ctx.lineTo(x, yAxis.bottom);
+						ctx.lineWidth = 1;
+						ctx.strokeStyle = '#FC9202';
+						ctx.stroke();
+						ctx.restore();
+					}
+				}
+			}],
 			options: {
+				hover: {
+					intersect: false,
+				},
 				adapters: {
 					date: { locale: 'ru' }
 				},
@@ -118,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 						},
 					},
 					tooltip: {
-						yAlign: "bottom",
+						xAlign: "right",
 						displayColors: false,
 						backgroundColor: "#fff",
 						bodyColor: "#10002B",
