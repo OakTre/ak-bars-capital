@@ -55,4 +55,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			}
 		}
 	});
+
+	console.log(document.visibilityState);
+
+	document.addEventListener("visibilitychange", function() {
+		if (document.visibilityState === 'visible') {
+			$(".intro-slider__nav").addClass("anim-start");
+		} else {
+			$(".intro-slider__nav").removeClass("anim-start");
+		}
+	});
 });
