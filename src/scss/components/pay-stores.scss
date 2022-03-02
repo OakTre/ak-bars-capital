@@ -72,11 +72,51 @@
 	&__map-container {
 		display: flex;
 		justify-content: flex-end;
+		padding-top: 14rem;
 
 		@include mq(sm) {
 			display: block;
 			padding-top: 0;
 			padding-bottom: 4rem;
+		}
+
+		.map__mobile-link {
+			@include mq(sm) {
+				padding-left: 3.1rem;
+			}
+		}
+
+		.map__content {
+			padding: 3.2rem;
+
+			@include mq(sm) {
+				padding: 2.4rem 1.6rem;
+			}
+		}
+
+		.map__heading {
+			margin-bottom: 2.2rem;
+		}
+
+		.map__working-time-list {
+			margin-bottom: 2.4rem;
+			padding-left: 3.1rem;
+		}
+
+		.map__working-time {
+			padding-left: 3.1rem;
+		}
+
+		.map__link {
+			margin-bottom: 2.4rem;
+		}
+
+		.map__working-time-day {
+			margin-right: 1rem;
+		}
+
+		.map__adress {
+			margin-bottom: 2.4rem;
 		}
 	}
 }

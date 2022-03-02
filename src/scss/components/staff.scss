@@ -64,7 +64,7 @@
 		height: 29.4rem;
 		display: block;
 		object-fit: cover;
-		margin-bottom: 2.4rem;
+		margin-bottom: 3.1rem;
 		border-radius: 1rem;
 		overflow: hidden;
 		transition: box-shadow var(--transition);
@@ -99,7 +99,7 @@
 		font-size: 1.4rem;
 		line-height: 2.4rem;
 		color: var(--color-grey2);
-		margin-bottom: 0.5rem;
+		margin-bottom: 2.1rem;
 
 		@include mq(sm) {
 			margin-bottom: 0.8rem;
@@ -138,6 +138,8 @@
 
 		&:nth-child(2) {
 			grid-column: 3 span;
+
+			transform: translateY(22px);
 		}
 
 		@include mq(md) {
@@ -225,7 +227,7 @@
 				font-size: 1.8rem;
 				line-height: 2.4rem;
 
-				padding-left: 1.8rem;
+				padding-left: 2.5rem;
 
 				@include mq(sm) {
 					font-size: 1.4rem;
@@ -234,8 +236,8 @@
 
 				&::before {
 					position: absolute;
-					top:  0.8rem;
-					left: 0;
+					top: 0.8rem;
+					left: 0.9rem;
 					width: 0.4rem;
 					height: 0.4rem;
 					background-color: var(--color-dark);

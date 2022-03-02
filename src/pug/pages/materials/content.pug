@@ -100,6 +100,12 @@ section.section_small-margin.materials
 					span
 						|	Ещё
 					+icon("arrow-shevron-bottom-small")(width="3" height="6" class="materials__tags-more-btn-icon")
+
+				.materials__tags.materials__tags-more
+					for item, index in nav_arr2
+						- let activeClass2 = index == 0 ? "is-active" : false
+						a.materials__tags-link(class=activeClass2 href="/")=item
+
 			.materials__card-list
 				for item, index in cards_arr
 					.materials__card-item.info-card
@@ -130,3 +136,4 @@ section.section_small-margin.materials
 
 +linkJs("initSelects")
 +linkJs("detailInfoMobileRedirect")
++linkJs("tags-show")

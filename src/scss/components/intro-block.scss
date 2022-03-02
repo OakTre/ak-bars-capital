@@ -381,6 +381,37 @@
 }
 
 .where-pay__intro {
+	margin-bottom: 8rem;
+
+	.intro-heading {
+		margin-bottom: 4.1rem;
+	}
+
+	.intro-slider__img._type2 {
+		bottom: 5.8rem;
+		width: 61.2rem;
+		height: 47.4rem;
+	}
+
+	.intro__breadcrumbs {
+		padding-top: 4.1rem;
+		padding-bottom: 10.1rem;
+
+		@include mq(md) {
+			padding-bottom: 4.1rem;
+		}
+	}
+
+	.intro__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.intro-slider {
+		height: auto;
+		flex-grow: 1;
+	}
+
 	@include mq(md) {
 		.intro__container {
 			display: flex;

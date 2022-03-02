@@ -8,8 +8,8 @@
 
 	&__img {
 		position: absolute;
-		right: 8.8rem;
-		bottom: 2.7rem;
+		right: 12.8rem;
+		bottom: 3rem;
 		width: 47.2rem;
 		height: 47.2rem;
 
@@ -117,7 +117,7 @@
 	&__legeng {
 		display: block;
 		margin-top: 7.2rem;
-		margin-bottom: 4rem;
+		margin-bottom: 3.5rem;
 		font-weight: 700;
 		font-size: 2.4rem;
 		line-height: 1;
@@ -190,7 +190,24 @@
 	}
 
 	&__files-file {
-		margin-bottom: 4.7rem;
+		margin-bottom: 4.1rem;
+
+		& > div {
+			flex-direction: column;
+		}
+
+		.file__icon {
+			margin-right: 2rem;
+		}
+
+		.file__size {
+			margin-left: 0;
+			margin-top: 2rem;
+
+			@include mq(sm) {
+				margin-top: 0;
+			}
+		}
 
 		@include mq(md) {
 			grid-column: 4 span;

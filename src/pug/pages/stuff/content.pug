@@ -1,4 +1,5 @@
 +linkCSS("staff")
++linkCSS("open-info")
 
 -
 	let arr = [
@@ -52,7 +53,7 @@
 section.section.staff
 	.site-container.staff__container
 		.staff__block(data-anim-fade)
-			h2.staff__heading.second-title
+			h2.open-info-detail__legend
 				|	Руководство
 			.staff__list
 				for item, index in arr
@@ -63,7 +64,7 @@ section.section.staff
 						span.staff__item-link-name
 							|	Подробнее
 		.staff__block(data-anim-fade)
-			h2.staff__heading.second-title
+			h2.open-info-detail__legend
 				|	Инвестиционное управление
 			.staff__list
 				for item, index in arr2
@@ -75,7 +76,7 @@ section.section.staff
 							|	Подробнее
 
 		.staff__block(data-anim-fade)
-			h2.staff__heading.second-title
+			h2.open-info-detail__legend
 				|	Управление этических финансовых инструментов
 			.staff__list
 				for item, index in arr3
@@ -87,7 +88,7 @@ section.section.staff
 							|	Подробнее
 
 		.staff__block(data-anim-fade)
-			h2.staff__heading.second-title
+			h2.open-info-detail__legend
 				|	Отдел по управлению рисками
 			.staff__list
 				for item, index in arr4

@@ -108,3 +108,28 @@
 		margin-bottom: 2.4rem;
 	}
 }
+
+
+.stuff-intro {
+	margin-bottom: 6rem;
+
+	@include mq(md) {
+		margin-bottom: 8rem;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 4rem;
+	}
+}
+
+.stuff-detailed-intro {
+	margin-bottom: 3.2rem;
+
+	@include mq(md) {
+		margin-bottom: 8rem;
+	}
+
+	@include mq(sm) {
+		margin-bottom: 4rem;
+	}
+}

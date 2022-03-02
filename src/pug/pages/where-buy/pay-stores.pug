@@ -2,7 +2,7 @@
 +linkCSS("pay-stores")
 
 section.pay-stores
-	.site-container.pay-stores__container
+	.site-container.pay-stores__container(data-anim-fade)
 		h2.pay-stores__heading.second-title
 			|	Пункты продаж
 		p.pay-stores__heading-text
@@ -23,12 +23,12 @@ section.pay-stores
 						span.select__placeholder
 							|	Пункт продаж
 						select(name="city" class="js-stores-select")
-	.pay-stores__map
+	.pay-stores__map(data-anim-fade)
 		#pay-stores-map.map__map
 		.site-container.map__container.pay-stores__map-container
 			.map__content
 				span.map__heading.js-content-heading
-					|	Офис в Казани на ул.&nbsp;Меридианная
+					|	Центральный офис УК «АК&nbsp;БАРС&nbsp;КАПИТАЛ»
 				span.map__adress
 					+icon("marker")(class="map__adres-icon" width="24" height="24")
 					span.js-content-street

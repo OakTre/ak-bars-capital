@@ -56,7 +56,7 @@
 			.choices__list--dropdown {
 				border-bottom-color: transparent;
 				border-top-color: var(--border-color);
-				border-radius: 0.5rem 0.5rem 0 0 ;
+				border-radius: 0.5rem 0.5rem 0 0;
 			}
 		}
 	}
@@ -104,17 +104,46 @@
 		border-radius: 0 0 0.5rem 0.5rem;
 		border: 1px solid var(--border-color);
 		padding: 0.5rem 0 0 0;
+		overflow: auto !important;
+
+		scrollbar-width: thin !important;
+		scrollbar-color: #00B2A9 !important;
 
 		/* полоса прокрутки (скроллбар) */
 		::-webkit-scrollbar {
-			width: 0.5rem; /* ширина для вертикального скролла */
-			height: 0.5rem; /* высота для горизонтального скролла */
-			background-color: transparent;
+			width: 5px !important;
+			background-color: transparent !important;
+		}
+
+		::-webkit-scrollbar-track {
+			background: transparent !important;
 		}
 
 		/* ползунок скроллбара */
 		::-webkit-scrollbar-thumb {
-			background-color: var(--color-green);
+			background-color: var(--color-green) !important;
+		}
+
+		.choices__list {
+			overflow: auto !important;
+
+			scrollbar-width: thin !important;
+			scrollbar-color: #00B2A9 !important;
+
+			/* полоса прокрутки (скроллбар) */
+			::-webkit-scrollbar {
+				width: 5px !important;
+				background-color: transparent !important;
+			}
+
+			::-webkit-scrollbar-track {
+				background: transparent !important;
+			}
+
+			/* ползунок скроллбара */
+			::-webkit-scrollbar-thumb {
+				background-color: var(--color-green) !important;
+			}
 		}
 
 		.choices__item {

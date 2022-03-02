@@ -2,7 +2,7 @@
 @import "../_include/_mixins/_media";
 
 .tabs-content {
-	padding: 6.4rem 0 7.2rem;
+	padding: 8rem 0 7.2rem;
 	background-color: var(--color-grey-bg);
 
 	@include mq(md) {
@@ -20,7 +20,7 @@
 	}
 
 	&__heading {
-		margin-bottom: 4.8rem;
+		margin-bottom: 4.4rem;
 
 		@include mq(md) {
 			margin-bottom: 2.6rem;

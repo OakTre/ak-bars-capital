@@ -22,10 +22,23 @@
 		}
 	}
 
+	&__info {
+		position: relative;
+	}
+
+	&__info-quote {
+		position: absolute;
+		top: 0;
+		left: -6.1rem;
+		width: 5rem;
+		height: 5rem;
+		fill: var(--color-green);
+	}
+
 	&__img {
 		display: block;
-		width: 32.6rem;
-		height: 32.6rem;
+		width: 44.4rem;
+		height: 36.1rem;
 		object-fit: cover;
 		border-radius: 1.2rem;
 		margin-right: 16.2rem;
@@ -50,7 +63,7 @@
 		line-height: 3.6rem;
 		font-family: var(--second-ff);
 		letter-spacing: 0.02em;
-		margin-bottom: 1.6rem;
+		margin-bottom: 4.6rem;
 
 		@include mq(md) {
 			margin-bottom: 3.2rem;
@@ -66,7 +79,7 @@
 	&__name {
 		display: block;
 		font-weight: 700;
-		font-size: 2.4rem;
+		font-size: 2.5rem;
 		line-height: 3.6rem;
 		letter-spacing: 0.02em;
 		margin-bottom: 0.8rem;
