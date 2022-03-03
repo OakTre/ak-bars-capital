@@ -1,7 +1,7 @@
 +linkCSS("income")
 
 section.section.income
-	.site-container.income__container
+	.site-container.income__container(data-anim-fade)
 		.income__left-block
 			h2.income__heading.second-title
 				span
@@ -51,8 +51,8 @@ section.section.income
 						.possible-income__text
 							span.possible-income__plus
 								|	+
-							span.possible-income__price
-								|	222 903,35
+							span.possible-income__price(data-animate-value data-value="222903")
+								|	222903
 							span.possible-income__r
 								|	 ₽
 						p.possible-income__small-txt
@@ -63,11 +63,14 @@ section.section.income
 					.possible-income__rigth
 						.possible-income__percents
 							span.possible-income__percents-nubmer
-								|	155,66%
+								span(data-animate-value data-value="222903")
+									|	155
+								|	%
 								+icon("small-green-triangle")(width="12" height="11" class="possible-income__percents-nubmer-icon")
 							span.possible-income__percents-nubmer-text
 								|	Доходность
 
 				button.button-reset.button.possible-income__btn
 					|	Оформить
+
 +linkJs("income")

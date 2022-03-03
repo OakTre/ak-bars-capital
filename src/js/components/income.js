@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		slider.noUiSlider.set(arr);
 	};
 
+	function toArabic(x) {
+		return x.toLocaleString('cs-CZ');
+	}
+
 	sliders.forEach(slider => {
 		const start = Number(slider.dataset.start);
 		const step = Number(slider.dataset.step);
@@ -25,12 +29,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			}
 		});
 
-		slider.noUiSlider.on("update", (values, handle)=>{
-			chidInput.value = Math.round(values[0]);
+		slider.noUiSlider.on("update", (values, handle) => {
+			chidInput.value = toArabic(Math.round(values[0]));
 		});
 
-		chidInput.addEventListener("change", (e)=>{
+		chidInput.addEventListener("change", (e) => {
 			setRangeSlider(0, e.currentTarget.value, slider);
 		})
+	});
+
+	$(window).scroll(function () {
+		$("[data-animate-value]:not([data-values-animated])").each(function () {
+			var scrollTop = window.scrollY + window.innerHeight;
+			var elScrollTop = $(this).offset().top + $(this).outerHeight();
+			var $el = $(this);
+
+			if (scrollTop > elScrollTop) {
+				$({ Counter: 0 }).animate(
+					{ Counter: $el.text() },
+					{
+						duration: 2100,
+						easing: "swing",
+						step: function (now) {
+							$el.text(toArabic(Math.ceil(now)));
+						},
+					}
+				);
+				$el.attr("data-values-animated", "true");
+			}
+		});
 	});
 });

@@ -43,13 +43,15 @@
 		}
 	]
 
-section.section.data
+section.section.data(data-anim-fade)
 	.site-container.data__container
 		h2.data__heading.second-title
 			|	Доходность стратегии
 		p.data__text
 			|	По динамике стоимости пая оцените стабильность и доходность стратегии. Фонд акций подходит для высокорискованных инвесторов, так как стоимость пая может резко изменяться
 
+		p.data__legend
+			|	Данные о фонде
 
 		.data__fund-info
 			for item in found_arr
@@ -109,7 +111,7 @@ section.section.data
 				|	Cкрыть
 
 		.data__btns
-			button.button-reset.button.data__btn
+			button.button-reset.button.data__btn(data-path="callback")
 				|	Купить online
 			button.button-reset.button._transparent.data__btn-question(data-path="callback" data-modal-heading="Задайте вопрос")
 				|	Задайте вопрос
