@@ -69,9 +69,11 @@
 					.yield-info-table__td.yield-info-table__td-body=name
 					for item in found_arr
 						- let greenClass = item.green ? "is-green" : false
-						.yield-info-table__td.yield-info-table__td-body(data-heading=item.attr class=greenClass)=item.name
-							- if (item.green == true)
-								+icon("small-green-triangle")(width="12" height="11" class="yield-info-table__td-icon")
+						.yield-info-table__td.yield-info-table__td-body(data-heading=item.attr class=greenClass)
+							span
+								span=item.name
+								- if (item.green == true)
+									+icon("small-green-triangle")(width="12" height="11" class="yield-info-table__td-icon")
 							- if (item.last == true)
 								+icon("arrow-down")(width="16" height="10" class="yield-info-table__td-icon-shevron")
 				.drop-menu-container.js-drop-menu-container
@@ -120,4 +122,49 @@
 							button.button-reset.button._black.yield-info-table__info-btn
 								|	Подробнее
 						.yield-info-table__info-col
-							canvas.yield-info-table__info-chart.js-yield-info-chart
+							.mod-mobile
+								span.yield-info-table__info-legend
+									|	Динамика стоимости пая
+
+								.yield-info-table__info-dates.js-dates-parent
+									label.yield-info-table__info-dates-icon-wrapper
+										input(type="text" class="visually-hidden js-yield-info-dates site-dates__input")
+										+icon("calendar2")(width="20" height="20" class="yield-info-table__info-dates-icon")
+										span.js-start-date
+											|	22 ноября 2021
+										|	-
+										span.js-end-date
+											|	23 ноября 2021
+							.yield-info-table__mob-wrapper
+								canvas.yield-info-table__info-chart.js-yield-info-chart
+
+							.mod-mobile
+								.yield-info-table__info-statistics
+									.yield-info-table__info-statistics-item
+										span.yield-info-table__info-statistics-time
+											|	за 1 год:
+										span.yield-info-table__info-statistics-percents
+											|	72,66%
+											+icon("small-green-triangle")(width="12" height="11" class="yield-info-table__info-statistics-icon")
+									.yield-info-table__info-statistics-item
+										span.yield-info-table__info-statistics-time
+											|	за 5 лет:
+										span.yield-info-table__info-statistics-percents
+											|	172,66%
+											+icon("small-green-triangle")(width="12" height="11" class="yield-info-table__info-statistics-icon")
+									.yield-info-table__info-statistics-item
+										span.yield-info-table__info-statistics-time
+											|	за 3 года:
+										span.yield-info-table__info-statistics-percents
+											|	78,6%
+											+icon("small-green-triangle")(width="12" height="11" class="yield-info-table__info-statistics-icon")
+									.yield-info-table__info-statistics-item
+										span.yield-info-table__info-statistics-time
+											|	за все время:
+										span.yield-info-table__info-statistics-percents
+											|	278,6%
+											+icon("small-green-triangle")(width="12" height="11" class="yield-info-table__info-statistics-icon")
+								p
+									|	Стратегия предполагает инвестирование в акции компаний, ориентированных на внутренний спрос отечественного рынка. При&nbsp;управлении фондом используется активная стратегия, предполагающая регулярный анализ рынка и изменение структуры портфеля.
+								button.button-reset.button._black.yield-info-table__info-btn
+									|	Подробнее
